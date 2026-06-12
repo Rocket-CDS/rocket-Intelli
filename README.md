@@ -26,6 +26,17 @@ This extension contributes the following settings:
 
 * `rocketIntelli.enable`: Enable/disable Rocket Intelli
 
+## Package
+
+```
+npm install -g @vscode/vsce
+```
+
+```
+vsce package
+```
+.vsix file output on root.
+
 ## Release Notes
 
 ### 0.0.1

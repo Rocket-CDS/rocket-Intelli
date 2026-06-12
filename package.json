@@ -4,6 +4,10 @@
   "description": "IntelliSense for Razor/CSHTML files with custom token support",
   "version": "0.0.1",
   "publisher": "nevoweb",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/rocket-Intelli.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
