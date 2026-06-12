@@ -1,6 +1,6 @@
 # Rocket Intelli
 
-IntelliSense extension for Razor/CSHTML files with custom token support.
+IntelliSense extension for Razor/CSHTML files with custom token support with RocketCDS.
 
 ## Features
 
@@ -36,6 +36,16 @@ npm install -g @vscode/vsce
 vsce package
 ```
 .vsix file output on root.
+
+## Install from the VS Code UI
+Open VS Code.  
+Open the Extensions view (Ctrl+Shift+X).  
+Click the ... menu in the top-right of the Extensions panel.  
+Select Install from VSIX....  
+Choose the **rocket-intelli-0.0.1.vsix** file.  
+Reload VS Code if prompted.  
+
+
 
 ## Release Notes
 
