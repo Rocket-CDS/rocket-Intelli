@@ -1,0 +1,581 @@
+[
+  {
+    "type": "csharp-method",
+    "name": "SafeSubstring",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Safely gets a substring of a given length from a string, without causing an out-of-bounds exception.",
+    "signature": "public static string SafeSubstring(string input, int maxLength)",
+    "parameters": [
+      { "name": "input", "type": "string", "description": "The input string." },
+      { "name": "maxLength", "type": "int", "description": "The maximum length of the substring." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsAbsoluteUrl",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Checks if a given URL is an absolute URL.",
+    "signature": "public static bool IsAbsoluteUrl(string url)",
+    "parameters": [
+      { "name": "url", "type": "string", "description": "The URL to check." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RemoveDiacritics",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Removes diacritics (accents) from a string.",
+    "signature": "public static string RemoveDiacritics(string text)",
+    "parameters": [
+      { "name": "text", "type": "string", "description": "The text to process." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DeCode",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Decodes a string that was encoded by converting each character to its integer value, separated by dots.",
+    "signature": "public static string DeCode(string codedval)",
+    "parameters": [
+      { "name": "codedval", "type": "string", "description": "The encoded string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "EnCode",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Encodes a string by converting each character to its integer value, separated by dots.",
+    "signature": "public static string EnCode(string value)",
+    "parameters": [
+      { "name": "value", "type": "string", "description": "The string to encode." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DecodeCSV",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Decodes a comma-separated string where each value was encoded using the EnCode method.",
+    "signature": "public static string DecodeCSV(string inputData)",
+    "parameters": [
+      { "name": "inputData", "type": "string", "description": "The encoded CSV string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "CreateFolder",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Creates a folder if it does not already exist.",
+    "signature": "public static void CreateFolder(string folderMapPath)",
+    "parameters": [
+      { "name": "folderMapPath", "type": "string", "description": "The physical path of the folder to create." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DeleteFolder",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Deletes a folder.",
+    "signature": "public static void DeleteFolder(string folderMapPath, bool recursive = false)",
+    "parameters": [
+      { "name": "folderMapPath", "type": "string", "description": "The physical path of the folder to delete." },
+      { "name": "recursive", "type": "bool", "description": "If true, deletes the folder and all its contents." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FormatToSave",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Formats a string for saving, applying scripting protection.",
+    "signature": "public static string FormatToSave(string inpData)",
+    "parameters": [
+      { "name": "inpData", "type": "string", "description": "The input data." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FormatToSave",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Formats a string for saving based on its data type, applying scripting protection.",
+    "signature": "public static string FormatToSave(string inpData, TypeCode dataTyp)",
+    "parameters": [
+      { "name": "inpData", "type": "string", "description": "The input data." },
+      { "name": "dataTyp", "type": "TypeCode", "description": "The data type of the input." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FormatDisableScripting",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Removes potentially malicious HTML tags and scripts from a string to prevent XSS attacks.",
+    "signature": "public static string FormatDisableScripting(string strInput, bool filterlinks = true)",
+    "parameters": [
+      { "name": "strInput", "type": "string", "description": "The string to filter." },
+      { "name": "filterlinks", "type": "bool", "description": "If true, also removes 'a' tags." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FormatToSave",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Formats data for saving to XML, converting it to a culture-invariant format.",
+    "signature": "public static string FormatToSave(string inpData, TypeCode dataTyp, string editlang)",
+    "parameters": [
+      { "name": "inpData", "type": "string", "description": "The input data." },
+      { "name": "dataTyp", "type": "TypeCode", "description": "The data type." },
+      { "name": "editlang", "type": "string", "description": "The culture code of the input data." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsCultureInfo",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Checks if a given string is a valid culture code.",
+    "signature": "public static bool IsCultureInfo(string cultureCode)",
+    "parameters": [
+      { "name": "cultureCode", "type": "string", "description": "The culture code to check." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FormatToDisplay",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Formats data for display, converting it from a culture-invariant format to a culture-specific format.",
+    "signature": "public static string FormatToDisplay(string inpData, string cultureCode, TypeCode dataTyp, string formatCode = \"\")",
+    "parameters": [
+      { "name": "inpData", "type": "string", "description": "The input data." },
+      { "name": "cultureCode", "type": "string", "description": "The culture code for display." },
+      { "name": "dataTyp", "type": "TypeCode", "description": "The data type." },
+      { "name": "formatCode", "type": "string", "description": "The format string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FormatDateToString",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Formats a DateTime object into a string based on a specific culture.",
+    "signature": "public static string FormatDateToString(DateTime dateTime, string cultureCode)",
+    "parameters": [
+      { "name": "dateTime", "type": "DateTime", "description": "The DateTime object." },
+      { "name": "cultureCode", "type": "string", "description": "The culture code." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsEmail",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Checks if a string is a valid email address.",
+    "signature": "public static bool IsEmail(string emailaddress)",
+    "parameters": [
+      { "name": "emailaddress", "type": "string", "description": "The email address to validate." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsNumeric",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Checks if an object can be converted to a numeric value, optionally using a specific culture.",
+    "signature": "public static bool IsNumeric(object expression, string cultureCode = \"\")",
+    "parameters": [
+      { "name": "expression", "type": "object", "description": "The object to check." },
+      { "name": "cultureCode", "type": "string", "description": "The culture code to use for parsing." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsUriValid",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Checks if a string is a well-formed URI and can optionally check if the host exists.",
+    "signature": "public static bool IsUriValid(string uri, UriKind uriKind  = UriKind.RelativeOrAbsolute, bool checkexists = false)",
+    "parameters": [
+      { "name": "uri", "type": "string", "description": "The URI string to check." },
+      { "name": "uriKind", "type": "UriKind", "description": "The kind of URI." },
+      { "name": "checkexists", "type": "bool", "description": "If true, performs a DNS lookup to see if the host exists." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsDate",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Checks if an object can be converted to a DateTime value using a specific culture.",
+    "signature": "public static bool IsDate(object expression, string cultureCode)",
+    "parameters": [
+      { "name": "expression", "type": "object", "description": "The object to check." },
+      { "name": "cultureCode", "type": "string", "description": "The culture code to use for parsing." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsDateInvariantCulture",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Checks if an object can be converted to a DateTime value using a set of common invariant culture formats.",
+    "signature": "public static bool IsDateInvariantCulture(object expression)",
+    "parameters": [
+      { "name": "expression", "type": "object", "description": "The object to check." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FormatAsMailTo",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Creates a 'mailto' link that is obfuscated to protect the email address from scrapers.",
+    "signature": "public static string FormatAsMailTo(string email, string subject = \"\", string visibleText = \"\")",
+    "parameters": [
+      { "name": "email", "type": "string", "description": "The email address." },
+      { "name": "subject", "type": "string", "description": "The default subject line." },
+      { "name": "visibleText", "type": "string", "description": "The visible text for the link." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DeleteSysFile",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Deletes a file, ignoring any exceptions if the file is locked.",
+    "signature": "public static void DeleteSysFile(string filePathName)",
+    "parameters": [
+      { "name": "filePathName", "type": "string", "description": "The path to the file to delete." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "CleanInput",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Strips out characters from a string that do not match a given regular expression.",
+    "signature": "public static string CleanInput(string strIn, string regexpr = \"\")",
+    "parameters": [
+      { "name": "strIn", "type": "string", "description": "The input string." },
+      { "name": "regexpr", "type": "string", "description": "The regular expression to match allowed characters." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "AlphaNumeric",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Strips out all non-alphanumeric characters from a string.",
+    "signature": "public static string AlphaNumeric(string strIn)",
+    "parameters": [
+      { "name": "strIn", "type": "string", "description": "The input string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "Numeric",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Strips out all non-numeric characters from a string.",
+    "signature": "public static string Numeric(string strIn)",
+    "parameters": [
+      { "name": "strIn", "type": "string", "description": "The input string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "UrlFriendly",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Converts a string into a URL-friendly format (e.g., 'like-this-one').",
+    "signature": "public static string UrlFriendly(string title)",
+    "parameters": [
+      { "name": "title", "type": "string", "description": "The string to convert." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "SanitizeFileName",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Sanitizes a file name by removing diacritics and invalid file name characters.",
+    "signature": "public static string SanitizeFileName(string fileName)",
+    "parameters": [
+      { "name": "fileName", "type": "string", "description": "The file name to sanitize." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RemapInternationalCharToAscii",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Remaps common international characters to their ASCII equivalents.",
+    "signature": "public static string RemapInternationalCharToAscii(char c)",
+    "parameters": [
+      { "name": "c", "type": "char", "description": "The character to remap." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "StripAccents",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Strips accents from a string.",
+    "signature": "public static string StripAccents(string s)",
+    "parameters": [
+      { "name": "s", "type": "string", "description": "The string to process." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUniqueString",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Generates a highly unique, URL-safe string based on the current time and a random number.",
+    "signature": "public static string GetUniqueString(int randomsize = 8)",
+    "parameters": [
+      { "name": "randomsize", "type": "int", "description": "The size of the random key to append." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetRandomKey",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Generates a random string of a specified size. Not guaranteed to be unique.",
+    "signature": "public static string GetRandomKey(int maxSize = 0, bool numericOnly = false)",
+    "parameters": [
+      { "name": "maxSize", "type": "int", "description": "The size of the key. If 0, returns a GUID-based key." },
+      { "name": "numericOnly", "type": "bool", "description": "If true, the key will only contain numbers." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetGuidKey",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Generates a URL-safe key from a new GUID.",
+    "signature": "public static string GetGuidKey()",
+    "parameters": [],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ReplaceFirstOccurrence",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Replaces the first occurrence of a substring within a string.",
+    "signature": "public static string ReplaceFirstOccurrence(string source, string find, string replace)",
+    "parameters": [
+      { "name": "source", "type": "string", "description": "The source string." },
+      { "name": "find", "type": "string", "description": "The substring to find." },
+      { "name": "replace", "type": "string", "description": "The replacement string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ReplaceLastOccurrence",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Replaces the last occurrence of a substring within a string.",
+    "signature": "public static string ReplaceLastOccurrence(string source, string find, string replace)",
+    "parameters": [
+      { "name": "source", "type": "string", "description": "The source string." },
+      { "name": "find", "type": "string", "description": "The substring to find." },
+      { "name": "replace", "type": "string", "description": "The replacement string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "Decrypt",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Decrypts a string using DES encryption with a given key.",
+    "signature": "public static string Decrypt(string strKey, string strData)",
+    "parameters": [
+      { "name": "strKey", "type": "string", "description": "The encryption key." },
+      { "name": "strData", "type": "string", "description": "The encrypted, Base64-encoded data." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "Encrypt",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Encrypts a string using DES encryption with a given key.",
+    "signature": "public static string Encrypt(string strKey, string strData)",
+    "parameters": [
+      { "name": "strKey", "type": "string", "description": "The encryption key." },
+      { "name": "strData", "type": "string", "description": "The data to encrypt." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ReplaceFileExt",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Replaces the extension of a file path with a new extension.",
+    "signature": "public static string ReplaceFileExt(string fileName, string newExt)",
+    "parameters": [
+      { "name": "fileName", "type": "string", "description": "The file path." },
+      { "name": "newExt", "type": "string", "description": "The new extension." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "StrToByteArray",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Converts a string to a byte array using UTF8 encoding.",
+    "signature": "public static byte[] StrToByteArray(string str)",
+    "parameters": [
+      { "name": "str", "type": "string", "description": "The string to convert." }
+    ],
+    "returns": "byte[]"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ObjectToByteArray",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Serializes an object into a byte array.",
+    "signature": "public static byte[] ObjectToByteArray(Object obj)",
+    "parameters": [
+      { "name": "obj", "type": "Object", "description": "The object to serialize." }
+    ],
+    "returns": "byte[]"
+  },
+  {
+    "type": "csharp-method",
+    "name": "CopyAll",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Recursively copies all files and subdirectories from a source to a target directory.",
+    "signature": "public static void CopyAll(string source, string target)",
+    "parameters": [
+      { "name": "source", "type": "string", "description": "The source directory path." },
+      { "name": "target", "type": "string", "description": "The target directory path." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "CopyAll",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Recursively copies all files and subdirectories from a source to a target directory.",
+    "signature": "public static void CopyAll(DirectoryInfo source, DirectoryInfo target)",
+    "parameters": [
+      { "name": "source", "type": "DirectoryInfo", "description": "The source directory." },
+      { "name": "target", "type": "DirectoryInfo", "description": "The target directory." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetMd5Hash",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Computes the MD5 hash of a string.",
+    "signature": "public static string GetMd5Hash(string input)",
+    "parameters": [
+      { "name": "input", "type": "string", "description": "The input string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetMd5Hash",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Computes the MD5 hash of a string, with an option for uppercase or lowercase output.",
+    "signature": "public static string GetMd5Hash(string input, bool uppercase)",
+    "parameters": [
+      { "name": "input", "type": "string", "description": "The input string." },
+      { "name": "uppercase", "type": "bool", "description": "If true, the hash is returned in uppercase." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "Base64Encode",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Encodes a string into Base64 format.",
+    "signature": "public static string Base64Encode(string plainText)",
+    "parameters": [
+      { "name": "plainText", "type": "string", "description": "The plain text to encode." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "Base64Decode",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Decodes a Base64-encoded string.",
+    "signature": "public static string Base64Decode(string base64EncodedData)",
+    "parameters": [
+      { "name": "base64EncodedData", "type": "string", "description": "The Base64-encoded data." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "AddJsonNetRootAttribute",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Adds the Json.NET namespace attribute to the root element of a SimplisityInfo's XML document.",
+    "signature": "public static void AddJsonNetRootAttribute(ref SimplisityInfo sInfo)",
+    "parameters": [
+      { "name": "sInfo", "type": "ref SimplisityInfo", "description": "The SimplisityInfo object." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "AddJsonArrayAttributesForXPath",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Adds the Json.NET 'Array=true' attribute to all XML elements matching an XPath expression.",
+    "signature": "public static void AddJsonArrayAttributesForXPath(string xpath, ref SimplisityInfo sInfo)",
+    "parameters": [
+      { "name": "xpath", "type": "string", "description": "The XPath expression." },
+      { "name": "sInfo", "type": "ref SimplisityInfo", "description": "The SimplisityInfo object." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "CopyDirectory",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Copies a directory and its contents to a new location.",
+    "signature": "public static void CopyDirectory(string sourceDir, string destinationDir, bool recursive)",
+    "parameters": [
+      { "name": "sourceDir", "type": "string", "description": "The source directory path." },
+      { "name": "destinationDir", "type": "string", "description": "The destination directory path." },
+      { "name": "recursive", "type": "bool", "description": "If true, copies subdirectories recursively." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "HtmlToPlainText",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Converts an HTML string to plain text by stripping out tags.",
+    "signature": "public static string HtmlToPlainText(string html)",
+    "parameters": [
+      { "name": "html", "type": "string", "description": "The HTML string." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "EscapeJsonString",
+    "source_file": "Simplisity/GeneralUtils.cs",
+    "description": "Escapes special characters in a string to make it safe for inclusion in a JSON string.",
+    "signature": "public static string EscapeJsonString(string value)",
+    "parameters": [
+      { "name": "value", "type": "string", "description": "The string to escape." }
+    ],
+    "returns": "string"
+  }
+]

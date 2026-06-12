@@ -1,0 +1,362 @@
+[
+  {
+    "type": "razor-token",
+    "name": "AddProcessData",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Adds metadata to the current rendering process. This data can be used by other tokens or within the same template. Returns an empty string.",
+    "signature": "public IEncodedString AddProcessData(String metaType, String metaValue)",
+    "parameters": [
+      { "name": "metaType", "type": "String", "description": "The key or type of the metadata." },
+      { "name": "metaValue", "type": "String", "description": "The value of the metadata." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@AddProcessData(\"mykey\", \"myvalue\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "AddPreProcessData",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Adds metadata to a specific cache list before the Razor template is rendered. This allows module code to use this data (e.g., for database queries) before rendering. It requires a unique template name and module ID to create a specific cache key.",
+    "signature": "public IEncodedString AddPreProcessData(String metaKey, String metaValue, String templateFullName, String moduleId)",
+    "parameters": [
+      { "name": "metaKey", "type": "String", "description": "The key for the metadata." },
+      { "name": "metaValue", "type": "String", "description": "The value of the metadata." },
+      { "name": "templateFullName", "type": "String", "description": "The unique cache key for the template, typically in the format '{theme}.{templatename}.{templateExtension}'." },
+      { "name": "moduleId", "type": "String", "description": "The module ID to identify the specific module instance." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@AddPreProcessData(\"sortfield\", \"name\", \"MyTheme.list.cshtml\", \"123\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "AddCssLinkHeader",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Generates a <link> tag to include a CSS file in the HTML header.",
+    "signature": "public IEncodedString AddCssLinkHeader(string cssRelPath)",
+    "parameters": [
+      { "name": "cssRelPath", "type": "string", "description": "The relative path to the CSS file." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@AddCssLinkHeader(\"/DesktopModules/MyModule/style.css\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "AddJsScriptHeader",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Generates a <script> tag to include a JavaScript file in the HTML header.",
+    "signature": "public IEncodedString AddJsScriptHeader(string jsRelPath)",
+    "parameters": [
+      { "name": "jsRelPath", "type": "string", "description": "The relative path to the JavaScript file." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@AddJsScriptHeader(\"/DesktopModules/MyModule/script.js\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "HiddenField",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a hidden input field bound to a SimplisityInfo data model.",
+    "signature": "public IEncodedString HiddenField(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the data field." },
+      { "name": "attributes", "type": "String", "description": "Additional HTML attributes." },
+      { "name": "defaultValue", "type": "String", "description": "The default value if the field is empty." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@HiddenField(Model.Info, \"genxml/hidden/mydata\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "TextBox",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a text input field bound to a SimplisityInfo data model.",
+    "signature": "public IEncodedString TextBox(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\", string type = \"text\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the data field." },
+      { "name": "attributes", "type": "String", "description": "Additional HTML attributes." },
+      { "name": "defaultValue", "type": "String", "description": "The default value if the field is empty." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." },
+      { "name": "type", "type": "string", "description": "The input type (e.g., 'text', 'password', 'email')." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@TextBox(Model.Info, \"genxml/textbox/firstname\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "TextBoxDate",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a date input field (type='date') bound to a SimplisityInfo data model. The value is formatted as 'yyyy-MM-dd'.",
+    "signature": "public IEncodedString TextBoxDate(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the date field." },
+      { "name": "attributes", "type": "String", "description": "Additional HTML attributes." },
+      { "name": "defaultValue", "type": "String", "description": "The default date value if the field is empty." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@TextBoxDate(Model.Info, \"genxml/date/startdate\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "TextArea",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a textarea field bound to a SimplisityInfo data model.",
+    "signature": "public IEncodedString TextArea(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the data field." },
+      { "name": "attributes", "type": "String", "description": "Additional HTML attributes." },
+      { "name": "defaultValue", "type": "String", "description": "The default value if the field is empty." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@TextArea(Model.Info, \"genxml/textbox/description\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "CheckBox",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a single checkbox with a label, bound to a boolean value in a SimplisityInfo data model.",
+    "signature": "public IEncodedString CheckBox(SimplisityInfo info, String xpath, String text, String attributes = \"\", Boolean defaultValue = false, bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the boolean field." },
+      { "name": "text", "type": "String", "description": "The label text for the checkbox." },
+      { "name": "attributes", "type": "String", "description": "Additional HTML attributes." },
+      { "name": "defaultValue", "type": "Boolean", "description": "The default checked state." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@CheckBox(Model.Info, \"genxml/checkbox/isactive\", \"Is Active\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "CheckBoxList",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a list of checkboxes from a dictionary or comma-separated strings. Each checkbox corresponds to a sub-node in the SimplisityInfo data model.",
+    "signature": "public IEncodedString CheckBoxList(SimplisityInfo info, string xpath, Dictionary<string, string> dataDictionary, string attributes = \"\", bool defaultValue = false, bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "string", "description": "The base XPath for the list data." },
+      { "name": "dataDictionary", "type": "Dictionary<string, string>", "description": "A dictionary of value-text pairs for the checkboxes." },
+      { "name": "attributes", "type": "string", "description": "HTML attributes for the container div." },
+      { "name": "defaultValue", "type": "bool", "description": "The default checked state for each item." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@CheckBoxList(Model.Info, \"genxml/checkboxlist/options\", myDictionary)"
+  },
+  {
+    "type": "razor-token",
+    "name": "RadioButtonList",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a list of radio buttons from a dictionary or comma-separated strings, bound to a single field in the SimplisityInfo data model.",
+    "signature": "public IEncodedString RadioButtonList(SimplisityInfo info, string xpath, Dictionary<string, string> dataDictionary, string attributes = \"\", string defaultValue = \"\", string labelattributes = \"\", bool localized = false, int row = 0, string listname = \"\", string inputclass = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "string", "description": "The XPath to the data field." },
+      { "name": "dataDictionary", "type": "Dictionary<string, string>", "description": "A dictionary of value-text pairs for the radio buttons." },
+      { "name": "attributes", "type": "string", "description": "HTML attributes for the container div." },
+      { "name": "defaultValue", "type": "string", "description": "The default selected value." },
+      { "name": "labelattributes", "type": "string", "description": "HTML attributes for the labels." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." },
+      { "name": "inputclass", "type": "string", "description": "CSS class for the input elements." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@RadioButtonList(Model.Info, \"genxml/radio/selection\", myDictionary)"
+  },
+  {
+    "type": "razor-token",
+    "name": "DropDownList",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a dropdown list (select) from a dictionary or comma-separated strings, bound to a single field in the SimplisityInfo data model.",
+    "signature": "public IEncodedString DropDownList(SimplisityInfo info, String xpath, Dictionary<string, string> dataDictionary, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the data field." },
+      { "name": "dataDictionary", "type": "Dictionary<string, string>", "description": "A dictionary of value-text pairs for the options." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes for the select element." },
+      { "name": "defaultValue", "type": "String", "description": "The default selected value." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DropDownList(Model.Info, \"genxml/dropdown/category\", myDictionary)"
+  },
+  {
+    "type": "razor-token",
+    "name": "SortableListIndex",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Outputs hidden fields required for a sortable list to correctly process the sort order. This includes a unique item reference and the current row index.",
+    "signature": "public IEncodedString SortableListIndex(SimplisityInfo info, int row)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model for the list item." },
+      { "name": "row", "type": "int", "description": "The current row index." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@SortableListIndex(Model.Info, i)"
+  },
+  {
+    "type": "razor-token",
+    "name": "EmailOf",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Formats an email address from the data model as a 'mailto:' link.",
+    "signature": "public IEncodedString EmailOf(SimplisityInfo info, String xpath, string subject = \"\", string visibleText = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the email address field." },
+      { "name": "subject", "type": "string", "description": "The email subject line." },
+      { "name": "visibleText", "type": "string", "description": "The visible text for the link. If empty, the email address is used." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@EmailOf(Model.Info, \"genxml/textbox/email\", \"Inquiry\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "HtmlOf",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "HTML-decodes a string from the data model or a direct string, rendering it as raw HTML.",
+    "signature": "public IEncodedString HtmlOf(SimplisityInfo info, String xpath)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the HTML content." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@HtmlOf(Model.Info, \"genxml/richtext/content\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DateOf",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Formats a date from the data model or a DateTime object into a string using a specific culture and format.",
+    "signature": "public IEncodedString DateOf(SimplisityInfo info, String xpath, String cultureCode, String format = \"d\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the date field." },
+      { "name": "cultureCode", "type": "String", "description": "The culture code for formatting (e.g., 'en-US', 'fr-FR')." },
+      { "name": "format", "type": "String", "description": "The date format string (e.g., 'd', 'g', 'yyyy-MM-dd')." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DateOf(Model.Info, \"genxml/date/publishdate\", \"en-GB\", \"D\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "Succinct",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Shortens a string to a specified length and appends '...' if it was truncated.",
+    "signature": "public IEncodedString Succinct(string value, int size, bool showdots = true)",
+    "parameters": [
+      { "name": "value", "type": "string", "description": "The string to shorten." },
+      { "name": "size", "type": "int", "description": "The maximum length of the returned string." },
+      { "name": "showdots", "type": "bool", "description": "If true, appends '...' if the string is truncated." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@Succinct(Model.Get(\"summary\"), 100)"
+  },
+  {
+    "type": "razor-token",
+    "name": "BreakOf",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Converts newline characters in a string to <br/> tags and HTML-encodes the content.",
+    "signature": "public IEncodedString BreakOf(SimplisityInfo info, String xpath)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the string field." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@BreakOf(Model.Info, \"genxml/textbox/multilinetext\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "CheckBoxListOf",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Displays a formatted list (ul/li) of the selected items from a checkbox list.",
+    "signature": "public IEncodedString CheckBoxListOf(SimplisityInfo info, String xpath, String datavalue, String datatext, String attributes = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The base XPath for the list data." },
+      { "name": "datavalue", "type": "String", "description": "Comma-separated string of checkbox values." },
+      { "name": "datatext", "type": "String", "description": "Comma-separated string of checkbox display texts." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes for the container ul element." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@CheckBoxListOf(Model.Info, \"genxml/checkboxlist/options\", \"1,2,3\", \"Option 1,Option 2,Option 3\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "FileSelectList",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a dropdown list of files from a specified directory.",
+    "signature": "public IEncodedString FileSelectList(SimplisityInfo info, String xpath, String mappathRootFolder, String attributes = \"\", Boolean allowEmpty = true, bool localized = false)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the field for the selected filename." },
+      { "name": "mappathRootFolder", "type": "String", "description": "The physical path to the folder containing the files." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes for the select element." },
+      { "name": "allowEmpty", "type": "Boolean", "description": "If true, includes an empty option in the list." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@FileSelectList(Model.Info, \"genxml/dropdown/templatefile\", Server.MapPath(\"~/MyTemplates\"))"
+  },
+  {
+    "type": "razor-token",
+    "name": "FolderSelectList",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a dropdown list of subdirectories from a specified directory.",
+    "signature": "public IEncodedString FolderSelectList(SimplisityInfo info, String xpath, String mappathRootFolder, String attributes = \"\", Boolean allowEmpty = true, bool localized = false)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the field for the selected folder name." },
+      { "name": "mappathRootFolder", "type": "String", "description": "The physical path to the root folder." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes for the select element." },
+      { "name": "allowEmpty", "type": "Boolean", "description": "If true, includes an empty option in the list." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@FolderSelectList(Model.Info, \"genxml/dropdown/themefolder\", Server.MapPath(\"~/MyThemes\"))"
+  },
+  {
+    "type": "razor-token",
+    "name": "SFields",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Generates a 's-fields' HTML attribute containing a JSON object from a series of key-value pairs. This is used for client-side scripting with Simplisity.",
+    "signature": "public IEncodedString SFields(params string[] sFields)",
+    "parameters": [
+      { "name": "sFields", "type": "string[]", "description": "An even number of strings representing key-value pairs." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@SFields(\"key1\", \"value1\", \"key2\", \"value2\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "SecuritySiteKey",
+    "source_file": "Simplisity/RazorEngineTokens.cs",
+    "description": "Renders a hidden element containing the current session's site key. This can be used for security validation in client-side calls.",
+    "signature": "public IEncodedString SecuritySiteKey(SessionParams sessionParams)",
+    "parameters": [
+      { "name": "sessionParams", "type": "SessionParams", "description": "The current session parameters object." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@SecuritySiteKey(Model.SessionParams)"
+  }
+]

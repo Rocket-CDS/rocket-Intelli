@@ -1,0 +1,738 @@
+[
+  {
+    "type": "csharp-method",
+    "name": "GetCurrentUserId",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets the ID of the currently logged-in user.",
+    "signature": "public static int GetCurrentUserId()",
+    "parameters": [],
+    "returns": "int"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RemoveUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Permanently removes a user from the database (hard delete).",
+    "signature": "public static void RemoveUser(int portalId, int userId, bool notify = false, bool deleteAdmin = false)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The ID of the user to remove." },
+      { "name": "notify", "type": "bool", "description": "Whether to notify the user." },
+      { "name": "deleteAdmin", "type": "bool", "description": "Whether to allow deletion of admin users." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DeleteUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Moves a user to the recycle bin (soft delete).",
+    "signature": "public static void DeleteUser(int portalId, int userId, bool notify = false, bool deleteAdmin = false)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The ID of the user to delete." },
+      { "name": "notify", "type": "bool", "description": "Whether to notify the user." },
+      { "name": "deleteAdmin", "type": "bool", "description": "Whether to allow deletion of admin users." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "UnDeleteUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Restores a user from the recycle bin.",
+    "signature": "public static void UnDeleteUser(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The ID of the user to restore." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetCurrentUserDisplayName",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets the display name of the currently logged-in user.",
+    "signature": "public static string GetCurrentUserDisplayName()",
+    "parameters": [],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "SetCurrentUserDisplayName",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Sets the display name for the currently logged-in user.",
+    "signature": "public static void SetCurrentUserDisplayName(string displayName)",
+    "parameters": [
+      { "name": "displayName", "type": "string", "description": "The new display name." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetCurrentUserName",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets the username of the currently logged-in user.",
+    "signature": "public static string GetCurrentUserName()",
+    "parameters": [],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetCurrentUserEmail",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets the email address of the currently logged-in user.",
+    "signature": "public static string GetCurrentUserEmail()",
+    "parameters": [],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUserRoles",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a list of roles for a specified user or the current user.",
+    "signature": "public static List<string> GetUserRoles(int portalid = -1, int userId = -1)",
+    "parameters": [
+      { "name": "portalid", "type": "int", "description": "The portal ID. Defaults to the current portal." },
+      { "name": "userId", "type": "int", "description": "The user ID. Defaults to the current user." }
+    ],
+    "returns": "List<string>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ResetPass",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Initiates the password reset process for a user by their email address.",
+    "signature": "public static bool ResetPass(string emailaddress, bool sendEmail)",
+    "parameters": [
+      { "name": "emailaddress", "type": "string", "description": "The user's email address." },
+      { "name": "sendEmail", "type": "bool", "description": "If true, sends the password reset email." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ChangePassword",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Changes the password for a specified user.",
+    "signature": "public static bool ChangePassword(int portalId, int userId, string newPassword)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "newPassword", "type": "string", "description": "The new password." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DoLogin",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Logs a user in with the provided credentials.",
+    "signature": "public static bool DoLogin(SessionParams sessionParams, string username, string password, bool rememberme)",
+    "parameters": [
+      { "name": "sessionParams", "type": "SessionParams", "description": "Session parameters, including the user's host address." },
+      { "name": "username", "type": "string", "description": "The username or email address." },
+      { "name": "password", "type": "string", "description": "The password." },
+      { "name": "rememberme", "type": "bool", "description": "If true, creates a persistent cookie." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "UserLogin",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Performs a user login action.",
+    "signature": "public static bool UserLogin(string userHostAddress, string username, string password, bool rememberme)",
+    "parameters": [
+      { "name": "userHostAddress", "type": "string", "description": "The user's IP address." },
+      { "name": "username", "type": "string", "description": "The username or email." },
+      { "name": "password", "type": "string", "description": "The password." },
+      { "name": "rememberme", "type": "bool", "description": "If true, creates a persistent cookie." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "UserLogin",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Logs in a user programmatically without a password check, assuming they are already authenticated.",
+    "signature": "public static void UserLogin(int portalId, string portalName, string userHostAddress, string username, bool rememberme)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "portalName", "type": "string", "description": "The name of the portal." },
+      { "name": "userHostAddress", "type": "string", "description": "The user's IP address." },
+      { "name": "username", "type": "string", "description": "The username or email." },
+      { "name": "rememberme", "type": "bool", "description": "If true, creates a persistent cookie." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DoLogin",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Logs a user in using data from a generic login form (SimplisityInfo).",
+    "signature": "public static bool DoLogin(SimplisityInfo postInfo, SimplisityInfo paramInfo)",
+    "parameters": [
+      { "name": "postInfo", "type": "SimplisityInfo", "description": "Posted data containing username, password, and remember me flag." },
+      { "name": "paramInfo", "type": "SimplisityInfo", "description": "Parameter data containing session information." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "LoginForm",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Renders a login form using a Razor template.",
+    "signature": "public static string LoginForm(string systemkey, SimplisityInfo sInfo, string interfacekey, int userid)",
+    "parameters": [
+      { "name": "systemkey", "type": "string", "description": "The system key to identify the theme." },
+      { "name": "sInfo", "type": "SimplisityInfo", "description": "Data to pass to the Razor template." },
+      { "name": "interfacekey", "type": "string", "description": "The interface key for the form's command." },
+      { "name": "userid", "type": "int", "description": "The current user's ID." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RegisterForm",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Renders a user registration form using a Razor template.",
+    "signature": "public static string RegisterForm(SimplisityInfo systemInfo, SimplisityInfo sInfo, string interfacekey, int userid)",
+    "parameters": [
+      { "name": "systemInfo", "type": "SimplisityInfo", "description": "System information." },
+      { "name": "sInfo", "type": "SimplisityInfo", "description": "Data to pass to the Razor template." },
+      { "name": "interfacekey", "type": "string", "description": "The interface key for the form's command." },
+      { "name": "userid", "type": "int", "description": "The current user's ID." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RegisterUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Registers a new user based on data from a SimplisityInfo object.",
+    "signature": "public static string RegisterUser(SimplisityInfo sInfo, string currentCulture = \"\")",
+    "parameters": [
+      { "name": "sInfo", "type": "SimplisityInfo", "description": "Data containing user registration details." },
+      { "name": "currentCulture", "type": "string", "description": "The culture for the new user." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RegisterUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Registers a new user with the specified details.",
+    "signature": "public static string RegisterUser(string displayname, string username, string useremail, string password, string confirmpassword, string currentCulture, bool approved)",
+    "parameters": [
+      { "name": "displayname", "type": "string", "description": "The display name." },
+      { "name": "username", "type": "string", "description": "The username." },
+      { "name": "useremail", "type": "string", "description": "The email address." },
+      { "name": "password", "type": "string", "description": "The password." },
+      { "name": "confirmpassword", "type": "string", "description": "The password confirmation." },
+      { "name": "currentCulture", "type": "string", "description": "The culture for the new user." },
+      { "name": "approved", "type": "bool", "description": "Whether the user is approved." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "CreateUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Creates a new user in the specified portal and optionally assigns them to a role.",
+    "signature": "public static string CreateUser(int portalId, string username, string email, string roleName = \"\")",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "username", "type": "string", "description": "The new username." },
+      { "name": "email", "type": "string", "description": "The new user's email." },
+      { "name": "roleName", "type": "string", "description": "Optional role to assign to the user." }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUserDataByUsername",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a UserData object for a user by their username.",
+    "signature": "public static UserData GetUserDataByUsername(int portalId, string username)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "username", "type": "string", "description": "The username." }
+    ],
+    "returns": "UserData"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUserDataByEmail",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a UserData object for a user by their email address.",
+    "signature": "public static UserData GetUserDataByEmail(int portalId, string email)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "email", "type": "string", "description": "The email address." }
+    ],
+    "returns": "UserData"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUserData",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a UserData object containing detailed information about a user.",
+    "signature": "public static UserData GetUserData(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." }
+    ],
+    "returns": "UserData"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsAuthorised",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if the current user is authorized (approved).",
+    "signature": "public static bool IsAuthorised()",
+    "parameters": [],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsAuthorised",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if a specific user is authorized (approved).",
+    "signature": "public static bool IsAuthorised(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "UnAuthoriseUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Marks a user as not approved.",
+    "signature": "public static void UnAuthoriseUser(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "AuthoriseUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Marks a user as approved.",
+    "signature": "public static void AuthoriseUser(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "UpdateEmail",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Updates the email address for a user.",
+    "signature": "public static UserData UpdateEmail(int portalId, int userId, string email)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "email", "type": "string", "description": "The new email address." }
+    ],
+    "returns": "UserData"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUserProfileProperties",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a dictionary of all profile properties for a user.",
+    "signature": "public static Dictionary<string, string> GetUserProfileProperties(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." }
+    ],
+    "returns": "Dictionary<string, string>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUserProfileProperties",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a dictionary of all profile properties for a user by their user ID as a string.",
+    "signature": "public static Dictionary<string, string> GetUserProfileProperties(string userId)",
+    "parameters": [
+      { "name": "userId", "type": "string", "description": "The user ID as a string." }
+    ],
+    "returns": "Dictionary<string, string>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "SetUserProfileProperties",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Sets multiple profile properties for a user.",
+    "signature": "public static void SetUserProfileProperties(String userId, Dictionary<string, string> properties)",
+    "parameters": [
+      { "name": "userId", "type": "String", "description": "The user ID as a string." },
+      { "name": "properties", "type": "Dictionary<string, string>", "description": "A dictionary of properties to set." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "SetUserProfileProperties",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Sets multiple profile properties for a user.",
+    "signature": "public static void SetUserProfileProperties(int portalId, int userId, Dictionary<string, string> properties)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "properties", "type": "Dictionary<string, string>", "description": "A dictionary of properties to set." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUserIdByUserName",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a user's ID from their username.",
+    "signature": "public static int GetUserIdByUserName(int portalId, string username)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "username", "type": "string", "description": "The username." }
+    ],
+    "returns": "int"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUsers",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a list of users as SimplisityRecord objects, optionally filtered by role.",
+    "signature": "public static List<SimplisityRecord> GetUsers(int portalId, string inRole = \"\")",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "inRole", "type": "string", "description": "Optional role name to filter by." }
+    ],
+    "returns": "List<SimplisityRecord>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUsers",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a paginated list of users as SimplisityRecord objects.",
+    "signature": "public static List<SimplisityRecord> GetUsers(int portalId, int pageNumber, int pageSize, ref int totalRecord, bool includeDeleted = false, bool superUsersOnly = false)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "pageNumber", "type": "int", "description": "The page number." },
+      { "name": "pageSize", "type": "int", "description": "The number of records per page." },
+      { "name": "totalRecord", "type": "ref int", "description": "Returns the total number of records." },
+      { "name": "includeDeleted", "type": "bool", "description": "If true, includes deleted users." },
+      { "name": "superUsersOnly", "type": "bool", "description": "If true, returns only super users." }
+    ],
+    "returns": "List<SimplisityRecord>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUsers",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Searches for users by a text string and returns a list of SimplisityRecord objects.",
+    "signature": "public static List<SimplisityRecord> GetUsers(int portalId, string searchtext, int returnLimit = 100)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "searchtext", "type": "string", "description": "The text to search for in user fields." },
+      { "name": "returnLimit", "type": "int", "description": "The maximum number of users to return." }
+    ],
+    "returns": "List<SimplisityRecord>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUsersUserData",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Searches for users by a text string and returns a list of UserData objects.",
+    "signature": "public static List<UserData> GetUsersUserData(int portalId, string searchtext, int returnLimit = 100)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "searchtext", "type": "string", "description": "The text to search for in user fields." },
+      { "name": "returnLimit", "type": "int", "description": "The maximum number of users to return." }
+    ],
+    "returns": "List<UserData>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetSuperUsers",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a list of all super users as SimplisityRecord objects.",
+    "signature": "public static List<SimplisityRecord> GetSuperUsers()",
+    "parameters": [],
+    "returns": "List<SimplisityRecord>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetUserIdByEmail",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a user's ID from their email address.",
+    "signature": "public static int GetUserIdByEmail(int portalId, string email)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "email", "type": "string", "description": "The email address." }
+    ],
+    "returns": "int"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsInRole",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if a specific user is in a given role.",
+    "signature": "public static bool IsInRole(int portalId, int userId, string role)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "role", "type": "string", "description": "The name of the role." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsInRole",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if the current user is in a given role.",
+    "signature": "public static bool IsInRole(string role)",
+    "parameters": [
+      { "name": "role", "type": "string", "description": "The name of the role." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsSuperUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if a specific user is a super user.",
+    "signature": "public static bool IsSuperUser(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsSuperUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if the current user is a super user.",
+    "signature": "public static bool IsSuperUser()",
+    "parameters": [],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsClientOnly",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if the current user has only the 'Collaborator' role and no higher-level roles.",
+    "signature": "public static Boolean IsClientOnly()",
+    "parameters": [],
+    "returns": "Boolean"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsManager",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if the current user is in the 'Manager' or 'Administrators' role.",
+    "signature": "public static Boolean IsManager()",
+    "parameters": [],
+    "returns": "Boolean"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsEditor",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if the current user has at least 'Collaborator' level permissions.",
+    "signature": "public static Boolean IsEditor()",
+    "parameters": [],
+    "returns": "Boolean"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsAdministrator",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if the current user is in the 'Administrators' role.",
+    "signature": "public static Boolean IsAdministrator()",
+    "parameters": [],
+    "returns": "Boolean"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsAdministrator",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if a specific user is an administrator.",
+    "signature": "public static bool IsAdministrator(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetValidUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Validates a user's credentials and returns the UserInfo object if valid.",
+    "signature": "public static UserInfo GetValidUser(int PortalId, string username, string password)",
+    "parameters": [
+      { "name": "PortalId", "type": "int", "description": "The portal ID." },
+      { "name": "username", "type": "string", "description": "The username." },
+      { "name": "password", "type": "string", "description": "The password." }
+    ],
+    "returns": "UserInfo"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsValidUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if a user exists by username.",
+    "signature": "public static bool IsValidUser(int PortalId, string username)",
+    "parameters": [
+      { "name": "PortalId", "type": "int", "description": "The portal ID." },
+      { "name": "username", "type": "string", "description": "The username." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsValidUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if a user's credentials are valid.",
+    "signature": "public static bool IsValidUser(int PortalId, string username, string password)",
+    "parameters": [
+      { "name": "PortalId", "type": "int", "description": "The portal ID." },
+      { "name": "username", "type": "string", "description": "The username." },
+      { "name": "password", "type": "string", "description": "The password." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "IsValidUser",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if a user exists by user ID.",
+    "signature": "public static bool IsValidUser(int portalId, int userId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetRoleById",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets role information as a SimplisityRecord by role ID.",
+    "signature": "public static SimplisityRecord GetRoleById(int portalId, int roleId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "roleId", "type": "int", "description": "The role ID." }
+    ],
+    "returns": "SimplisityRecord"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetRoles",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets a dictionary of all roles in a portal.",
+    "signature": "public static Dictionary<int, string> GetRoles(int portalId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." }
+    ],
+    "returns": "Dictionary<int, string>"
+  },
+  {
+    "type": "csharp-method",
+    "name": "GetRoleByName",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Gets role information as a SimplisityRecord by role name.",
+    "signature": "public static SimplisityRecord GetRoleByName(int portalId, string roleName)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "roleName", "type": "string", "description": "The name of the role." }
+    ],
+    "returns": "SimplisityRecord"
+  },
+  {
+    "type": "csharp-method",
+    "name": "AddUserRole",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Adds a user to a role.",
+    "signature": "public static void AddUserRole(int portalId, int userId, int roleId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "roleId", "type": "int", "description": "The role ID." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "AddUserRole",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Adds a user to a role and optionally notifies the user.",
+    "signature": "public static void AddUserRole(int portalId, int userId, int roleId, bool notifyUser)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "roleId", "type": "int", "description": "The role ID." },
+      { "name": "notifyUser", "type": "bool", "description": "If true, notifies the user." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RemoveUserRole",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Removes a user from a role.",
+    "signature": "public static void RemoveUserRole(int portalId, int userId, int roleId)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "roleId", "type": "int", "description": "The role ID." }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "SignOut",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Signs the current user out.",
+    "signature": "public static void SignOut()",
+    "parameters": [],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "HasModuleAccess",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Checks if a user has a specific level of access to a module.",
+    "signature": "public static bool HasModuleAccess(int portalId, int userId, int moduleId, string permissionKey = \"VIEW\")",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "moduleId", "type": "int", "description": "The module ID." },
+      { "name": "permissionKey", "type": "string", "description": "The permission key to check (e.g., 'VIEW', 'EDIT')." }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "UpdateOrCreateUserProfileProperty",
+    "source_file": "API/Components/User/UserUtils.cs",
+    "description": "Updates or creates a DNN user profile property. If the property definition doesn't exist, it will be created.",
+    "signature": "public static bool UpdateOrCreateUserProfileProperty(int userId, string key, string value, int portalId = 0, string category = \"Custom\", bool visibilityAllUsers = false)",
+    "parameters": [
+      { "name": "userId", "type": "int", "description": "The user ID." },
+      { "name": "key", "type": "string", "description": "The profile property name." },
+      { "name": "value", "type": "string", "description": "The value to set." },
+      { "name": "portalId", "type": "int", "description": "The portal ID." },
+      { "name": "category", "type": "string", "description": "The category for the property if it needs to be created." },
+      { "name": "visibilityAllUsers", "type": "bool", "description": "The visibility mode for the property if it needs to be created." }
+    ],
+    "returns": "bool"
+  }
+]

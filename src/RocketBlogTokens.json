@@ -1,0 +1,18 @@
+[
+  {
+    "type": "razor-token",
+    "name": "AssignDataModel",
+    "source_file": "RocketBlogAPI/Render/RocketBlogTokens.cs",
+    "description": "Assigns the data model for Razor by calling the base class's AssignDataModel method. This makes the template easier to build by populating various data properties from the SimplisityRazor model.",
+    "signature": "public new string AssignDataModel(SimplisityRazor sModel)",
+    "parameters": [
+      {
+        "name": "sModel",
+        "type": "SimplisityRazor",
+        "description": "The SimplisityRazor model containing the data objects."
+      }
+    ],
+    "returns": "string",
+    "example": "@{ AssignDataModel(Model); }"
+  }
+]

@@ -1,0 +1,265 @@
+[
+  {
+    "type": "razor-token",
+    "name": "AssignDataModel",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Assigns the data model for Razor, making the template easier to build by populating various data properties like appTheme, moduleData, articleData, etc., from the SimplisityRazor model.",
+    "signature": "public string AssignDataModel(SimplisityRazor sModel)",
+    "parameters": [
+      {
+        "name": "sModel",
+        "type": "SimplisityRazor",
+        "description": "The SimplisityRazor model containing the data objects."
+      }
+    ],
+    "returns": "string",
+    "example": "@{ AssignDataModel(Model); }"
+  },
+  {
+    "type": "razor-token",
+    "name": "TextBoxMoney",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders a textbox for currency input. The value is formatted according to the portal's currency settings.",
+    "signature": "public IEncodedString TextBoxMoney(int portalId, string systemKey, string cultureCode, SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\", string type = \"text\")",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The ID of the portal." },
+      { "name": "systemKey", "type": "string", "description": "The system key for the catalog." },
+      { "name": "cultureCode", "type": "string", "description": "The culture code for currency formatting." },
+      { "name": "info", "type": "SimplisityInfo", "description": "The data model." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the numeric money value." },
+      { "name": "attributes", "type": "String", "description": "Additional HTML attributes." },
+      { "name": "defaultValue", "type": "String", "description": "The default value if the field is empty." },
+      { "name": "localized", "type": "bool", "description": "If true, binds to the localized 'genxml/lang/' path." },
+      { "name": "row", "type": "int", "description": "Row index for list data." },
+      { "name": "listname", "type": "string", "description": "List name for creating unique IDs." },
+      { "name": "type", "type": "string", "description": "The input type (default is 'text')." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@TextBoxMoney(0, \"rocketdirectoryapi\", \"en-US\", Model.Info, \"genxml/textbox/price\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "InterfaceNameResourceKey",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Gets the localized name for a RocketInterface from the resource files. It searches in the system's resources first, then the interface's template resources.",
+    "signature": "public IEncodedString InterfaceNameResourceKey(RocketInterface rocketInterface, SystemLimpet systemData, String lang = \"\", string resxFileName = \"SideMenu\")",
+    "parameters": [
+      { "name": "rocketInterface", "type": "RocketInterface", "description": "The interface object." },
+      { "name": "systemData", "type": "SystemLimpet", "description": "The system data object." },
+      { "name": "lang", "type": "String", "description": "Optional language code." },
+      { "name": "resxFileName", "type": "string", "description": "The name of the resource file (default is 'SideMenu')." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@InterfaceNameResourceKey(myInterface, systemData)"
+  },
+  {
+    "type": "razor-token",
+    "name": "FilterGroupCheckBox",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders a checkbox for a property group filter, typically used in theme settings to enable or disable filter groups.",
+    "signature": "public IEncodedString FilterGroupCheckBox(SimplisityInfo info, string groupId, string textName)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The settings data model." },
+      { "name": "groupId", "type": "string", "description": "The ID of the property group." },
+      { "name": "textName", "type": "string", "description": "The display name for the checkbox." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@FilterGroupCheckBox(Model.Info, \"group1\", \"Group 1 Filters\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "FilterCheckBox",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders a filter checkbox for the public-facing view. When changed, it updates a session field and triggers a JavaScript function to refresh the article list.",
+    "signature": "public IEncodedString FilterCheckBox(string checkboxId, string textName, string sreturn, bool value, string cssClass = \"\", string attributes = \"\")",
+    "parameters": [
+      { "name": "checkboxId", "type": "string", "description": "The unique ID for the checkbox." },
+      { "name": "textName", "type": "string", "description": "The display name for the filter." },
+      { "name": "sreturn", "type": "string", "description": "The jQuery selector for the container to be updated with the new list." },
+      { "name": "value", "type": "bool", "description": "The initial checked state." },
+      { "name": "cssClass", "type": "string", "description": "Additional CSS classes." },
+      { "name": "attributes", "type": "string", "description": "Additional HTML attributes." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@FilterCheckBox(\"filter-color-red\", \"Red\", \"#articlelist\", false)"
+  },
+  {
+    "type": "razor-token",
+    "name": "FilterJsApiCall",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders the JavaScript function 'callFilterArticleList' which calls the remote API to refresh the list of articles based on the current filter selections.",
+    "signature": "public IEncodedString FilterJsApiCall(ModuleContentLimpet moduleData, SessionParams sessionParams, string templateName = \"articlelist.cshtml\")",
+    "parameters": [
+      { "name": "moduleData", "type": "ModuleContentLimpet", "description": "The module settings data." },
+      { "name": "sessionParams", "type": "SessionParams", "description": "The current session parameters." },
+      { "name": "templateName", "type": "string", "description": "The name of the template to render for the list." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@FilterJsApiCall(moduleData, sessionParams)"
+  },
+  {
+    "type": "razor-token",
+    "name": "FilterClearButton",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders a button that clears all active filters by unchecking all filter checkboxes and refreshing the article list.",
+    "signature": "public IEncodedString FilterClearButton(string textName, string sreturn)",
+    "parameters": [
+      { "name": "textName", "type": "string", "description": "The text to display on the button." },
+      { "name": "sreturn", "type": "string", "description": "The jQuery selector for the container to be updated." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@FilterClearButton(\"Clear All\", \"#articlelist\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "TagButtonClear",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders a button to clear the active tag filter. It is initially hidden and appears when a tag is selected.",
+    "signature": "public IEncodedString TagButtonClear(string textName, SessionParams sessionParams, string displayClass = \"rocket-tagbutton\")",
+    "parameters": [
+      { "name": "textName", "type": "string", "description": "The text for the clear button." },
+      { "name": "sessionParams", "type": "SessionParams", "description": "The current session parameters." },
+      { "name": "displayClass", "type": "string", "description": "The base CSS class for the button." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@TagButtonClear(\"Clear Tag\", sessionParams)"
+  },
+  {
+    "type": "razor-token",
+    "name": "TagButton",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders a clickable tag button. When clicked, it sets the 'rocketpropertyidtag' session field and refreshes the article list to show items with that tag.",
+    "signature": "public IEncodedString TagButton(int propertyid, string textName, SessionParams sessionParams, string displayClass = \"rocket-tagbutton\", string selectedClass = \"rocket-tagbuttonOn\")",
+    "parameters": [
+      { "name": "propertyid", "type": "int", "description": "The ID of the property representing the tag." },
+      { "name": "textName", "type": "string", "description": "The display name of the tag." },
+      { "name": "sessionParams", "type": "SessionParams", "description": "The current session parameters." },
+      { "name": "displayClass", "type": "string", "description": "The base CSS class for the button." },
+      { "name": "selectedClass", "type": "string", "description": "The CSS class applied when the tag is selected." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@TagButton(123, \"Featured\", sessionParams)"
+  },
+  {
+    "type": "razor-token",
+    "name": "TagJsApiCall",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders the JavaScript function 'callTagArticleList' which calls the remote API to refresh the list of articles based on the selected tag.",
+    "signature": "public IEncodedString TagJsApiCall(ModuleContentLimpet moduleData, string sreturn, SessionParams sessionParams, string templateName = \"articlelist.cshtml\")",
+    "parameters": [
+      { "name": "moduleData", "type": "ModuleContentLimpet", "description": "The module settings data." },
+      { "name": "sreturn", "type": "string", "description": "The jQuery selector for the container to be updated." },
+      { "name": "sessionParams", "type": "SessionParams", "description": "The current session parameters." },
+      { "name": "templateName", "type": "string", "description": "The name of the template to render for the list." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@TagJsApiCall(moduleData, \"#articlelist\", sessionParams)"
+  },
+  {
+    "type": "razor-token",
+    "name": "DateJsApiCall",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders the JavaScript function 'doDateSearchReload' which calls the remote API to refresh the list of articles based on a selected date range.",
+    "signature": "public IEncodedString DateJsApiCall(ModuleContentLimpet moduleData, string sreturn, SessionParams sessionParams, string templateName = \"articlelist.cshtml\")",
+    "parameters": [
+      { "name": "moduleData", "type": "ModuleContentLimpet", "description": "The module settings data." },
+      { "name": "sreturn", "type": "string", "description": "The jQuery selector for the container to be updated." },
+      { "name": "sessionParams", "type": "SessionParams", "description": "The current session parameters." },
+      { "name": "templateName", "type": "string", "description": "The name of the template to render for the list." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DateJsApiCall(moduleData, \"#articlelist\", sessionParams)"
+  },
+  {
+    "type": "razor-token",
+    "name": "ListUrl",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Builds a friendly URL to a list page, optionally including category information.",
+    "signature": "public IEncodedString ListUrl(int listpageid, CategoryLimpet categoryData, string[] urlparams = null)",
+    "parameters": [
+      { "name": "listpageid", "type": "int", "description": "The Tab ID of the list page." },
+      { "name": "categoryData", "type": "CategoryLimpet", "description": "The category data to include in the URL." },
+      { "name": "urlparams", "type": "string[]", "description": "Optional additional URL parameters." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@ListUrl(100, myCategory)"
+  },
+  {
+    "type": "razor-token",
+    "name": "DetailUrl",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Builds a friendly URL to a detail page for a specific article, including the article title and ID for SEO and routing.",
+    "signature": "public IEncodedString DetailUrl(int detailpageid, ArticleLimpet articleData, string[] urlparams = null)",
+    "parameters": [
+      { "name": "detailpageid", "type": "int", "description": "The Tab ID of the detail page." },
+      { "name": "articleData", "type": "ArticleLimpet", "description": "The article data, containing the title and ID." },
+      { "name": "urlparams", "type": "string[]", "description": "Optional additional URL parameters." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DetailUrl(101, myArticle)"
+  },
+  {
+    "type": "razor-token",
+    "name": "RssUrl",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Generates a URL for an RSS feed based on a command, date range, and optional SQL index.",
+    "signature": "public IEncodedString RssUrl(int portalId, string cmd, int yearDate, int monthDate, int numberOfMonths = 1, string sqlidx = \"\")",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The ID of the portal." },
+      { "name": "cmd", "type": "string", "description": "The command for the RSS feed action." },
+      { "name": "yearDate", "type": "int", "description": "The starting year." },
+      { "name": "monthDate", "type": "int", "description": "The starting month." },
+      { "name": "numberOfMonths", "type": "int", "description": "The number of months to include in the feed." },
+      { "name": "sqlidx", "type": "string", "description": "Optional SQL index identifier." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@RssUrl(0, \"getfeed\", 2023, 1, 12)"
+  },
+  {
+    "type": "razor-token",
+    "name": "ChatGPT",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders a button to open a ChatGPT modal for generating text. Requires a ChatGPT API key in the global settings. The generated text will populate the field specified by 'textId'.",
+    "signature": "public IEncodedString ChatGPT(string textId, string sourceTextId = \"\")",
+    "parameters": [
+      {
+        "name": "textId",
+        "type": "string",
+        "description": "The ID of the target HTML element to populate with the response."
+      },
+      {
+        "name": "sourceTextId",
+        "type": "string",
+        "description": "Optional. The ID of an element whose value will be used as the initial prompt."
+      }
+    ],
+    "returns": "IEncodedString",
+    "example": "@ChatGPT(\"mytextarea\", \"mysourcetextbox\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DeepL",
+    "source_file": "RocketDirectoryAPI/Render/RocketDirectoryAPITokens.cs",
+    "description": "Renders a button to open a DeepL translation modal. Requires a DeepL API key in the global settings and more than one portal language to be enabled. The translated text will populate the field specified by 'textId'.",
+    "signature": "public IEncodedString DeepL(string textId, string sourceTextId = \"\", string cultureCode = \"\")",
+    "parameters": [
+      {
+        "name": "textId",
+        "type": "string",
+        "description": "The ID of the target HTML element to populate with the translated text."
+      },
+      {
+        "name": "sourceTextId",
+        "type": "string",
+        "description": "Optional. The ID of an element whose value will be used as the source text for translation."
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": "Optional. The language code for the 'translate' resource string."
+      }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DeepL(\"translatedtext\", \"originaltext\")"
+  }
+]

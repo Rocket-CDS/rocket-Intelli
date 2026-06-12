@@ -1,0 +1,49 @@
+{
+  "name": "rocket-intelli",
+  "displayName": "Rocket Intelli",
+  "description": "IntelliSense for Razor/CSHTML files with custom token support",
+  "version": "0.0.1",
+  "publisher": "nevoweb",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:razor",
+    "onLanguage:cshtml"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rocket-intelli.downloadTokenFile",
+        "title": "Download Razor Token File"
+      }
+    ],
+    "languages": [
+      {
+        "id": "razor",
+        "aliases": ["Razor", "razor"],
+        "extensions": [".cshtml", ".razor"]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^20.x",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.40.0",
+    "typescript": "^5.1.0"
+  }
+}

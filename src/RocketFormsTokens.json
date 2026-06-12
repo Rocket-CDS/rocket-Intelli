@@ -1,0 +1,90 @@
+[
+  {
+    "type": "razor-token",
+    "name": "AssignDataModel",
+    "source_file": "RocketForms/Render/RocketFormsTokens.cs",
+    "description": "Assigns the data model for Razor, making the template easier to build by populating various data properties like appTheme, moduleData, portalData, etc., from the SimplisityRazor model.",
+    "signature": "public string AssignDataModel(SimplisityRazor sModel)",
+    "parameters": [
+      {
+        "name": "sModel",
+        "type": "SimplisityRazor",
+        "description": "The SimplisityRazor model containing the data objects."
+      }
+    ],
+    "returns": "string",
+    "example": "@{ AssignDataModel(Model); }"
+  },
+  {
+    "type": "razor-token",
+    "name": "DelayFormButton",
+    "source_file": "RocketForms/Render/RocketFormsTokens.cs",
+    "description": "Renders a form submission button that appears after a specified delay. This is a security measure to help prevent automated bot submissions. It renders a specified Razor template for the button's appearance.",
+    "signature": "public IEncodedString DelayFormButton(SimplisityRazor sModel, string spost, int millisec = 1200, string template = \"DelayFormButton.cshtml\")",
+    "parameters": [
+      {
+        "name": "sModel",
+        "type": "SimplisityRazor",
+        "description": "The current Razor model."
+      },
+      {
+        "name": "spost",
+        "type": "string",
+        "description": "The jQuery selector for the element that contains the post button."
+      },
+      {
+        "name": "millisec",
+        "type": "int",
+        "description": "The delay in milliseconds before the button is displayed."
+      },
+      {
+        "name": "template",
+        "type": "string",
+        "description": "The name of the Razor template file to use for rendering the button."
+      }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DelayFormButton(Model, \"#postbuttonwrapper\", 2000)"
+  },
+  {
+    "type": "razor-token",
+    "name": "ResourceKey",
+    "source_file": "RocketForms/Render/RocketFormsTokens.cs",
+    "description": "Gets a localized resource string. It searches through a list of resource paths and file keys (including 'RocketForms' and theme-specific resx files) to find the requested key.",
+    "signature": "public string ResourceKey(AppThemeLimpet appTheme, String resourceKey, String lang = \"\", String resourceExtension = \"Text\")",
+    "parameters": [
+      {
+        "name": "appTheme",
+        "type": "AppThemeLimpet",
+        "description": "The current application theme."
+      },
+      {
+        "name": "resourceKey",
+        "type": "String",
+        "description": "The resource key to retrieve."
+      },
+      {
+        "name": "lang",
+        "type": "String",
+        "description": "Optional language code."
+      },
+      {
+        "name": "resourceExtension",
+        "type": "String",
+        "description": "The resource extension (e.g., 'Text', 'Help')."
+      }
+    ],
+    "returns": "string",
+    "example": "@ResourceKey(appTheme, \"submitbutton\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "StylePadding",
+    "source_file": "RocketForms/Render/RocketFormsTokens.cs",
+    "description": "Generates an inline CSS padding style string based on module settings. It reads 'leftpadding', 'rightpadding', 'toppadding', and 'bottompadding' settings and creates corresponding CSS properties.",
+    "signature": "public string StylePadding()",
+    "parameters": [],
+    "returns": "string",
+    "example": "<div style=\"@StylePadding()\">...</div>"
+  }
+]

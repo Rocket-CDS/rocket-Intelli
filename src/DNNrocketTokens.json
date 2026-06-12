@@ -1,0 +1,607 @@
+[
+  {
+    "type": "razor-token",
+    "name": "AddProcessDataResx",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Adds resource paths to the process data for later use by resource key tokens. Can include portal-specific, app-theme-specific, and optionally the core API resx paths.",
+    "signature": "public IEncodedString AddProcessDataResx(AppThemeLimpet appTheme, bool includeAPIresx = false)",
+    "parameters": [
+      { "name": "appTheme", "type": "AppThemeLimpet", "description": "The application theme object." },
+      { "name": "includeAPIresx", "type": "bool", "description": "If true, includes the core DNNrocket API resource path." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.AddProcessDataResx(appTheme, true)"
+  },
+  {
+    "type": "razor-token",
+    "name": "DropDownLanguageList",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a dropdown list of enabled languages for the portal, with flags.",
+    "signature": "public IEncodedString DropDownLanguageList(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object containing the data." },
+      { "name": "xpath", "type": "String", "description": "The XPath expression to the data field." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes to apply to the select element." },
+      { "name": "defaultValue", "type": "String", "description": "The default value to select." },
+      { "name": "localized", "type": "bool", "description": "Indicates if the data is localized." },
+      { "name": "row", "type": "int", "description": "The row index for list data." },
+      { "name": "listname", "type": "string", "description": "The name of the list if applicable." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.DropDownLanguageList(Model.Info, \"genxml/dropdown/language\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DropDownCurrencyList",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a dropdown list of available currencies.",
+    "signature": "public IEncodedString DropDownCurrencyList(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object containing the data." },
+      { "name": "xpath", "type": "String", "description": "The XPath expression to the data field." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes to apply to the select element." },
+      { "name": "defaultValue", "type": "String", "description": "The default value to select." },
+      { "name": "localized", "type": "bool", "description": "Indicates if the data is localized." },
+      { "name": "row", "type": "int", "description": "The row index for list data." },
+      { "name": "listname", "type": "string", "description": "The name of the list if applicable." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.DropDownCurrencyList(Model.Info, \"genxml/dropdown/currency\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DropDownCultureCodeList",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a dropdown list of culture codes for the portal.",
+    "signature": "public IEncodedString DropDownCultureCodeList(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object containing the data." },
+      { "name": "xpath", "type": "String", "description": "The XPath expression to the data field." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes to apply to the select element." },
+      { "name": "defaultValue", "type": "String", "description": "The default value to select." },
+      { "name": "localized", "type": "bool", "description": "Indicates if the data is localized." },
+      { "name": "row", "type": "int", "description": "The row index for list data." },
+      { "name": "listname", "type": "string", "description": "The name of the list if applicable." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.DropDownCultureCodeList(Model.Info, \"genxml/dropdown/culturecode\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DropDownCountryCodeList",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a dropdown list of country codes.",
+    "signature": "public IEncodedString DropDownCountryCodeList(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object containing the data." },
+      { "name": "xpath", "type": "String", "description": "The XPath expression to the data field." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes to apply to the select element." },
+      { "name": "defaultValue", "type": "String", "description": "The default value to select." },
+      { "name": "localized", "type": "bool", "description": "Indicates if the data is localized." },
+      { "name": "row", "type": "int", "description": "The row index for list data." },
+      { "name": "listname", "type": "string", "description": "The name of the list if applicable." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.DropDownCountryCodeList(Model.Info, \"genxml/dropdown/countrycode\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DropDownSystemKeyList",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a dropdown list of active system keys.",
+    "signature": "public IEncodedString DropDownSystemKeyList(SimplisityInfo info, String xpath, String attributes = \"\", String defaultValue = \"\", bool localized = false, int row = 0, string listname = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object containing the data." },
+      { "name": "xpath", "type": "String", "description": "The XPath expression to the data field." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes to apply to the select element." },
+      { "name": "defaultValue", "type": "String", "description": "The default value to select." },
+      { "name": "localized", "type": "bool", "description": "Indicates if the data is localized." },
+      { "name": "row", "type": "int", "description": "The row index for list data." },
+      { "name": "listname", "type": "string", "description": "The name of the list if applicable." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.DropDownSystemKeyList(Model.Info, \"genxml/dropdown/systemkey\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "ResourceCSV",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Output CSV list of resx values. Example: @ResourceCSV(\"RocketIntra\", \"test1,test2,test3\")",
+    "signature": "public IEncodedString ResourceCSV(String resourceFileKey, string keyListCSV, string lang = \"\", string resourceExtension = \"Text\")",
+    "parameters": [
+      { "name": "resourceFileKey", "type": "String", "description": "The base name of the resource file." },
+      { "name": "keyListCSV", "type": "string", "description": "A comma-separated list of resource keys." },
+      { "name": "lang", "type": "string", "description": "Optional language code." },
+      { "name": "resourceExtension", "type": "string", "description": "The resource extension to use, defaults to 'Text'." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ResourceCSV(\"MyResources\", \"key1,key2,key3\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "ButtonTextIcon",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a button with text followed by an icon, based on a button type.",
+    "signature": "public IEncodedString ButtonTextIcon(ButtonTypes buttontype, String lang = \"\")",
+    "parameters": [
+      { "name": "buttontype", "type": "ButtonTypes", "description": "The type of the button (e.g., Save, Cancel, Edit)." },
+      { "name": "lang", "type": "String", "description": "Optional language code." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ButtonTextIcon(ButtonTypes.Save)"
+  },
+  {
+    "type": "razor-token",
+    "name": "ButtonIconText",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a button with an icon followed by text, based on a button type.",
+    "signature": "public IEncodedString ButtonIconText(ButtonTypes buttontype, String lang = \"\")",
+    "parameters": [
+      { "name": "buttontype", "type": "ButtonTypes", "description": "The type of the button (e.g., Save, Cancel, Edit)." },
+      { "name": "lang", "type": "String", "description": "Optional language code." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ButtonIconText(ButtonTypes.Save)"
+  },
+  {
+    "type": "razor-token",
+    "name": "ButtonText",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a button with an icon followed by text.",
+    "signature": "public IEncodedString ButtonText(ButtonTypes buttontype, String lang = \"\")",
+    "parameters": [
+      { "name": "buttontype", "type": "ButtonTypes", "description": "The type of the button (e.g., Save, Cancel, Edit)." },
+      { "name": "lang", "type": "String", "description": "Optional language code." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ButtonText(ButtonTypes.Delete)"
+  },
+  {
+    "type": "razor-token",
+    "name": "ButtonIcon",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a button with only an icon, using the button text as the title attribute for accessibility.",
+    "signature": "public IEncodedString ButtonIcon(ButtonTypes buttontype, String lang = \"\")",
+    "parameters": [
+      { "name": "buttontype", "type": "ButtonTypes", "description": "The type of the button (e.g., Save, Cancel, Edit)." },
+      { "name": "lang", "type": "String", "description": "Optional language code." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ButtonIcon(ButtonTypes.Edit)"
+  },
+  {
+    "type": "razor-token",
+    "name": "ResourceKeyMod",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Gets a resource string, automatically prepending the key with a module reference and an underscore.",
+    "signature": "public IEncodedString ResourceKeyMod(String moduleRef, String resourceFileKey, String lang = \"\", String resourceExtension = \"Text\")",
+    "parameters": [
+      { "name": "moduleRef", "type": "String", "description": "The module reference string." },
+      { "name": "resourceFileKey", "type": "String", "description": "The resource key." },
+      { "name": "lang", "type": "String", "description": "Optional language code." },
+      { "name": "resourceExtension", "type": "String", "description": "Optional resource extension (default is 'Text')." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ResourceKeyMod(\"MyModRef\", \"MyKey\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "ResourceKey",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Gets a resource string from the resource paths previously added via AddProcessDataResx.",
+    "signature": "public IEncodedString ResourceKey(String resourceFileKey, String lang = \"\", String resourceExtension = \"Text\")",
+    "parameters": [
+      { "name": "resourceFileKey", "type": "String", "description": "The resource key." },
+      { "name": "lang", "type": "String", "description": "Optional language code." },
+      { "name": "resourceExtension", "type": "String", "description": "Optional resource extension (default is 'Text')." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ResourceKey(\"WelcomeMessage\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "ResourceKeyJS",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Gets a resource string and escapes single quotes for safe use within JavaScript code.",
+    "signature": "public IEncodedString ResourceKeyJS(String resourceFileKey, String lang = \"\", String resourceExtension = \"Text\")",
+    "parameters": [
+      { "name": "resourceFileKey", "type": "String", "description": "The resource key." },
+      { "name": "lang", "type": "String", "description": "Optional language code." },
+      { "name": "resourceExtension", "type": "String", "description": "Optional resource extension (default is 'Text')." }
+    ],
+    "returns": "IEncodedString",
+    "example": "var message = '@DnnRocket.ResourceKeyJS(\"AlertMessage\")';"
+  },
+  {
+    "type": "razor-token",
+    "name": "RenderLanguageSelector",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a language selector component with a dictionary for selector fields.",
+    "signature": "public IEncodedString RenderLanguageSelector(string scmd, Dictionary<string, string> sfieldDict, AppThemeSystemLimpet appThemeSystem, SimplisityRazor model)",
+    "parameters": [
+      { "name": "scmd", "type": "string", "description": "The Simplisity command to execute on language change." },
+      { "name": "sfieldDict", "type": "Dictionary<string, string>", "description": "A dictionary of fields to pass with the command." },
+      { "name": "appThemeSystem", "type": "AppThemeSystemLimpet", "description": "The system's app theme." },
+      { "name": "model", "type": "SimplisityRazor", "description": "The current Razor model." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.RenderLanguageSelector(\"changelang\", new Dictionary<string, string>(), appThemeSystem, Model)"
+  },
+  {
+    "type": "razor-token",
+    "name": "RenderRemoteLanguageSelector",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a remote language selector component.",
+    "signature": "public IEncodedString RenderRemoteLanguageSelector(string scmd, string sfields, AppThemeSystemLimpet appThemeSystem, SimplisityRazor model)",
+    "parameters": [
+      { "name": "scmd", "type": "string", "description": "The Simplisity command." },
+      { "name": "sfields", "type": "string", "description": "JSON string of fields." },
+      { "name": "appThemeSystem", "type": "AppThemeSystemLimpet", "description": "The system's app theme." },
+      { "name": "model", "type": "SimplisityRazor", "description": "The current Razor model." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.RenderRemoteLanguageSelector(\"changelang\", \"{}\", appThemeSystem, Model)"
+  },
+  {
+    "type": "razor-token",
+    "name": "RenderTemplate",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a Razor template string with the given model.",
+    "signature": "public IEncodedString RenderTemplate(string razorTemplate, SimplisityRazor model, bool debugMode = false)",
+    "parameters": [
+      { "name": "razorTemplate", "type": "string", "description": "The full Razor template content as a string." },
+      { "name": "model", "type": "SimplisityRazor", "description": "The model to pass to the template." },
+      { "name": "debugMode", "type": "bool", "description": "If true, enables debug mode for rendering." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.RenderTemplate(\"<div>Hello @Model.Get('name')</div>\", myModel)"
+  },
+  {
+    "type": "razor-token",
+    "name": "RenderPlugin",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a plugin based on its registered interface key. The 'systemdata' object must be available in the model.",
+    "signature": "public IEncodedString RenderPlugin(string interfaceKey, string cmd, SimplisityRazor model)",
+    "parameters": [
+      { "name": "interfaceKey", "type": "string", "description": "The interface key of the plugin to render." },
+      { "name": "cmd", "type": "string", "description": "The command to pass to the plugin's RenderToken method." },
+      { "name": "model", "type": "SimplisityRazor", "description": "The model to pass to the plugin." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.RenderPlugin(\"myplugin\", \"showdetails\", Model)"
+  },
+  {
+    "type": "razor-token",
+    "name": "RenderXml",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a display of the XML model from a SimplisityInfo object for debugging purposes.",
+    "signature": "public IEncodedString RenderXml(SimplisityInfo info, string xmlidx = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object containing the XML data." },
+      { "name": "xmlidx", "type": "string", "description": "Optional index for the XML." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.RenderXml(Model.Info)"
+  },
+  {
+    "type": "razor-token",
+    "name": "RenderImageSelect",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders an image selection interface.",
+    "signature": "public IEncodedString RenderImageSelect(string systemKey, string imageFolderRel, bool singleselect = true, bool autoreturn = false)",
+    "parameters": [
+      { "name": "systemKey", "type": "string", "description": "The system key." },
+      { "name": "imageFolderRel", "type": "string", "description": "The relative path to the image folder." },
+      { "name": "singleselect", "type": "bool", "description": "True for single image selection, false for multi-select." },
+      { "name": "autoreturn", "type": "bool", "description": "True to automatically return after selection." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.RenderImageSelect(\"mysystem\", \"/Portals/0/Images\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "RenderDocumentSelect",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a document selection interface.",
+    "signature": "public IEncodedString RenderDocumentSelect(string systemKey, string docFolderRel, bool singleselect = true, bool autoreturn = false)",
+    "parameters": [
+      { "name": "systemKey", "type": "string", "description": "The system key." },
+      { "name": "docFolderRel", "type": "string", "description": "The relative path to the document folder." },
+      { "name": "singleselect", "type": "bool", "description": "True for single document selection, false for multi-select." },
+      { "name": "autoreturn", "type": "bool", "description": "True to automatically return after selection." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.RenderDocumentSelect(\"mysystem\", \"/Portals/0/Documents\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "TranslationLock",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a lock/unlock icon for managing the translation state of a field. It includes a hidden checkbox to store the state.",
+    "signature": "public IEncodedString TranslationLock(SimplisityInfo info, string xpath, bool active = true, int row = 0)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object." },
+      { "name": "xpath", "type": "string", "description": "The XPath to the data field." },
+      { "name": "active", "type": "bool", "description": "If false, only shows the current state without interaction." },
+      { "name": "row", "type": "int", "description": "The row index for list data." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.TranslationLock(Model.Info, \"genxml/textbox/title\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "Translate",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a translation icon that can be clicked to trigger a translation action for a specific field.",
+    "signature": "public IEncodedString Translate(SimplisityInfo info, string xpath, bool active = true, int row = 0)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object." },
+      { "name": "xpath", "type": "string", "description": "The XPath to the data field to be translated." },
+      { "name": "active", "type": "bool", "description": "If false, the icon is not rendered." },
+      { "name": "row", "type": "int", "description": "The row index for list data." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.Translate(Model.Info, \"genxml/textbox/summary\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "TranslationKeyUp",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Generates an 'onkeyup' HTML attribute. When the user types in a field, this script will automatically set the corresponding translation lock to 'locked'.",
+    "signature": "public IEncodedString TranslationKeyUp(string fieldId, bool active = true, int row = 0)",
+    "parameters": [
+      { "name": "fieldId", "type": "string", "description": "The base ID of the input field." },
+      { "name": "active", "type": "bool", "description": "If false, returns an empty string." },
+      { "name": "row", "type": "int", "description": "The row index, used to create a unique ID." }
+    ],
+    "returns": "IEncodedString",
+    "example": "<input type='text' @DnnRocket.TranslationKeyUp(\"title\") />"
+  },
+  {
+    "type": "razor-token",
+    "name": "EditFlag",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Displays the flag image for the current editing culture code from session parameters.",
+    "signature": "public IEncodedString EditFlag(SessionParams sessionParams, string classvalues = \"\")",
+    "parameters": [
+      { "name": "sessionParams", "type": "SessionParams", "description": "The current session parameters object." },
+      { "name": "classvalues", "type": "string", "description": "CSS classes to apply to the img tag." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.EditFlag(Model.SessionParams, \"my-flag-class\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DisplayFlag",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Displays a flag image for a given culture code, if the image file exists.",
+    "signature": "public IEncodedString DisplayFlag(string cultureCode, string classvalues = \"\")",
+    "parameters": [
+      { "name": "cultureCode", "type": "string", "description": "The culture code for the flag (e.g., 'en-US')." },
+      { "name": "classvalues", "type": "string", "description": "CSS classes to apply to the img tag." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.DisplayFlag(\"fr-FR\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DisplayEngineFlag",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Displays a flag image from a remote engine URL for a given culture code.",
+    "signature": "public IEncodedString DisplayEngineFlag(string engineUrl, string cultureCode, string classvalues = \"\")",
+    "parameters": [
+      { "name": "engineUrl", "type": "string", "description": "The base URL of the remote engine." },
+      { "name": "cultureCode", "type": "string", "description": "The culture code for the flag (e.g., 'en-US')." },
+      { "name": "classvalues", "type": "string", "description": "CSS classes to apply to the img tag." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.DisplayEngineFlag(\"https://myothersite.com\", \"de-DE\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "ImageUrl",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Display Thumbnail Image. Creates and returns a URL for a resized version of an image. Supports various output formats and cropping. By default, PNGs remain PNGs, and other formats are converted to WEBP. The cache holds a lock on the image file, so use DNNrocketUtils.ClearThumbnailLock() before deleting the original image.",
+    "signature": "public IEncodedString ImageUrl(string engineUrl, string imgRelPath, int width, int height, string imgType, bool cropCenter)",
+    "parameters": [
+      { "name": "engineUrl", "type": "string", "description": "Domain URL, used to get full URL image path. Can be empty for local images." },
+      { "name": "imgRelPath", "type": "string", "description": "The relative path to the source image." },
+      { "name": "width", "type": "int", "description": "The target width of the image. If 0, aspect ratio is maintained based on height." },
+      { "name": "height", "type": "int", "description": "The target height of the image. If 0, aspect ratio is maintained based on width." },
+      { "name": "imgType", "type": "string", "description": "Defines output type: empty, 'png', 'jpg'. Default is 'webp' for non-PNG images." },
+      { "name": "cropCenter", "type": "bool", "description": "If true, the image is cropped to the center to fit the dimensions." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ImageUrl(\"\", \"/Portals/0/my-image.jpg\", 200, 200, \"webp\", true)"
+  },
+  {
+    "type": "razor-token",
+    "name": "InjectHiddenFieldData",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders all nodes under 'genxml/hidden/*' as hidden input fields in the HTML. This is useful for passing data from the model to client-side scripts.",
+    "signature": "public IEncodedString InjectHiddenFieldData(SimplisityInfo sInfo)",
+    "parameters": [
+      { "name": "sInfo", "type": "SimplisityInfo", "description": "The SimplisityInfo object containing the data." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.InjectHiddenFieldData(Model.Info)"
+  },
+  {
+    "type": "razor-token",
+    "name": "CKEditor4legacy",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Legacy CKEditor 4 implementation. Consider using @Editor() instead.",
+    "signature": "public IEncodedString CKEditor4legacy(SimplisityInfo info, string xpath, bool localized = false, int row = 0, string listname = \"\", string langauge = \"\", bool coded = false, string filename = \"ckeditor4startup1.js\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object." },
+      { "name": "xpath", "type": "string", "description": "The XPath to the data field for the editor content." },
+      { "name": "localized", "type": "bool", "description": "Indicates if the data is localized." },
+      { "name": "row", "type": "int", "description": "The row index for list data." },
+      { "name": "listname", "type": "string", "description": "The name of the list if applicable." },
+      { "name": "langauge", "type": "string", "description": "Language code for the editor." },
+      { "name": "coded", "type": "bool", "description": "If true, uses coded text mode." },
+      { "name": "filename", "type": "string", "description": "The CKEditor startup script filename." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.CKEditor4legacy(Model.Info, \"genxml/richtext/content\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "Editor",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a rich text editor (defaulting to Jodit). The specific editor template can be configured in the portal settings or specified directly.",
+    "signature": "public IEncodedString Editor(SimplisityInfo info, string xpath, SimplisityRazor model, int row = 0, string listname = \"\", string editorRazorTemplate = \"EditorJoditDefault.cshtml\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object containing the data." },
+      { "name": "xpath", "type": "string", "description": "The XPath to the data field for the editor content." },
+      { "name": "model", "type": "SimplisityRazor", "description": "The current Razor model." },
+      { "name": "row", "type": "int", "description": "The row index for list data." },
+      { "name": "listname", "type": "string", "description": "The name of the list if applicable." },
+      { "name": "editorRazorTemplate", "type": "string", "description": "The name of the Razor template file for the editor." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.Editor(Model.Info, \"genxml/richtext/content\", Model)"
+  },
+  {
+    "type": "razor-token",
+    "name": "LinkInternalUrl",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Generates a URL for an internal DNN page (tab) with a specific culture code and optional extra parameters.",
+    "signature": "public IEncodedString LinkInternalUrl(int portalid, int tabid, string cultureCode, PortalSettings portalSettings = null, string[] extraparams = null)",
+    "parameters": [
+      { "name": "portalid", "type": "int", "description": "The ID of the portal." },
+      { "name": "tabid", "type": "int", "description": "The ID of the tab (page)." },
+      { "name": "cultureCode", "type": "string", "description": "The culture code for the URL." },
+      { "name": "portalSettings", "type": "PortalSettings", "description": "Optional. The current portal settings." },
+      { "name": "extraparams", "type": "string[]", "description": "Optional. An array of extra URL parameters." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.LinkInternalUrl(0, 55, \"en-US\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "TabSelectListOnTabId",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a dropdown list of portal tabs (pages), structured as a tree. The value of each option is the TabId.",
+    "signature": "public IEncodedString TabSelectListOnTabId(SimplisityInfo info, String xpath, String attributes = \"\", Boolean allowEmpty = true, bool localized = false, int row = 0, string listname = \"\", bool showAllTabs = false)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the data field to bind the selected tab ID." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes for the select element." },
+      { "name": "allowEmpty", "type": "Boolean", "description": "If true, includes an empty option." },
+      { "name": "localized", "type": "bool", "description": "Indicates if the data is localized." },
+      { "name": "row", "type": "int", "description": "The row index for list data." },
+      { "name": "listname", "type": "string", "description": "The name of the list if applicable." },
+      { "name": "showAllTabs", "type": "bool", "description": "If true, shows all tabs regardless of permissions." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.TabSelectListOnTabId(Model.Info, \"genxml/dropdown/pagelink\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "GetTabUrlByGuid",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Gets the URL for a tab by its unique GUID.",
+    "signature": "public IEncodedString GetTabUrlByGuid(String tabguid)",
+    "parameters": [
+      { "name": "tabguid", "type": "String", "description": "The GUID of the tab." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.GetTabUrlByGuid(\"a1b2c3d4-e5f6-7890-1234-567890abcdef\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "LinkPageURL",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Creates an anchor tag linking to an internal DNN page. The tab ID is read from a SimplisityInfo field.",
+    "signature": "public IEncodedString LinkPageURL(SimplisityInfo info, string xpath, bool openInNewWindow = true, string text = \"\", string attributes = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object." },
+      { "name": "xpath", "type": "string", "description": "The XPath to the field containing the tab ID." },
+      { "name": "openInNewWindow", "type": "bool", "description": "If true, adds target='_blank' to the link." },
+      { "name": "text", "type": "string", "description": "The link text. If empty, the URL is used." },
+      { "name": "attributes", "type": "string", "description": "Additional HTML attributes for the anchor tag." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.LinkPageURL(Model.Info, \"genxml/data/linkedpageid\", text: \"Read More\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "LinkURL",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Creates an anchor tag for a URL stored in a SimplisityInfo field. Automatically handles adding 'https://' if missing.",
+    "signature": "public IEncodedString LinkURL(SimplisityInfo info, string xpath, bool openInNewWindow = true, string text = \"\", string attributes = \"\")",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object." },
+      { "name": "xpath", "type": "string", "description": "The XPath to the field containing the URL." },
+      { "name": "openInNewWindow", "type": "bool", "description": "If true, adds target='_blank' to the link." },
+      { "name": "text", "type": "string", "description": "The link text. If empty, the URL without scheme is used." },
+      { "name": "attributes", "type": "string", "description": "Additional HTML attributes for the anchor tag." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.LinkURL(Model.Info, \"genxml/textbox/websiteurl\", true, \"Visit Website\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "DataSourceList",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a dropdown list of data sources (MODULEPARAMS) for a given system key.",
+    "signature": "public IEncodedString DataSourceList(SimplisityInfo info, int systemkey, string xpath, string attributes = \"\", bool allowEmpty = true, bool localized = false)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object." },
+      { "name": "systemkey", "type": "int", "description": "The system key to filter data sources." },
+      { "name": "xpath", "type": "string", "description": "The XPath to the data field." },
+      { "name": "attributes", "type": "string", "description": "HTML attributes for the select element." },
+      { "name": "allowEmpty", "type": "bool", "description": "If true, includes an empty option." },
+      { "name": "localized", "type": "bool", "description": "Indicates if the data is localized." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.DataSourceList(Model.Info, 1, \"genxml/dropdown/datasource\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "GetTreeTabList",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Generates a tree-structured HTML list of portal tabs with checkboxes for selection.",
+    "signature": "public IEncodedString GetTreeTabList(int portalId, List<int> selectedTabIdList, string treeviewId, string lang = \"\", string attributes = \"\", bool showAllTabs = false)",
+    "parameters": [
+      { "name": "portalId", "type": "int", "description": "The ID of the portal." },
+      { "name": "selectedTabIdList", "type": "List<int>", "description": "A list of tab IDs that should be pre-selected." },
+      { "name": "treeviewId", "type": "string", "description": "The ID for the tree view element." },
+      { "name": "lang", "type": "string", "description": "The language code. If empty, uses the current culture." },
+      { "name": "attributes", "type": "string", "description": "HTML attributes for the ul element." },
+      { "name": "showAllTabs", "type": "bool", "description": "If true, shows all tabs regardless of permissions." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.GetTreeTabList(0, new List<int>(), \"mytree\")"
+  },
+  {
+    "type": "razor-token",
+    "name": "ModSelectList",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Renders a dropdown list of modules for a given portal, showing module references.",
+    "signature": "public IEncodedString ModSelectList(SimplisityInfo info, String xpath, int portalId, String attributes = \"\", bool addEmpty = true)",
+    "parameters": [
+      { "name": "info", "type": "SimplisityInfo", "description": "The SimplisityInfo object." },
+      { "name": "xpath", "type": "String", "description": "The XPath to the data field." },
+      { "name": "portalId", "type": "int", "description": "The ID of the portal." },
+      { "name": "attributes", "type": "String", "description": "HTML attributes for the select element." },
+      { "name": "addEmpty", "type": "bool", "description": "If true, includes an empty option." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.ModSelectList(Model.Info, \"genxml/dropdown/moduleid\", 0)"
+  },
+  {
+    "type": "razor-token",
+    "name": "CheckBoxRowECOMode",
+    "source_file": "API/render/DNNrocketTokens.cs",
+    "description": "Creates a checkbox for ECOMode in the settings of a module.",
+    "signature": "public IEncodedString CheckBoxRowECOMode(SimplisityInfo rowData, bool defaultValue = true)",
+    "parameters": [
+      { "name": "rowData", "type": "SimplisityInfo", "description": "The row data." },
+      { "name": "defaultValue", "type": "bool", "description": "Default value for the checkbox." }
+    ],
+    "returns": "IEncodedString",
+    "example": "@DnnRocket.CheckBoxRowECOMode(Model.Info)"
+  }
+]
