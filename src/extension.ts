@@ -6,6 +6,11 @@ import * as https from 'https';
 export function activate(context: vscode.ExtensionContext) {
     console.log('Rocket Intelli extension is now active!');
 
+    // Use global storage for runtime token downloads because extension install folders
+    // can be read-only on some machines/setups.
+    const tokenStorageDir = path.join(context.globalStorageUri.fsPath, 'tokens');
+    fs.mkdirSync(tokenStorageDir, { recursive: true });
+
     const tokenUrls = [
         'https://docs.rocket-cds.org/razortokens/DNNrocketTokens.json',
         'https://docs.rocket-cds.org/razortokens/DNNrocketUtils.json',
@@ -24,11 +29,25 @@ export function activate(context: vscode.ExtensionContext) {
         const downloadPromises = tokenUrls.map(url => {
             return new Promise<void>((resolve, reject) => {
                 const fileName = path.basename(url);
-                const filePath = path.join(context.extensionPath, 'src', fileName);
+                const filePath = path.join(tokenStorageDir, fileName);
                 const file = fs.createWriteStream(filePath);
 
                 https.get(url, (response) => {
-                    if (response.statusCode === 200) {
+                    if (response.statusCode && response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
+                        // Handle redirects from CDNs/proxies.
+                        https.get(response.headers.location, (redirectedResponse) => {
+                            if (redirectedResponse.statusCode === 200) {
+                                redirectedResponse.pipe(file);
+                                file.on('finish', () => {
+                                    file.close(() => resolve());
+                                });
+                            } else {
+                                fs.unlink(filePath, () => reject(`Failed to download ${fileName}: Redirect target responded with ${redirectedResponse.statusCode}`));
+                            }
+                        }).on('error', (err) => {
+                            fs.unlink(filePath, () => reject(`Failed to download ${fileName}: ${err.message}`));
+                        });
+                    } else if (response.statusCode === 200) {
                         response.pipe(file);
                         file.on('finish', () => {
                             file.close(() => resolve());
@@ -54,32 +73,36 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Function to load tokens from all local JSON files (with deduplication)
     const loadTokens = () => {
-        const tokenDir = path.join(context.extensionPath, 'src');
+        const bundledTokenDir = path.join(context.extensionPath, 'src');
+        const tokenDirs = [tokenStorageDir, bundledTokenDir];
         const allTokens: any[] = [];
         const seen = new Set<string>();
 
-        if (fs.existsSync(tokenDir)) {
-            const files = fs.readdirSync(tokenDir);
-            files.forEach(file => {
-                if (path.extname(file) === '.json' && (file.endsWith('Tokens.json') || file.endsWith('Utils.json'))) {
-                    const tokenFilePath = path.join(tokenDir, file);
-                    try {
-                        const tokenContent = fs.readFileSync(tokenFilePath, 'utf8');
-                        const tokens = JSON.parse(tokenContent);
-                        if (Array.isArray(tokens)) {
-                            tokens.forEach((token: any) => {
-                                if (token.name && !seen.has(token.name)) {
-                                    seen.add(token.name);
-                                    allTokens.push(token);
-                                }
-                            });
+        tokenDirs.forEach((tokenDir) => {
+            if (fs.existsSync(tokenDir)) {
+                const files = fs.readdirSync(tokenDir);
+                files.forEach(file => {
+                    if (path.extname(file) === '.json' && (file.endsWith('Tokens.json') || file.endsWith('Utils.json'))) {
+                        const tokenFilePath = path.join(tokenDir, file);
+                        try {
+                            const tokenContent = fs.readFileSync(tokenFilePath, 'utf8');
+                            const tokens = JSON.parse(tokenContent);
+                            if (Array.isArray(tokens)) {
+                                tokens.forEach((token: any) => {
+                                    if (token.name && !seen.has(token.name)) {
+                                        seen.add(token.name);
+                                        allTokens.push(token);
+                                    }
+                                });
+                            }
+                        } catch (error) {
+                            console.error(`Error reading or parsing ${file}:`, error);
                         }
-                    } catch (error) {
-                        console.error(`Error reading or parsing ${file}:`, error);
                     }
-                }
-            });
-        }
+                });
+            }
+        });
+
         return allTokens;
     };
 

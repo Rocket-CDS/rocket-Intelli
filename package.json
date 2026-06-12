@@ -15,8 +15,11 @@
     "Programming Languages"
   ],
   "activationEvents": [
+    "onStartupFinished",
+    "onCommand:rocket-intelli.downloadTokenFile",
     "onLanguage:razor",
-    "onLanguage:cshtml"
+    "onLanguage:cshtml",
+    "onLanguage:aspnetcorerazor"
   ],
   "main": "./out/extension.js",
   "contributes": {
