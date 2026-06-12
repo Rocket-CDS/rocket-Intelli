@@ -12,9 +12,8 @@ export function activate(context: vscode.ExtensionContext) {
         'https://docs.rocket-cds.org/razortokens/RazorEngineTokens.json',
         'https://docs.rocket-cds.org/razortokens/GeneralUtils.json',
         'https://docs.rocket-cds.org/razortokens/UserUtils.json',
-        'https://docs.rocket-cds.org/razortokens/RocketBlogTokens.json',
-        'https://docs.rocket-cds.org/razortokens/RocketContentAPITokens.json',
-        'https://docs.rocket-cds.org/razortokens/RocketDirectoryAPITokens.json',
+        'https://docs.rocket-cds.org/razortokens/RocketContentTokens.json',
+        'https://docs.rocket-cds.org/razortokens/RocketDirectoryTokens.json',
         'https://docs.rocket-cds.org/razortokens/RocketEventsTokens.json',
         'https://docs.rocket-cds.org/razortokens/RocketFormsTokens.json'
     ];
