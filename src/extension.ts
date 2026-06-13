@@ -23,9 +23,58 @@ export function activate(context: vscode.ExtensionContext) {
         'https://docs.rocket-cds.org/razortokens/RocketFormsTokens.json'
     ];
 
-    // Command to download the token files
-    let downloadCommand = vscode.commands.registerCommand('rocket-intelli.downloadTokenFile', () => {
-        vscode.window.showInformationMessage('Downloading token files...');
+    const getTokenJsonFiles = (dir: string): string[] => {
+        if (!fs.existsSync(dir)) {
+            return [];
+        }
+
+        return fs.readdirSync(dir).filter(file => {
+            return path.extname(file) === '.json' && (file.endsWith('Tokens.json') || file.endsWith('Utils.json'));
+        });
+    };
+
+    // Function to load tokens from all local JSON files (with deduplication)
+    const loadTokens = () => {
+        const bundledTokenDir = path.join(context.extensionPath, 'src');
+        const tokenDirs = [tokenStorageDir, bundledTokenDir];
+        const allTokens: any[] = [];
+        const seen = new Set<string>();
+
+        tokenDirs.forEach((tokenDir) => {
+            if (fs.existsSync(tokenDir)) {
+                const files = fs.readdirSync(tokenDir);
+                files.forEach(file => {
+                    if (path.extname(file) === '.json' && (file.endsWith('Tokens.json') || file.endsWith('Utils.json'))) {
+                        const tokenFilePath = path.join(tokenDir, file);
+                        try {
+                            const tokenContent = fs.readFileSync(tokenFilePath, 'utf8');
+                            const tokens = JSON.parse(tokenContent);
+                            if (Array.isArray(tokens)) {
+                                tokens.forEach((token: any) => {
+                                    if (token.name && !seen.has(token.name)) {
+                                        seen.add(token.name);
+                                        allTokens.push(token);
+                                    }
+                                });
+                            }
+                        } catch (error) {
+                            console.error(`Error reading or parsing ${file}:`, error);
+                        }
+                    }
+                });
+            }
+        });
+
+        return allTokens;
+    };
+
+    let allTokens = loadTokens();
+
+    const downloadTokenFiles = (showNotifications: boolean) => {
+        if (showNotifications) {
+            vscode.window.showInformationMessage('Downloading token files...');
+        }
+
         const downloadPromises = tokenUrls.map(url => {
             return new Promise<void>((resolve, reject) => {
                 const fileName = path.basename(url);
@@ -63,50 +112,39 @@ export function activate(context: vscode.ExtensionContext) {
 
         Promise.all(downloadPromises)
             .then(() => {
-                vscode.window.showInformationMessage('All token files have been downloaded successfully.');
+                allTokens = loadTokens();
+                if (showNotifications) {
+                    vscode.window.showInformationMessage('Rocket token files have been downloaded and updated.');
+                }
             })
             .catch((error) => {
-                vscode.window.showErrorMessage(error);
+                const message = typeof error === 'string' ? error : String(error);
+                if (showNotifications) {
+                    vscode.window.showErrorMessage(message);
+                } else {
+                    console.error('Rocket Intelli token auto-download failed:', message);
+                }
             });
+    };
+
+    // Command to download/update token files
+    let downloadCommand = vscode.commands.registerCommand('rocket-intelli.downloadTokenFile', () => {
+        downloadTokenFiles(true);
     });
     context.subscriptions.push(downloadCommand);
 
-    // Function to load tokens from all local JSON files (with deduplication)
-    const loadTokens = () => {
-        const bundledTokenDir = path.join(context.extensionPath, 'src');
-        const tokenDirs = [tokenStorageDir, bundledTokenDir];
-        const allTokens: any[] = [];
-        const seen = new Set<string>();
+    // Easy-to-find button to manually download/update token files.
+    const downloadStatusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
+    downloadStatusBarItem.command = 'rocket-intelli.downloadTokenFile';
+    downloadStatusBarItem.text = '$(cloud-download) Rocket Tokens';
+    downloadStatusBarItem.tooltip = 'Download or update Rocket Intelli token JSON files';
+    downloadStatusBarItem.show();
+    context.subscriptions.push(downloadStatusBarItem);
 
-        tokenDirs.forEach((tokenDir) => {
-            if (fs.existsSync(tokenDir)) {
-                const files = fs.readdirSync(tokenDir);
-                files.forEach(file => {
-                    if (path.extname(file) === '.json' && (file.endsWith('Tokens.json') || file.endsWith('Utils.json'))) {
-                        const tokenFilePath = path.join(tokenDir, file);
-                        try {
-                            const tokenContent = fs.readFileSync(tokenFilePath, 'utf8');
-                            const tokens = JSON.parse(tokenContent);
-                            if (Array.isArray(tokens)) {
-                                tokens.forEach((token: any) => {
-                                    if (token.name && !seen.has(token.name)) {
-                                        seen.add(token.name);
-                                        allTokens.push(token);
-                                    }
-                                });
-                            }
-                        } catch (error) {
-                            console.error(`Error reading or parsing ${file}:`, error);
-                        }
-                    }
-                });
-            }
-        });
-
-        return allTokens;
-    };
-
-    const allTokens = loadTokens();
+    // First install/first run: auto-download only when storage has no token JSON.
+    if (getTokenJsonFiles(tokenStorageDir).length === 0) {
+        downloadTokenFiles(false);
+    }
 
     // Register completion provider for Razor/CSHTML files
     const completionProvider = vscode.languages.registerCompletionItemProvider(
