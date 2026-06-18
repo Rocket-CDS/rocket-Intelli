@@ -2,19 +2,22 @@
   {
     "type": "csharp-method",
     "name": "Handle404Exception",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Handles a 404 Not Found error by redirecting to the portal's defined 404 page or by returning a standard 404 response.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Handles a 404 Not Found error by redirecting to the portal\u0027s defined 404 page or by returning a standard 404 response.",
     "signature": "public static void Handle404Exception(HttpResponse response, PortalSettings portalSetting)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "response",
         "type": "HttpResponse",
-        "description": "The current HTTP response object."
+        "description": ""
       },
       {
         "name": "portalSetting",
         "type": "PortalSettings",
-        "description": "The settings of the current portal."
+        "description": ""
       }
     ],
     "returns": "void"
@@ -22,24 +25,27 @@
   {
     "type": "csharp-method",
     "name": "AppendFileModifiedDate",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Appends a version number based on the file's last modified date to a relative path. Useful for cache-busting CSS and JS files.",
-    "signature": "public static string AppendFileModifiedDate(string relPath, string paramname = \"v\", bool useCache = true)",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Appends a version number based on the file\u0027s last modified date to a relative path. Useful for cache-busting CSS and JS files.",
+    "signature": "public static string AppendFileModifiedDate(string relPath, string paramname = \u0022v\u0022, bool useCache = true)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "relPath",
         "type": "string",
-        "description": "The relative path to the file."
+        "description": ""
       },
       {
         "name": "paramname",
         "type": "string",
-        "description": "The name of the query string parameter to add (default is 'v')."
+        "description": ""
       },
       {
         "name": "useCache",
         "type": "bool",
-        "description": "Whether to use caching for the generated URL."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -47,34 +53,40 @@
   {
     "type": "csharp-method",
     "name": "ReturnString",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Creates a dictionary for a standard API response, containing an HTML output string and an optional JSON object.",
-    "signature": "public static Dictionary<string, object> ReturnString(string strOut, object jsonOut = null)",
+    "signature": "public static Dictionary\u003Cstring, object\u003E ReturnString(string strOut, object jsonOut = null)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "strOut",
         "type": "string",
-        "description": "The HTML string for the 'outputhtml' key."
+        "description": ""
       },
       {
         "name": "jsonOut",
         "type": "object",
-        "description": "The JSON object for the 'outputjson' key."
+        "description": ""
       }
     ],
-    "returns": "Dictionary<string, object>"
+    "returns": "Dictionary\u003Cstring, object\u003E"
   },
   {
     "type": "csharp-method",
     "name": "HtmlOf",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Decodes an HTML-encoded string.",
     "signature": "public static string HtmlOf(String htmlString)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "htmlString",
         "type": "String",
-        "description": "The HTML string to decode."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -82,14 +94,17 @@
   {
     "type": "csharp-method",
     "name": "HtmlDecode",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Decodes an HTML-encoded string.",
     "signature": "public static string HtmlDecode(String htmlString)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "htmlString",
         "type": "String",
-        "description": "The HTML string to decode."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -97,14 +112,17 @@
   {
     "type": "csharp-method",
     "name": "HtmlEncode",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Encodes a plain text string into an HTML-safe string.",
     "signature": "public static string HtmlEncode(String planStr)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "planStr",
         "type": "String",
-        "description": "The plain text string to encode."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -112,19 +130,45 @@
   {
     "type": "csharp-method",
     "name": "RequestParam",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a request parameter from the form or query string.",
     "signature": "public static string RequestParam(HttpContextBase context, string paramName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "context",
         "type": "HttpContextBase",
-        "description": "The HTTP context."
+        "description": ""
       },
       {
         "name": "paramName",
         "type": "string",
-        "description": "The name of the parameter to retrieve."
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RequestParam",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string RequestParam(HttpContextWrapper context, string paramName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "context",
+        "type": "HttpContextWrapper",
+        "description": ""
+      },
+      {
+        "name": "paramName",
+        "type": "string",
+        "description": ""
       }
     ],
     "returns": "string"
@@ -132,19 +176,114 @@
   {
     "type": "csharp-method",
     "name": "RequestQueryStringParam",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a request parameter from the query string.",
     "signature": "public static string RequestQueryStringParam(HttpRequestBase Request, string paramName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "Request",
         "type": "HttpRequestBase",
-        "description": "The HTTP request."
+        "description": ""
       },
       {
         "name": "paramName",
         "type": "string",
-        "description": "The name of the parameter to retrieve."
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RequestQueryStringParam",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string RequestQueryStringParam(HttpContextWrapper context, string paramName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "context",
+        "type": "HttpContextWrapper",
+        "description": ""
+      },
+      {
+        "name": "paramName",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RequestParam",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string RequestParam(HttpContext context, string paramName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "context",
+        "type": "HttpContext",
+        "description": ""
+      },
+      {
+        "name": "paramName",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RequestQueryStringParam",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string RequestQueryStringParam(HttpRequest Request, string paramName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "Request",
+        "type": "HttpRequest",
+        "description": ""
+      },
+      {
+        "name": "paramName",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RequestQueryStringParam",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string RequestQueryStringParam(HttpContext context, string paramName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "context",
+        "type": "HttpContext",
+        "description": ""
+      },
+      {
+        "name": "paramName",
+        "type": "string",
+        "description": ""
       }
     ],
     "returns": "string"
@@ -152,19 +291,22 @@
   {
     "type": "csharp-method",
     "name": "ZipFolder",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Creates a zip archive from a folder.",
     "signature": "public static void ZipFolder(string folderMapPath, string zipFileMapPath)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "folderMapPath",
         "type": "string",
-        "description": "The physical path to the folder to be zipped."
+        "description": ""
       },
       {
         "name": "zipFileMapPath",
         "type": "string",
-        "description": "The physical path where the zip file will be created."
+        "description": ""
       }
     ],
     "returns": "void"
@@ -172,24 +314,27 @@
   {
     "type": "csharp-method",
     "name": "ExtractZipFolder",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Extracts a zip archive to a specified folder.",
     "signature": "public static void ExtractZipFolder(string zipFileMapPath, string outFolderMapPath, bool overwrite)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "zipFileMapPath",
         "type": "string",
-        "description": "The physical path to the zip file."
+        "description": ""
       },
       {
         "name": "outFolderMapPath",
         "type": "string",
-        "description": "The physical path to the output folder."
+        "description": ""
       },
       {
         "name": "overwrite",
         "type": "bool",
-        "description": "If true, existing files will be overwritten."
+        "description": ""
       }
     ],
     "returns": "void"
@@ -197,69 +342,81 @@
   {
     "type": "csharp-method",
     "name": "GetFiles",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a list of FileInfo objects for all files in a specified folder.",
-    "signature": "public static List<System.IO.FileInfo> GetFiles(string FolderMapPath)",
+    "signature": "public static List\u003CSystem.IO.FileInfo\u003E GetFiles(string FolderMapPath)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "FolderMapPath",
         "type": "string",
-        "description": "The physical path to the folder."
+        "description": ""
       }
     ],
-    "returns": "List<System.IO.FileInfo>"
+    "returns": "List\u003CSystem.IO.FileInfo\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetRegionList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a dictionary of regions for a given country code from a DNN list.",
-    "signature": "public static Dictionary<string, string> GetRegionList(string countrycode, string dnnlistname = \"Region\")",
+    "signature": "public static Dictionary\u003Cstring, string\u003E GetRegionList(string countrycode, string dnnlistname = \u0022Region\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "countrycode",
         "type": "string",
-        "description": "The country code."
+        "description": ""
       },
       {
         "name": "dnnlistname",
         "type": "string",
-        "description": "The name of the DNN list to query (default is 'Region')."
+        "description": ""
       }
     ],
-    "returns": "Dictionary<string, string>"
+    "returns": "Dictionary\u003Cstring, string\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetCountryCodeList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a dictionary of all country codes and their names for a given portal.",
-    "signature": "public static Dictionary<String, String> GetCountryCodeList(int portalId = -1)",
+    "signature": "public static Dictionary\u003CString, String\u003E GetCountryCodeList(int portalId = -1)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "portalId",
         "type": "int",
-        "description": "The portal ID. Defaults to the current portal."
+        "description": ""
       }
     ],
-    "returns": "Dictionary<String, String>"
+    "returns": "Dictionary\u003CString, String\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetCountryName",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the name of a country from its country code.",
     "signature": "public static string GetCountryName(string countryCode, int portalId = -1)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "countryCode",
         "type": "string",
-        "description": "The country code."
+        "description": ""
       },
       {
         "name": "portalId",
         "type": "int",
-        "description": "The portal ID. Defaults to the current portal."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -267,19 +424,22 @@
   {
     "type": "csharp-method",
     "name": "GetRegionName",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the name of a region from a combined country and region code key.",
-    "signature": "public static string GetRegionName(string countryRegionCodeKey, string dnnlistname = \"Region\")",
+    "signature": "public static string GetRegionName(string countryRegionCodeKey, string dnnlistname = \u0022Region\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "countryRegionCodeKey",
         "type": "string",
-        "description": "The combined key (e.g., 'Country.US:Region.TX')."
+        "description": ""
       },
       {
         "name": "dnnlistname",
         "type": "string",
-        "description": "The name of the DNN list (default is 'Region')."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -287,38 +447,47 @@
   {
     "type": "csharp-method",
     "name": "GetCultureCodeNameList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a dictionary of enabled culture codes and their native names for a portal.",
-    "signature": "public static Dictionary<string, string> GetCultureCodeNameList(int portalId = -1)",
+    "signature": "public static Dictionary\u003Cstring, string\u003E GetCultureCodeNameList(int portalId = -1)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "portalId",
         "type": "int",
-        "description": "The portal ID. Defaults to the current portal."
+        "description": ""
       }
     ],
-    "returns": "Dictionary<string, string>"
+    "returns": "Dictionary\u003Cstring, string\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetAllCultureCodeNameList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a dictionary of all culture codes and their display names available in the .NET framework.",
-    "signature": "public static Dictionary<string, string> GetAllCultureCodeNameList()",
+    "signature": "public static Dictionary\u003Cstring, string\u003E GetAllCultureCodeNameList()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
-    "returns": "Dictionary<string, string>"
+    "returns": "Dictionary\u003Cstring, string\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetCultureCodeName",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the display name for a given culture code.",
     "signature": "public static string GetCultureCodeName(string cultureCode)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "cultureCode",
         "type": "string",
-        "description": "The culture code (e.g., 'en-US')."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -326,78 +495,93 @@
   {
     "type": "csharp-method",
     "name": "GetCultureCodeList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a list of enabled culture codes for a portal.",
-    "signature": "public static List<string> GetCultureCodeList(int portalId = -1)",
+    "signature": "public static List\u003Cstring\u003E GetCultureCodeList(int portalId = -1)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "portalId",
         "type": "int",
-        "description": "The portal ID. Defaults to the current portal."
+        "description": ""
       }
     ],
-    "returns": "List<string>"
+    "returns": "List\u003Cstring\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetPortalLanguageList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets a list of unique two-letter language codes (e.g., 'en', 'fr') enabled for a portal.",
-    "signature": "public static List<string> GetPortalLanguageList(int portalId = -1)",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets a list of unique two-letter language codes (e.g., \u0027en\u0027, \u0027fr\u0027) enabled for a portal.",
+    "signature": "public static List\u003Cstring\u003E GetPortalLanguageList(int portalId = -1)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "portalId",
         "type": "int",
-        "description": "The portal ID. Defaults to the current portal."
+        "description": ""
       }
     ],
-    "returns": "List<string>"
+    "returns": "List\u003Cstring\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetCurrencyList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets a dictionary of available currencies for a portal from the 'Currency' DNN list.",
-    "signature": "public static Dictionary<string, string> GetCurrencyList(int portalId = -1)",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets a dictionary of available currencies for a portal from the \u0027Currency\u0027 DNN list.",
+    "signature": "public static Dictionary\u003Cstring, string\u003E GetCurrencyList(int portalId = -1)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "portalId",
         "type": "int",
-        "description": "The portal ID. Defaults to the current portal."
+        "description": ""
       }
     ],
-    "returns": "Dictionary<string, string>"
+    "returns": "Dictionary\u003Cstring, string\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetAllCultureCodeList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a list of SimplisityInfo objects representing all available .NET cultures, including display name, code, and a flag image URL.",
-    "signature": "public static List<SimplisityInfo> GetAllCultureCodeList()",
+    "signature": "public static List\u003CSimplisityInfo\u003E GetAllCultureCodeList()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
-    "returns": "List<SimplisityInfo>"
+    "returns": "List\u003CSimplisityInfo\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetDataResponseAsString",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Fetches the content of a URL as a string. Can optionally pass data in the request header.",
-    "signature": "public static string GetDataResponseAsString(string dataurl, string headerFieldId = \"\", string headerFieldData = \"\")",
+    "signature": "public static string GetDataResponseAsString(string dataurl, string headerFieldId = \u0022\u0022, string headerFieldData = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "dataurl",
         "type": "string",
-        "description": "The URL to fetch."
+        "description": ""
       },
       {
         "name": "headerFieldId",
         "type": "string",
-        "description": "The ID of the header field to add."
+        "description": ""
       },
       {
         "name": "headerFieldData",
         "type": "string",
-        "description": "The data for the header field."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -405,24 +589,27 @@
   {
     "type": "csharp-method",
     "name": "GetLocalizedString",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a localized string from a resource file.",
     "signature": "public static string GetLocalizedString(string Key, string resourceFileRoot, string lang)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "Key",
         "type": "string",
-        "description": "The resource key."
+        "description": ""
       },
       {
         "name": "resourceFileRoot",
         "type": "string",
-        "description": "The path to the resource file."
+        "description": ""
       },
       {
         "name": "lang",
         "type": "string",
-        "description": "The language code."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -430,44 +617,35 @@
   {
     "type": "csharp-method",
     "name": "ConvertObjectToXMLString",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Serializes an object into an XML string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Convert Object to XML. Exmaple: var xmlString = ConvertObjectToXMLString(p); XElement xElement = XElement.Parse(xmlString); Serializes an object into an XML string.",
     "signature": "public static string ConvertObjectToXMLString(object classObject)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "classObject",
         "type": "object",
-        "description": "The object to serialize."
+        "description": ""
       }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
-    "name": "ConvertXmlStringtoObject",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Deserializes an XML string into an object of a specified type.",
-    "signature": "public static T ConvertXmlStringtoObject<T>(string xmlString)",
-    "parameters": [
-      {
-        "name": "xmlString",
-        "type": "string",
-        "description": "The XML string to deserialize."
-      }
-    ],
-    "returns": "T"
-  },
-  {
-    "type": "csharp-method",
     "name": "GetModuleVersion",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the version string of a DNN module.",
     "signature": "public static string GetModuleVersion(int moduleId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "moduleId",
         "type": "int",
-        "description": "The ID of the module."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -475,14 +653,17 @@
   {
     "type": "csharp-method",
     "name": "GetLibraryVersion",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the version string of an installed DNN library package.",
     "signature": "public static string GetLibraryVersion(string packageName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "packageName",
         "type": "string",
-        "description": "The name of the package."
+        "description": ""
       }
     ],
     "returns": "string"
@@ -490,14 +671,17 @@
   {
     "type": "csharp-method",
     "name": "CreateFolder",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Creates a folder using the DNN FolderManager to work around potential medium trust issues.",
     "signature": "public static void CreateFolder(string fullfolderPath)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "fullfolderPath",
         "type": "string",
-        "description": "The full physical path of the folder to create."
+        "description": ""
       }
     ],
     "returns": "void"
@@ -505,14 +689,17 @@
   {
     "type": "csharp-method",
     "name": "CreateDefaultRocketRoles",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Creates the default set of DNNrocket roles (Collaborator, Editor, Manager, etc.) for a given portal.",
     "signature": "public static void CreateDefaultRocketRoles(int portalId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "portalId",
         "type": "int",
-        "description": "The ID of the portal."
+        "description": ""
       }
     ],
     "returns": "void"
@@ -520,14 +707,17 @@
   {
     "type": "csharp-method",
     "name": "DefaultRoleExist",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Checks if the default 'Collaborator' role exists for a given portal.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Checks if the default \u0027Collaborator\u0027 role exists for a given portal.",
     "signature": "public static bool DefaultRoleExist(int portalId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
       {
         "name": "portalId",
         "type": "int",
-        "description": "The ID of the portal."
+        "description": ""
       }
     ],
     "returns": "bool"
@@ -535,1143 +725,2608 @@
   {
     "type": "csharp-method",
     "name": "CreateRole",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Creates a new security role in a portal if it does not already exist.",
-    "signature": "public static void CreateRole(int portalId, string roleName, string description = \"\", float serviceFee = 0, int billingPeriod = 0, string billingFrequency = \"M\", float trialFee = 0, int trialPeriod = 0, string trialFrequency = \"N\", bool isPublic = false, bool isAuto = false)",
+    "signature": "public static void CreateRole(int portalId, string roleName, string description = \u0022\u0022, float serviceFee = 0, int billingPeriod = 0, string billingFrequency = \u0022M\u0022, float trialFee = 0, int trialPeriod = 0, string trialFrequency = \u0022N\u0022, bool isPublic = false, bool isAuto = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." },
-      { "name": "roleName", "type": "string", "description": "The name of the role to create." },
-      { "name": "description", "type": "string", "description": "Description for the role." },
-      { "name": "serviceFee", "type": "float", "description": "Service fee for the role." },
-      { "name": "billingPeriod", "type": "int", "description": "Billing period." },
-      { "name": "billingFrequency", "type": "string", "description": "Billing frequency (e.g., 'M' for monthly)." },
-      { "name": "trialFee", "type": "float", "description": "Trial fee." },
-      { "name": "trialPeriod", "type": "int", "description": "Trial period." },
-      { "name": "trialFrequency", "type": "string", "description": "Trial frequency." },
-      { "name": "isPublic", "type": "bool", "description": "Whether the role is public." },
-      { "name": "isAuto", "type": "bool", "description": "Whether the role is auto-assigned." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "roleName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "serviceFee",
+        "type": "float",
+        "description": ""
+      },
+      {
+        "name": "billingPeriod",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "billingFrequency",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "trialFee",
+        "type": "float",
+        "description": ""
+      },
+      {
+        "name": "trialPeriod",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "trialFrequency",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "isPublic",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "isAuto",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "GetRoleByName",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a RoleInfo object for a role by its name.",
     "signature": "public static RoleInfo GetRoleByName(int portalId, string roleName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." },
-      { "name": "roleName", "type": "string", "description": "The name of the role." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "roleName",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "RoleInfo"
   },
   {
     "type": "csharp-method",
     "name": "AddRoleToModule",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Grants 'EDIT' and 'DEPLOY' permissions for a specific role to a module.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Grants \u0027EDIT\u0027 and \u0027DEPLOY\u0027 permissions for a specific role to a module.",
     "signature": "public static void AddRoleToModule(int portalId, int moduleid, int roleid)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." },
-      { "name": "moduleid", "type": "int", "description": "The module ID." },
-      { "name": "roleid", "type": "int", "description": "The role ID." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "moduleid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "roleid",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "RemoveRoleToModule",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Removes permissions for a specific role from a module.",
     "signature": "public static void RemoveRoleToModule(int portalId, int moduleid, int roleid)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." },
-      { "name": "moduleid", "type": "int", "description": "The module ID." },
-      { "name": "roleid", "type": "int", "description": "The role ID." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "moduleid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "roleid",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "GetTabModuleTitles",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets a dictionary of module IDs and their titles for a specific tab.",
-    "signature": "public static Dictionary<int,string> GetTabModuleTitles(int tabid, bool getDeleted = false)",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static Dictionary\u003Cint,string\u003E GetTabModuleTitles(int tabid, bool getDeleted = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "tabid", "type": "int", "description": "The tab ID." },
-      { "name": "getDeleted", "type": "bool", "description": "If true, includes deleted modules." }
+      {
+        "name": "tabid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "getDeleted",
+        "type": "bool",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<int,string>"
+    "returns": "Dictionary\u003Cint,string\u003E"
   },
   {
     "type": "csharp-method",
     "name": "UpdateModuleTitle",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Updates the title of a module.",
     "signature": "public static void UpdateModuleTitle(int tabid, int moduleid, string title)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "tabid", "type": "int", "description": "The tab ID where the module resides." },
-      { "name": "moduleid", "type": "int", "description": "The module ID." },
-      { "name": "title", "type": "string", "description": "The new title." }
+      {
+        "name": "tabid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "moduleid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "ModuleIsDeleted",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Checks if a module is marked as deleted.",
     "signature": "public static bool ModuleIsDeleted(int tabid, int moduleid)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "tabid", "type": "int", "description": "The tab ID." },
-      { "name": "moduleid", "type": "int", "description": "The module ID." }
+      {
+        "name": "tabid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "moduleid",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "ModuleExists",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Checks if a module exists on a specific tab.",
     "signature": "public static bool ModuleExists(int tabid, int moduleid)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "tabid", "type": "int", "description": "The tab ID." },
-      { "name": "moduleid", "type": "int", "description": "The module ID." }
+      {
+        "name": "tabid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "moduleid",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "GetModuleTabId",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the Tab ID for a module by its unique GUID.",
     "signature": "public static int GetModuleTabId(Guid uniqueId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "uniqueId", "type": "Guid", "description": "The unique ID of the module." }
+      {
+        "name": "uniqueId",
+        "type": "Guid",
+        "description": ""
+      }
     ],
     "returns": "int"
   },
   {
     "type": "csharp-method",
     "name": "GetTabInfo",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a TabInfo object for a given tab ID and portal ID.",
     "signature": "public static TabInfo GetTabInfo(int portalid, int tabid, bool ignoreCache = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalid", "type": "int", "description": "The portal ID." },
-      { "name": "tabid", "type": "int", "description": "The tab ID." },
-      { "name": "ignoreCache", "type": "bool", "description": "If true, bypasses the cache." }
+      {
+        "name": "portalid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "tabid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "ignoreCache",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "TabInfo"
   },
   {
     "type": "csharp-method",
     "name": "GetTabInfoRecord",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets a SimplisityRecord representation of a TabInfo object.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
     "signature": "public static SimplisityRecord GetTabInfoRecord(int portalId,int tabid, bool ignoreCache = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." },
-      { "name": "tabid", "type": "int", "description": "The tab ID." },
-      { "name": "ignoreCache", "type": "bool", "description": "If true, bypasses the cache." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "tabid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "ignoreCache",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "SimplisityRecord"
   },
   {
     "type": "csharp-method",
     "name": "GetTreeTabList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a dictionary of tabs in a hierarchical (tree) structure, suitable for a dropdown list.",
-    "signature": "public static Dictionary<int, string> GetTreeTabList(bool showAllTabs = false)",
+    "signature": "public static Dictionary\u003Cint, string\u003E GetTreeTabList(bool showAllTabs = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "showAllTabs", "type": "bool", "description": "If true, includes all tabs regardless of permissions." }
+      {
+        "name": "showAllTabs",
+        "type": "bool",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<int, string>"
+    "returns": "Dictionary\u003Cint, string\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetTabList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a list of all tabs in a portal as SimplisityRecord objects.",
-    "signature": "public static List<SimplisityRecord> GetTabList(int portalId)",
+    "signature": "public static List\u003CSimplisityRecord\u003E GetTabList(int portalId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      }
     ],
-    "returns": "List<SimplisityRecord>"
+    "returns": "List\u003CSimplisityRecord\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetTreeTabListOnTabId",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a dictionary of tabs in a hierarchical structure, where the key is the TabId.",
-    "signature": "public static Dictionary<int, string> GetTreeTabListOnTabId(bool showAllTabs = false)",
+    "signature": "public static Dictionary\u003Cint, string\u003E GetTreeTabListOnTabId(bool showAllTabs = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "showAllTabs", "type": "bool", "description": "If true, includes all tabs regardless of permissions." }
+      {
+        "name": "showAllTabs",
+        "type": "bool",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<int, string>"
+    "returns": "Dictionary\u003Cint, string\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetResourceString",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a specific value from a resource file based on the key and extension.",
-    "signature": "public static String GetResourceString(String resourcePath, String resourceKey, String resourceExt = \"Text\", String lang = \"\")",
+    "signature": "public static String GetResourceString(String resourcePath, String resourceKey, String resourceExt = \u0022Text\u0022, String lang = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "resourcePath", "type": "String", "description": "The relative path to the resource directory." },
-      { "name": "resourceKey", "type": "String", "description": "The key for the resource (e.g., 'filename.key')." },
-      { "name": "resourceExt", "type": "String", "description": "The extension of the resource value (e.g., 'Text', 'Help')." },
-      { "name": "lang", "type": "String", "description": "The language code." }
+      {
+        "name": "resourcePath",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "resourceKey",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "resourceExt",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "lang",
+        "type": "String",
+        "description": ""
+      }
     ],
     "returns": "String"
   },
   {
     "type": "csharp-method",
     "name": "GetResourceData",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a dictionary of all resource values (Text, Help, etc.) for a given resource key.",
-    "signature": "public static Dictionary<String, String> GetResourceData(String resourcePath, String resourceKey, String lang = \"\")",
+    "signature": "public static Dictionary\u003CString, String\u003E GetResourceData(String resourcePath, String resourceKey, String lang = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "resourcePath", "type": "String", "description": "The relative path to the resource directory." },
-      { "name": "resourceKey", "type": "String", "description": "The key for the resource (e.g., 'filename.key')." },
-      { "name": "lang", "type": "String", "description": "The language code." }
+      {
+        "name": "resourcePath",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "resourceKey",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "lang",
+        "type": "String",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<String, String>"
+    "returns": "Dictionary\u003CString, String\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetResourceFileRelPath",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Constructs the relative path to a resource file based on path, filename, and culture code.",
-    "signature": "public static string GetResourceFileRelPath(String resourcePath, String resourceFileName, String cultureCode = \"\")",
+    "signature": "public static string GetResourceFileRelPath(String resourcePath, String resourceFileName, String cultureCode = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "resourcePath", "type": "String", "description": "The base resource path." },
-      { "name": "resourceFileName", "type": "String", "description": "The name of the resource file." },
-      { "name": "cultureCode", "type": "String", "description": "The culture code." }
+      {
+        "name": "resourcePath",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "resourceFileName",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "String",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetResourceFileMapPath",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the full physical map path for a resource file.",
-    "signature": "public static string GetResourceFileMapPath(String resourcePath, String resourceFileName, String cultureCode = \"\")",
+    "signature": "public static string GetResourceFileMapPath(String resourcePath, String resourceFileName, String cultureCode = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "resourcePath", "type": "String", "description": "The base resource path." },
-      { "name": "resourceFileName", "type": "String", "description": "The name of the resource file." },
-      { "name": "cultureCode", "type": "String", "description": "The culture code." }
+      {
+        "name": "resourcePath",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "resourceFileName",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "String",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "ResxValues",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Extracts all key-value pairs from a .resx file that end with a specific key extension.",
-    "signature": "public static Dictionary<string, string> ResxValues(string resourceFileName, string cultureCode, string keyExtension)",
+    "signature": "public static Dictionary\u003Cstring, string\u003E ResxValues(string resourceFileName, string cultureCode, string keyExtension)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "resourceFileName", "type": "string", "description": "The path to the .resx file." },
-      { "name": "cultureCode", "type": "string", "description": "The culture code." },
-      { "name": "keyExtension", "type": "string", "description": "The extension to filter keys by (e.g., 'Text')." }
+      {
+        "name": "resourceFileName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "keyExtension",
+        "type": "string",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<string, string>"
+    "returns": "Dictionary\u003Cstring, string\u003E"
   },
   {
     "type": "csharp-method",
     "name": "Encrypt",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Encrypts a string using the portal's GUID as the default passkey.",
-    "signature": "public static String Encrypt(String value, String passkey = \"\")",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Encrypts a string using the portal\u0027s GUID as the default passkey.",
+    "signature": "public static String Encrypt(String value, String passkey = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "value", "type": "String", "description": "The string to encrypt." },
-      { "name": "passkey", "type": "String", "description": "Optional passkey. Defaults to the portal GUID." }
+      {
+        "name": "value",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "passkey",
+        "type": "String",
+        "description": ""
+      }
     ],
     "returns": "String"
   },
   {
     "type": "csharp-method",
     "name": "Decrypt",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Decrypts a string using the portal's GUID as the default passkey.",
-    "signature": "public static String Decrypt(String value, String passkey = \"\")",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Decrypts a string using the portal\u0027s GUID as the default passkey.",
+    "signature": "public static String Decrypt(String value, String passkey = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "value", "type": "String", "description": "The string to decrypt." },
-      { "name": "passkey", "type": "String", "description": "Optional passkey. Defaults to the portal GUID." }
+      {
+        "name": "value",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "passkey",
+        "type": "String",
+        "description": ""
+      }
     ],
     "returns": "String"
   },
   {
     "type": "csharp-method",
     "name": "DeleteCookieValue",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Deletes a cookie by setting its expiration date to the past.",
     "signature": "public static void DeleteCookieValue(string name)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "name", "type": "string", "description": "The name of the cookie to delete." }
+      {
+        "name": "name",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "SetCookieValue",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Sets a cookie with a specified name and value.",
     "signature": "public static void SetCookieValue(string name, string value)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "name", "type": "string", "description": "The name of the cookie." },
-      { "name": "value", "type": "string", "description": "The value of the cookie." }
+      {
+        "name": "name",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "GetCookieValue",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the value of a cookie by its name.",
     "signature": "public static string GetCookieValue(string name)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "name", "type": "string", "description": "The name of the cookie." }
+      {
+        "name": "name",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "ValidCulture",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Checks if a given culture code is enabled for the current portal.",
     "signature": "public static bool ValidCulture(string cultureCode)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "cultureCode", "type": "string", "description": "The culture code to validate." }
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "SetEditCulture",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Sets the editing culture by storing it in a cookie.",
     "signature": "public static string SetEditCulture(string editlang)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "editlang", "type": "string", "description": "The language code to set as the editing culture." }
+      {
+        "name": "editlang",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetEditCulture",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets the current editing culture from the URL parameter 'editlang' or the 'simplisity_editlanguage' cookie.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets the current editing culture from the URL parameter \u0027editlang\u0027 or the \u0027simplisity_editlanguage\u0027 cookie.",
     "signature": "public static string GetEditCulture()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "SetCurrentCulture",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Sets the current thread's culture and updates the 'language' and 'simplisity_language' cookies.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Sets the current thread\u0027s culture and updates the \u0027language\u0027 and \u0027simplisity_language\u0027 cookies.",
     "signature": "public static void SetCurrentCulture(string cultureCode)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "cultureCode", "type": "string", "description": "The culture code to set." }
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
+    "name": "SetCurrentCulture",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static void SetCurrentCulture()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
     "name": "GetCurrentCulture",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets the name of the current thread's culture.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets the name of the current thread\u0027s culture.",
     "signature": "public static string GetCurrentCulture()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetCurrentCountryCode",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets the country code part (e.g., 'US') from the current culture.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets the country code part (e.g., \u0027US\u0027) from the current culture.",
     "signature": "public static string GetCurrentCountryCode()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetCountryCode",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Extracts the country code part from a full culture code.",
     "signature": "public static string GetCountryCode(string cultureCode)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "cultureCode", "type": "string", "description": "The full culture code (e.g., 'en-US')." }
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetCurrentLanguageCode",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets the language code part (e.g., 'en') from the current culture.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets the language code part (e.g., \u0027en\u0027) from the current culture.",
     "signature": "public static string GetCurrentLanguageCode()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetLanguageCode",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Extracts the language code part from a full culture code.",
     "signature": "public static string GetLanguageCode(string cultureCode)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "cultureCode", "type": "string", "description": "The full culture code (e.g., 'en-US')." }
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "SystemThemeImgDirectoryRel",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Returns the relative path to the system theme image directory.",
     "signature": "public static string SystemThemeImgDirectoryRel()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "SystemThemeImgDirectoryMapPath",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Returns the physical map path to the system theme image directory.",
     "signature": "public static string SystemThemeImgDirectoryMapPath()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "MapPath",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Converts a relative web path to a physical file system path.",
     "signature": "public static string MapPath(string relpath)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "relpath", "type": "string", "description": "The relative path." }
+      {
+        "name": "relpath",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "MapPathReverse",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Converts a physical file system path back to a relative web path.",
     "signature": "public static string MapPathReverse(string fullMapPath)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "fullMapPath", "type": "string", "description": "The full physical path." }
+      {
+        "name": "fullMapPath",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "Email",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the email address of the specified portal or the current portal.",
     "signature": "public static string Email(int portalId = -1)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID. Defaults to the current portal." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetEntityTypeCode",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets the entity type code from an interface's info, defaulting to the uppercase interface key if not specified.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets the entity type code from an interface\u0027s info, defaulting to the uppercase interface key if not specified.",
     "signature": "public static string GetEntityTypeCode(SimplisityInfo interfaceInfo)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "interfaceInfo", "type": "SimplisityInfo", "description": "The SimplisityInfo object for the interface." }
+      {
+        "name": "interfaceInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetUniqueFileName",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Generates a unique file name for a given folder by appending an index if the file already exists.",
-    "signature": "public static string GetUniqueFileName(string fileName, string folderMapPath, int idx = 1, string originalFileName = \"\")",
+    "signature": "public static string GetUniqueFileName(string fileName, string folderMapPath, int idx = 1, string originalFileName = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "fileName", "type": "string", "description": "The desired file name." },
-      { "name": "folderMapPath", "type": "string", "description": "The physical path to the folder." },
-      { "name": "idx", "type": "int", "description": "The starting index for uniqueness." },
-      { "name": "originalFileName", "type": "string", "description": "The original file name for recursive calls." }
+      {
+        "name": "fileName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "folderMapPath",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "idx",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "originalFileName",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "EncryptFileName",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Encrypts a file name and replaces any invalid file name characters.",
     "signature": "public static string EncryptFileName(string encryptkey, string fileName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "encryptkey", "type": "string", "description": "The encryption key." },
-      { "name": "fileName", "type": "string", "description": "The file name to encrypt." }
+      {
+        "name": "encryptkey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "fileName",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetSystemByName",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets a system's SimplisityInfo data by its system key.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets a system\u0027s SimplisityInfo data by its system key.",
     "signature": "public static SimplisityInfo GetSystemByName(string systemkey)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "systemkey", "type": "string", "description": "The system key." }
+      {
+        "name": "systemkey",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "SimplisityInfo"
   },
   {
     "type": "csharp-method",
     "name": "GetModuleSystemKey",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets the DNNrocket system key associated with a module, derived from its module name (e.g., 'systemkey_interfacekey').",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Use the First DNN Module definition as the DNNrocket systemkey Gets the DNNrocket system key associated with a module, derived from its module name (e.g., \u0027systemkey_interfacekey\u0027).",
     "signature": "public static string GetModuleSystemKey(int moduleId, int tabId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "moduleId", "type": "int", "description": "The module ID." },
-      { "name": "tabId", "type": "int", "description": "The tab ID." }
+      {
+        "name": "moduleId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetModuleInterfaceKey",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Gets the DNNrocket interface key associated with a module, derived from its module name (e.g., 'systemkey_interfacekey').",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Use the module name as DNNrocket interface key. Gets the DNNrocket interface key associated with a module, derived from its module name (e.g., \u0027systemkey_interfacekey\u0027).",
     "signature": "public static string GetModuleInterfaceKey(int moduleId, int tabId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "moduleId", "type": "int", "description": "The module ID." },
-      { "name": "tabId", "type": "int", "description": "The tab ID." }
+      {
+        "name": "moduleId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetAllModulesInPortal",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a list of all non-deleted module IDs in a portal.",
-    "signature": "public static List<int> GetAllModulesInPortal(int portalId)",
+    "signature": "public static List\u003Cint\u003E GetAllModulesInPortal(int portalId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      }
     ],
-    "returns": "List<int>"
+    "returns": "List\u003Cint\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetAllModulesOnPage",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a list of all non-deleted module IDs on a specific page (tab).",
-    "signature": "public static List<int> GetAllModulesOnPage(int tabId)",
+    "signature": "public static List\u003Cint\u003E GetAllModulesOnPage(int tabId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "tabId", "type": "int", "description": "The tab ID." }
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      }
     ],
-    "returns": "List<int>"
+    "returns": "List\u003Cint\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetModuleSystemInfo",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets the system information for a module, caching the result.",
     "signature": "public static SimplisityInfo GetModuleSystemInfo(string systemkey, int moduleId, bool loadSystemXml = true)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "systemkey", "type": "string", "description": "The system key." },
-      { "name": "moduleId", "type": "int", "description": "The module ID." },
-      { "name": "loadSystemXml", "type": "bool", "description": "If true, forces a load from XML if not found in the database." }
+      {
+        "name": "systemkey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "moduleId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "loadSystemXml",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "SimplisityInfo"
   },
   {
     "type": "csharp-method",
     "name": "GetProviderReturn",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Executes a command on an API provider (APInterface) and returns the result.",
-    "signature": "public static Dictionary<string, object> GetProviderReturn(string paramCmd, SimplisityInfo systemInfo, RocketInterface rocketInterface, SimplisityInfo postInfo, SimplisityInfo paramInfo, string templateRelPath, string editlang)",
+    "signature": "public static Dictionary\u003Cstring, object\u003E GetProviderReturn(string paramCmd, SimplisityInfo systemInfo, RocketInterface rocketInterface, SimplisityInfo postInfo, SimplisityInfo paramInfo, string templateRelPath, string editlang)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "paramCmd", "type": "string", "description": "The command to execute." },
-      { "name": "systemInfo", "type": "SimplisityInfo", "description": "The system data." },
-      { "name": "rocketInterface", "type": "RocketInterface", "description": "The interface data." },
-      { "name": "postInfo", "type": "SimplisityInfo", "description": "The posted data." },
-      { "name": "paramInfo", "type": "SimplisityInfo", "description": "Additional parameter data." },
-      { "name": "templateRelPath", "type": "string", "description": "The relative path to the template." },
-      { "name": "editlang", "type": "string", "description": "The current editing language." }
+      {
+        "name": "paramCmd",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "systemInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "rocketInterface",
+        "type": "RocketInterface",
+        "description": ""
+      },
+      {
+        "name": "postInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "paramInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "templateRelPath",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "editlang",
+        "type": "string",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<string, object>"
+    "returns": "Dictionary\u003Cstring, object\u003E"
   },
   {
     "type": "csharp-method",
     "name": "EventProviderBefore",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Executes the 'BeforeEvent' method on all active event providers for a system.",
-    "signature": "public static Dictionary<string, object> EventProviderBefore(string paramCmd, SystemLimpet systemData, SimplisityInfo postInfo, SimplisityInfo paramInfo, string editlang)",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Executes the \u0027BeforeEvent\u0027 method on all active event providers for a system.",
+    "signature": "public static Dictionary\u003Cstring, object\u003E EventProviderBefore(string paramCmd, SystemLimpet systemData, SimplisityInfo postInfo, SimplisityInfo paramInfo, string editlang)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "paramCmd", "type": "string", "description": "The command being executed." },
-      { "name": "systemData", "type": "SystemLimpet", "description": "The system data." },
-      { "name": "postInfo", "type": "SimplisityInfo", "description": "The posted data." },
-      { "name": "paramInfo", "type": "SimplisityInfo", "description": "Additional parameter data." },
-      { "name": "editlang", "type": "string", "description": "The current editing language." }
+      {
+        "name": "paramCmd",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "systemData",
+        "type": "SystemLimpet",
+        "description": ""
+      },
+      {
+        "name": "postInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "paramInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "editlang",
+        "type": "string",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<string, object>"
+    "returns": "Dictionary\u003Cstring, object\u003E"
   },
   {
     "type": "csharp-method",
     "name": "EventProviderAfter",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Executes the 'AfterEvent' method on all active event providers for a system.",
-    "signature": "public static Dictionary<string, object> EventProviderAfter(string paramCmd, SystemLimpet systemData, SimplisityInfo postInfo, SimplisityInfo paramInfo, string editlang)",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Executes the \u0027AfterEvent\u0027 method on all active event providers for a system.",
+    "signature": "public static Dictionary\u003Cstring, object\u003E EventProviderAfter(string paramCmd, SystemLimpet systemData, SimplisityInfo postInfo, SimplisityInfo paramInfo, string editlang)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "paramCmd", "type": "string", "description": "The command that was executed." },
-      { "name": "systemData", "type": "SystemLimpet", "description": "The system data." },
-      { "name": "postInfo", "type": "SimplisityInfo", "description": "The posted data." },
-      { "name": "paramInfo", "type": "SimplisityInfo", "description": "Additional parameter data." },
-      { "name": "editlang", "type": "string", "description": "The current editing language." }
+      {
+        "name": "paramCmd",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "systemData",
+        "type": "SystemLimpet",
+        "description": ""
+      },
+      {
+        "name": "postInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "paramInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "editlang",
+        "type": "string",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<string, object>"
+    "returns": "Dictionary\u003Cstring, object\u003E"
   },
   {
     "type": "csharp-method",
     "name": "RenderImageSelect",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Renders an image selection interface using a specified Razor template.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Render the image select template Renders an image selection interface using a specified Razor template.",
     "signature": "public static string RenderImageSelect(string systemkey, string imageFolderRel, bool selectsingle = true, bool autoreturn = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "systemkey", "type": "string", "description": "The system key." },
-      { "name": "imageFolderRel", "type": "string", "description": "The relative path to the image folder." },
-      { "name": "selectsingle", "type": "bool", "description": "True for single image selection." },
-      { "name": "autoreturn", "type": "bool", "description": "True to automatically return after selection." }
+      {
+        "name": "systemkey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "imageFolderRel",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "selectsingle",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "autoreturn",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "RenderDocumentSelect",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string RenderDocumentSelect(ModuleParams moduleParams, bool selectsingle = true, bool autoreturn = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "moduleParams",
+        "type": "ModuleParams",
+        "description": ""
+      },
+      {
+        "name": "selectsingle",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "autoreturn",
+        "type": "bool",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RenderDocumentSelect",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Renders a document selection interface using a specified Razor template.",
     "signature": "public static string RenderDocumentSelect(string systemkey, string documentFolderRel, bool selectsingle = true, bool autoreturn = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "systemkey", "type": "string", "description": "The system key." },
-      { "name": "documentFolderRel", "type": "string", "description": "The relative path to the document folder." },
-      { "name": "selectsingle", "type": "bool", "description": "True for single document selection." },
-      { "name": "autoreturn", "type": "bool", "description": "True to automatically return after selection." }
+      {
+        "name": "systemkey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "documentFolderRel",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "selectsingle",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "autoreturn",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "ForceDocDownload",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Forces a file to be downloaded by the browser.",
     "signature": "public static void ForceDocDownload(string docFilePath, string fileName, HttpResponse response)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "docFilePath", "type": "string", "description": "The physical path to the document." },
-      { "name": "fileName", "type": "string", "description": "The name the file will have when downloaded." },
-      { "name": "response", "type": "HttpResponse", "description": "The current HTTP response object." }
+      {
+        "name": "docFilePath",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "fileName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "response",
+        "type": "HttpResponse",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "ForceStringDownload",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Forces a string of data to be downloaded by the browser as a file.",
     "signature": "public static void ForceStringDownload(HttpResponse response, string fileName, string fileData)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "response", "type": "HttpResponse", "description": "The current HTTP response object." },
-      { "name": "fileName", "type": "string", "description": "The name the file will have." },
-      { "name": "fileData", "type": "string", "description": "The string data to be in the file." }
+      {
+        "name": "response",
+        "type": "HttpResponse",
+        "description": ""
+      },
+      {
+        "name": "fileName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "fileData",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "UpdateFieldXpath",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Updates the XPath for a list of fields in a SimplisityRecord based on their type and name.",
     "signature": "public static SimplisityRecord UpdateFieldXpath(SimplisityInfo postInfo, SimplisityRecord record, string listname)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "postInfo", "type": "SimplisityInfo", "description": "The posted data containing the field definitions." },
-      { "name": "record", "type": "SimplisityRecord", "description": "The record to update." },
-      { "name": "listname", "type": "string", "description": "The name of the record list containing the fields." }
+      {
+        "name": "postInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "record",
+        "type": "SimplisityRecord",
+        "description": ""
+      },
+      {
+        "name": "listname",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "SimplisityRecord"
   },
   {
     "type": "csharp-method",
     "name": "BackUpNewFileName",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Generates a new backup file name in a structured backup directory, based on the current date and time.",
-    "signature": "public static string BackUpNewFileName(string backupRootFolder, string moduleName, string fileAppendix = \"BackUp.xml\")",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Generates a new backup file name, based on the date and time.  (May not be unique) Generates a new backup file name in a structured backup directory, based on the current date and time.",
+    "signature": "public static string BackUpNewFileName(string backupRootFolder, string moduleName, string fileAppendix = \u0022BackUp.xml\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "backupRootFolder", "type": "string", "description": "The root folder for the backup." },
-      { "name": "moduleName", "type": "string", "description": "The name of the module being backed up." },
-      { "name": "fileAppendix", "type": "string", "description": "The appendix for the file name." }
+      {
+        "name": "backupRootFolder",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "moduleName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "fileAppendix",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "RecycleApplicationPool",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Recycles the application pool by 'touching' the web.config file.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Recycles a web site Application Pool (including the current web site). Requires to reference Microsoft.Web.Administration and System.Web.Hosting. IMPORTANT: The IIS user requires extended permissions to recycle application pool(s). Recycles the application pool by \u0027touching\u0027 the web.config file.",
     "signature": "public static bool RecycleApplicationPool(string siteName = null)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "siteName", "type": "string", "description": "Not used. The current site's app pool is always recycled." }
+      {
+        "name": "siteName",
+        "type": "string",
+        "description": "The site name: leave it NULL to recycle the current site\u0027s App Pool."
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "CloneModule",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Clones a module from one tab to another.",
     "signature": "public static void CloneModule(int moduleid, int fromTabId, int toTabId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "moduleid", "type": "int", "description": "The ID of the module to clone." },
-      { "name": "fromTabId", "type": "int", "description": "The ID of the source tab." },
-      { "name": "toTabId", "type": "int", "description": "The ID of the destination tab." }
+      {
+        "name": "moduleid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "fromTabId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "toTabId",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "ClearThumbnailLock",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Clears file locks on thumbnail images by disposing of them from the cache.",
     "signature": "public static void ClearThumbnailLock()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "ClearTempDB",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Deletes all data from the 'DNNrocketTemp' table.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Deletes all data from the \u0027DNNrocketTemp\u0027 table.",
     "signature": "public static void ClearTempDB()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "SetCache",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static void SetCache(string cacheKey, object objObject)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "cacheKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "objObject",
+        "type": "object",
+        "description": ""
+      }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "SetCache",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Sets an object in the DNN cache with a specified expiration.",
     "signature": "public static void SetCache(string cacheKey, object objObject, int keephours)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "cacheKey", "type": "string", "description": "The cache key." },
-      { "name": "objObject", "type": "object", "description": "The object to cache." },
-      { "name": "keephours", "type": "int", "description": "The number of hours to keep the object in the cache." }
+      {
+        "name": "cacheKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "objObject",
+        "type": "object",
+        "description": ""
+      },
+      {
+        "name": "keephours",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "GetCache",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets an object from the DNN cache.",
     "signature": "public static object GetCache(string cacheKey)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "cacheKey", "type": "string", "description": "The cache key." }
+      {
+        "name": "cacheKey",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "object"
   },
   {
     "type": "csharp-method",
     "name": "RemoveCache",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Removes an object from the DNN cache.",
     "signature": "public static void RemoveCache(string cacheKey)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "cacheKey", "type": "string", "description": "The cache key." }
+      {
+        "name": "cacheKey",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "ClearAllCache",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Clears the entire DNN cache.",
     "signature": "public static void ClearAllCache()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "ClearPortalCache",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static void ClearPortalCache()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ClearPortalCache",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Clears the cache for a specific portal.",
     "signature": "public static void ClearPortalCache(int portalId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "SynchronizeModule",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Synchronizes a module's content between the cache and the database and updates its ModifiedContentDate.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Synchronizes the module content between cache and database. \u002B Update ModifiedContentDate",
     "signature": "public static void SynchronizeModule(int moduleId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "moduleId", "type": "int", "description": "The module ID." }
+      {
+        "name": "moduleId",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "NavigateURL",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "A wrapper for the DNN Globals.NavigateURL method to generate URLs for pages.",
-    "signature": "public static string NavigateURL(int tabId, Dictionary<string,string> dictParams, string seoname)",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string NavigateURL()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "NavigateURL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string NavigateURL(int tabId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "tabId", "type": "int", "description": "The tab ID." },
-      { "name": "dictParams", "type": "Dictionary<string,string>", "description": "A dictionary of query string parameters." },
-      { "name": "seoname", "type": "string", "description": "A search-engine-friendly name to add to the URL." }
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "NavigateURL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string NavigateURL(int tabId, string[] param)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "param",
+        "type": "string[]",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "NavigateURL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string NavigateURL(int tabId, Dictionary\u003Cstring, string\u003E dictParams)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "dictParams",
+        "type": "Dictionary\u003Cstring, string\u003E",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "NavigateURL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string NavigateURL(int tabId, Dictionary\u003Cstring,string\u003E dictParams, string seoname)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "dictParams",
+        "type": "Dictionary\u003Cstring,string\u003E",
+        "description": ""
+      },
+      {
+        "name": "seoname",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "NavigateURL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string NavigateURL(int tabId, string cultureCode, string[] param)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "param",
+        "type": "string[]",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "NavigateURL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string NavigateURL(int tabId, string controlKey, string cultureCode, string[] param)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "controlKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "param",
+        "type": "string[]",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "NavigateURL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static string NavigateURL(int tabId, PortalSettings portalSettings, string controlKey, string cultureCode, string[] param)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "portalSettings",
+        "type": "PortalSettings",
+        "description": ""
+      },
+      {
+        "name": "controlKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "param",
+        "type": "string[]",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "NavigateURL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "A wrapper for the DNN Globals.NavigateURL method to generate URLs for pages.",
+    "signature": "public static string NavigateURL(int tabId, bool isSuperTab, PortalSettings portalSettings, string controlKey, string cultureCode, string[] param)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "tabId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "isSuperTab",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "portalSettings",
+        "type": "PortalSettings",
+        "description": ""
+      },
+      {
+        "name": "controlKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "param",
+        "type": "string[]",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "UrlFriendly",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Converts a string into a URL-friendly format.",
     "signature": "public static string UrlFriendly(string textstring)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "textstring", "type": "string", "description": "The text to convert." }
+      {
+        "name": "textstring",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "ConvertTimeToDouble",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Converts a time string (e.g., 'HH:mm:ss') into a double representation of hours.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Converts a time string (e.g., \u0027HH:mm:ss\u0027) into a double representation of hours.",
     "signature": "public static double ConvertTimeToDouble(string timeString)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "timeString", "type": "string", "description": "The time string." }
+      {
+        "name": "timeString",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "double"
   },
   {
     "type": "csharp-method",
     "name": "ProtectEmail",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Obfuscates an email address in HTML to protect it from scrapers.",
-    "signature": "public static string ProtectEmail(this string email, string subject = \"\", string visibleText = \"\")",
+    "signature": "public static string ProtectEmail(this string email, string subject = \u0022\u0022, string visibleText = \u0022\u0022)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "email", "type": "string", "description": "The email address." },
-      { "name": "subject", "type": "string", "description": "The default subject line." },
-      { "name": "visibleText", "type": "string", "description": "The visible text for the link." }
+      {
+        "name": "email",
+        "type": "this string",
+        "description": ""
+      },
+      {
+        "name": "subject",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "visibleText",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "TruncateWords",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Truncates a string to a maximum number of characters, ensuring it doesn't cut off in the middle of a word.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Truncates a string to a maximum number of characters, ensuring it doesn\u0027t cut off in the middle of a word.",
     "signature": "public static string TruncateWords(this string text, int maxCharacters, string trailingText)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "text", "type": "string", "description": "The text to truncate." },
-      { "name": "maxCharacters", "type": "int", "description": "The maximum number of characters." },
-      { "name": "trailingText", "type": "string", "description": "Text to append if truncated (e.g., '...')." }
+      {
+        "name": "text",
+        "type": "this string",
+        "description": ""
+      },
+      {
+        "name": "maxCharacters",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "trailingText",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "Truncate",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Truncates a string to a maximum number of characters.",
-    "signature": "public static string Truncate(this string text, int maxCharacters, string trailingText)",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Truncates text to a number of characters",
+    "signature": "public static string Truncate(this string text, int maxCharacters)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "text", "type": "string", "description": "The text to truncate." },
-      { "name": "maxCharacters", "type": "int", "description": "The maximum number of characters." },
-      { "name": "trailingText", "type": "string", "description": "Text to append if truncated." }
+      {
+        "name": "text",
+        "type": "this string",
+        "description": ""
+      },
+      {
+        "name": "maxCharacters",
+        "type": "int",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "Truncate",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Truncates text to a number of characters and adds trailing text, i.e. elipses, to the end Truncates a string to a maximum number of characters.",
+    "signature": "public static string Truncate(this string text, int maxCharacters, string trailingText)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "text",
+        "type": "this string",
+        "description": ""
+      },
+      {
+        "name": "maxCharacters",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "trailingText",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "UpdateSqlIndex",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Updates or creates a SQL index record in the DNNrocket database.",
     "signature": "public static void UpdateSqlIndex(SimplisityRecord idx)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "idx", "type": "SimplisityRecord", "description": "The index record to update." }
+      {
+        "name": "idx",
+        "type": "SimplisityRecord",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "IsMobile",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Determines if the current request is from a mobile device.",
     "signature": "public static bool IsMobile()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "UpdateSimplsityInfoFields",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Updates fields in a SimplisityInfo object from another SimplisityInfo object based on an XPath selector.",
     "signature": "public static SimplisityInfo UpdateSimplsityInfoFields(SimplisityInfo newInfo, SimplisityInfo postInfo, string xpathListSelect)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "newInfo", "type": "SimplisityInfo", "description": "The object to be updated." },
-      { "name": "postInfo", "type": "SimplisityInfo", "description": "The source object." },
-      { "name": "xpathListSelect", "type": "string", "description": "The XPath selector for the fields to update." }
+      {
+        "name": "newInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "postInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "xpathListSelect",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "SimplisityInfo"
   },
   {
     "type": "csharp-method",
     "name": "UpdateSimplsityRecordFields",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Updates fields in a SimplisityRecord object from a SimplisityInfo object based on an XPath selector.",
     "signature": "public static SimplisityRecord UpdateSimplsityRecordFields(SimplisityRecord newRec, SimplisityInfo postInfo, string xpathListSelect)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "newRec", "type": "SimplisityRecord", "description": "The record to be updated." },
-      { "name": "postInfo", "type": "SimplisityInfo", "description": "The source object." },
-      { "name": "xpathListSelect", "type": "string", "description": "The XPath selector for the fields to update." }
+      {
+        "name": "newRec",
+        "type": "SimplisityRecord",
+        "description": ""
+      },
+      {
+        "name": "postInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "xpathListSelect",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "SimplisityRecord"
   },
   {
     "type": "csharp-method",
     "name": "ParseQueryString",
-    "source_file": "API/Components/DNNrocketUtils.cs",
-    "description": "Parses a URL to get a specific query parameter value, checking both friendly URL format and standard query string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "Gets a query parameter from a URL string.  This function parses the URL string to get the parameter. it assumes friendly URL format first and the uses HttpUtility.ParseQueryString(url.Query). Because friendly format may have a page the same name as a key, be careful with the name of query keys. Parses a URL to get a specific query parameter value, checking both friendly URL format and standard query string.",
     "signature": "public static string ParseQueryString(string key, string requesturl)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "key", "type": "string", "description": "The key of the query parameter." },
-      { "name": "requesturl", "type": "string", "description": "The URL to parse." }
+      {
+        "name": "key",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "requesturl",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetModList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a list of ModuleBase objects for all modules in a portal.",
-    "signature": "public static List<ModuleBase> GetModList(int portalId, bool includeDeleted = false)",
+    "signature": "public static List\u003CModuleBase\u003E GetModList(int portalId, bool includeDeleted = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." },
-      { "name": "includeDeleted", "type": "bool", "description": "If true, includes deleted modules." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "includeDeleted",
+        "type": "bool",
+        "description": ""
+      }
     ],
-    "returns": "List<ModuleBase>"
+    "returns": "List\u003CModuleBase\u003E"
   },
   {
     "type": "csharp-method",
     "name": "GetPortalContentRecByRefId",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a portal-level content record by its reference ID, using caching.",
     "signature": "public static SimplisityRecord GetPortalContentRecByRefId(int portalId, string systemKey, string tableName)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." },
-      { "name": "systemKey", "type": "string", "description": "The system key." },
-      { "name": "tableName", "type": "string", "description": "The database table name." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "systemKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "tableName",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "SimplisityRecord"
   },
   {
     "type": "csharp-method",
     "name": "DeleteSearchDocument",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Deletes a document from the DNN search index.",
     "signature": "public static void DeleteSearchDocument(int portalId, string queryString)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." },
-      { "name": "queryString", "type": "string", "description": "The query string that identifies the document." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "queryString",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "GetQueryKeys",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a dictionary of configured query parameter keys and their associated data for a portal.",
-    "signature": "public static Dictionary<string, QueryParamsData> GetQueryKeys(int portalId)",
+    "signature": "public static Dictionary\u003Cstring, QueryParamsData\u003E GetQueryKeys(int portalId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The portal ID." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      }
     ],
-    "returns": "Dictionary<string, QueryParamsData>"
+    "returns": "Dictionary\u003Cstring, QueryParamsData\u003E"
   },
   {
     "type": "csharp-method",
     "name": "DeleteOldFiles",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Deletes files in a folder that are older than a specified number of days.",
     "signature": "public static void DeleteOldFiles(string folderPath, uint maximumAgeInDays, params string[] filesToExclude)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "folderPath", "type": "string", "description": "The path to the folder." },
-      { "name": "maximumAgeInDays", "type": "uint", "description": "The maximum age of files to keep." },
-      { "name": "filesToExclude", "type": "string[]", "description": "An array of file names to exclude from deletion." }
+      {
+        "name": "folderPath",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "maximumAgeInDays",
+        "type": "uint",
+        "description": ""
+      },
+      {
+        "name": "filesToExclude",
+        "type": "string[]",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "DeleteFileIfOlderThan",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Deletes a single file if it is older than a specified date.",
     "signature": "public static void DeleteFileIfOlderThan(string path, DateTime date)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "path", "type": "string", "description": "The path to the file." },
-      { "name": "date", "type": "DateTime", "description": "The cutoff date." }
+      {
+        "name": "path",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "date",
+        "type": "DateTime",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "StartBackgroundThread",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Starts a new background thread.",
     "signature": "public static void StartBackgroundThread(ThreadStart threadStart)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "threadStart", "type": "ThreadStart", "description": "The delegate for the thread to execute." }
+      {
+        "name": "threadStart",
+        "type": "ThreadStart",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "DependanciesList",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a list of dependency records for an app theme, processing URL tokens.",
-    "signature": "public static List<SimplisityRecord> DependanciesList(string moduleRef, AppThemeBase appTheme, string domainUrl, string appThemeSystemFolder)",
+    "signature": "public static List\u003CSimplisityRecord\u003E DependanciesList(string moduleRef, AppThemeBase appTheme, string domainUrl, string appThemeSystemFolder)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "moduleRef", "type": "string", "description": "The module reference." },
-      { "name": "appTheme", "type": "AppThemeBase", "description": "The application theme." },
-      { "name": "domainUrl", "type": "string", "description": "The domain URL." },
-      { "name": "appThemeSystemFolder", "type": "string", "description": "The system theme folder." }
+      {
+        "name": "moduleRef",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "appTheme",
+        "type": "AppThemeBase",
+        "description": ""
+      },
+      {
+        "name": "domainUrl",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "appThemeSystemFolder",
+        "type": "string",
+        "description": ""
+      }
     ],
-    "returns": "List<SimplisityRecord>"
+    "returns": "List\u003CSimplisityRecord\u003E"
   },
   {
     "type": "csharp-method",
     "name": "InjectDependencies",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Gets a cached list of Dependency objects to be injected into a page.",
-    "signature": "public static List<Dependency> InjectDependencies(string moduleRef, AppThemeBase appTheme, bool ecoMode, string skinSrc, string domainUrl, string appThemeSystemFolder)",
+    "signature": "public static List\u003CDependency\u003E InjectDependencies(string moduleRef, AppThemeBase appTheme, bool ecoMode, string skinSrc, string domainUrl, string appThemeSystemFolder)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "moduleRef", "type": "string", "description": "The module reference." },
-      { "name": "appTheme", "type": "AppThemeBase", "description": "The application theme." },
-      { "name": "ecoMode", "type": "bool", "description": "Eco-friendly mode flag." },
-      { "name": "skinSrc", "type": "string", "description": "The source path of the current skin." },
-      { "name": "domainUrl", "type": "string", "description": "The domain URL." },
-      { "name": "appThemeSystemFolder", "type": "string", "description": "The system theme folder." }
+      {
+        "name": "moduleRef",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "appTheme",
+        "type": "AppThemeBase",
+        "description": ""
+      },
+      {
+        "name": "ecoMode",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "skinSrc",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "domainUrl",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "appThemeSystemFolder",
+        "type": "string",
+        "description": ""
+      }
     ],
-    "returns": "List<Dependency>"
+    "returns": "List\u003CDependency\u003E"
   },
   {
     "type": "csharp-method",
     "name": "InjectDependacies",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
+    "description": "",
+    "signature": "public static void InjectDependacies(string moduleRef, Page page, AppThemeBase appTheme, bool ecoMode, string skinSrc, string domainUrl, string appThemeSystemFolder)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
+    "parameters": [
+      {
+        "name": "moduleRef",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "page",
+        "type": "Page",
+        "description": ""
+      },
+      {
+        "name": "appTheme",
+        "type": "AppThemeBase",
+        "description": ""
+      },
+      {
+        "name": "ecoMode",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "skinSrc",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "domainUrl",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "appThemeSystemFolder",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "void"
+  },
+  {
+    "type": "csharp-method",
+    "name": "InjectDependacies",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Injects CSS and JS dependencies into a WebForms page.",
     "signature": "public static void InjectDependacies(string moduleRef, Page page, AppThemeBase appTheme, bool ecoMode, string skinSrc, string domainUrl, string appThemeSystemFolder, string displayTemplate)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "moduleRef", "type": "string", "description": "The module reference." },
-      { "name": "page", "type": "Page", "description": "The current page object." },
-      { "name": "appTheme", "type": "AppThemeBase", "description": "The application theme." },
-      { "name": "ecoMode", "type": "bool", "description": "Eco-friendly mode flag." },
-      { "name": "skinSrc", "type": "string", "description": "The source path of the current skin." },
-      { "name": "domainUrl", "type": "string", "description": "The domain URL." },
-      { "name": "appThemeSystemFolder", "type": "string", "description": "The system theme folder." },
-      { "name": "displayTemplate", "type": "string", "description": "The name of the display template being rendered." }
+      {
+        "name": "moduleRef",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "page",
+        "type": "Page",
+        "description": ""
+      },
+      {
+        "name": "appTheme",
+        "type": "AppThemeBase",
+        "description": ""
+      },
+      {
+        "name": "ecoMode",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "skinSrc",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "domainUrl",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "appThemeSystemFolder",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "displayTemplate",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "IsModuleDeleted",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Checks if a module is marked as deleted by its ID.",
     "signature": "public static bool IsModuleDeleted(int moduleId)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "moduleId", "type": "int", "description": "The module ID." }
+      {
+        "name": "moduleId",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "SetTempStorage",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Saves a SimplisityInfo object to temporary database storage with an expiration.",
-    "signature": "public static string SetTempStorage(SimplisityInfo value, string key = \"\", int keephours = 24)",
+    "signature": "public static string SetTempStorage(SimplisityInfo value, string key = \u0022\u0022, int keephours = 24)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "value", "type": "SimplisityInfo", "description": "The data to store." },
-      { "name": "key", "type": "string", "description": "A unique key for retrieval. If empty, a new GUID is generated." },
-      { "name": "keephours", "type": "int", "description": "The number of hours to keep the data." }
+      {
+        "name": "value",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "key",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "keephours",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetTempStorage",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Retrieves a SimplisityInfo object from temporary storage.",
     "signature": "public static SimplisityInfo GetTempStorage(string key, bool deleteAfterRead = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "key", "type": "string", "description": "The key for the data." },
-      { "name": "deleteAfterRead", "type": "bool", "description": "If true, the data is deleted after being read." }
+      {
+        "name": "key",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "deleteAfterRead",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "SimplisityInfo"
   },
   {
     "type": "csharp-method",
     "name": "SetTempRecordStorage",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Saves a SimplisityRecord object to temporary database storage.",
-    "signature": "public static string SetTempRecordStorage(SimplisityRecord value, string key = \"\", int keephours = 24)",
+    "signature": "public static string SetTempRecordStorage(SimplisityRecord value, string key = \u0022\u0022, int keephours = 24)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "value", "type": "SimplisityRecord", "description": "The record to store." },
-      { "name": "key", "type": "string", "description": "A unique key for retrieval." },
-      { "name": "keephours", "type": "int", "description": "The number of hours to keep the data." }
+      {
+        "name": "value",
+        "type": "SimplisityRecord",
+        "description": ""
+      },
+      {
+        "name": "key",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "keephours",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetTempRecordStorage",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Retrieves a SimplisityRecord object from temporary storage.",
     "signature": "public static SimplisityRecord GetTempRecordStorage(string key, bool deleteAfterRead = false)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "key", "type": "string", "description": "The key for the data." },
-      { "name": "deleteAfterRead", "type": "bool", "description": "If true, the data is deleted after being read." }
+      {
+        "name": "key",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "deleteAfterRead",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "SimplisityRecord"
   },
   {
     "type": "csharp-method",
     "name": "DeleteTempStorage",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Deletes an item from temporary storage by its key.",
     "signature": "public static void DeleteTempStorage(string key)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "key", "type": "string", "description": "The key of the item to delete." }
+      {
+        "name": "key",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "ClearOldTempStorage",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Deletes all expired items from the temporary storage table.",
     "signature": "public static void ClearOldTempStorage()",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "ImportWebsite",
-    "source_file": "API/Components/DNNrocketUtils.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\API\\Components\\DNNrocketUtils.cs",
     "description": "Initiates a DNN website import process from a given package file.",
     "signature": "public static ExportImportJob ImportWebsite(int portalId, string importDataMapPath)",
+    "classname": "DNNrocketUtils",
+    "isstatic": "true",
+    "namespace": "DNNrocketAPI.Components",
     "parameters": [
-      { "name": "portalId", "type": "int", "description": "The ID of the portal to import into." },
-      { "name": "importDataMapPath", "type": "string", "description": "The physical path to the import package (.zip file)." }
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "importDataMapPath",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "ExportImportJob"
   }

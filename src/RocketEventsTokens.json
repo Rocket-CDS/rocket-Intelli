@@ -1,97 +1,53 @@
 [
   {
-    "type": "razor-token",
+    "type": "csharp-method",
     "name": "AssignDataModel",
-    "source_file": "RocketEventsAPI/Render/RocketEventsTokens.cs",
-    "description": "Assigns and prepares the data model for Razor event templates. It calls the base class's AssignDataModel, sets up date parameters for calendar views, and populates several event lists (next events, past events, monthly events, etc.) into the SimplisityRazor model.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketEventsAPI\\Render\\RocketEventsTokens.cs",
+    "description": "Assigns and prepares the data model for Razor event templates. It calls the base class\u0027s AssignDataModel, sets up date parameters for calendar views, and populates several event lists (next events, past events, monthly events, etc.) into the SimplisityRazor model.",
     "signature": "public new string AssignDataModel(SimplisityRazor sModel)",
+    "classname": "RocketEventsAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketEventsAPI.Components",
     "parameters": [
       {
         "name": "sModel",
         "type": "SimplisityRazor",
-        "description": "The SimplisityRazor model containing the data objects and session parameters."
+        "description": ""
       }
     ],
-    "returns": "string",
-    "example": "@{ AssignDataModel(Model); }"
+    "returns": "string"
   },
   {
-    "type": "razor-token",
+    "type": "csharp-method",
     "name": "RssEventUrl",
-    "source_file": "RocketEventsAPI/Render/RocketEventsTokens.cs",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketEventsAPI\\Render\\RocketEventsTokens.cs",
     "description": "Generates a URL for an RSS feed of events for a specific month and year. The URL includes parameters for the command, month, year, and a SQL index for sorting by event start date.",
     "signature": "public IEncodedString RssEventUrl(int portalId, string cmd, int monthDate, int yearDate)",
+    "classname": "RocketEventsAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketEventsAPI.Components",
     "parameters": [
       {
         "name": "portalId",
         "type": "int",
-        "description": "The ID of the portal."
+        "description": ""
       },
       {
         "name": "cmd",
         "type": "string",
-        "description": "The command for the RSS feed action (e.g., 'geteventsfeed')."
+        "description": ""
       },
       {
         "name": "monthDate",
         "type": "int",
-        "description": "The month for the feed."
+        "description": ""
       },
       {
         "name": "yearDate",
         "type": "int",
-        "description": "The year for the feed."
+        "description": ""
       }
     ],
-    "returns": "IEncodedString",
-    "example": "@RssEventUrl(0, \"eventsfeed\", 12, 2023)"
-  },
-  {
-    "type": "property",
-    "name": "monthStartDate",
-    "source_file": "RocketEventsAPI/Render/RocketEventsTokens.cs",
-    "description": "The start date of the current month being viewed.",
-    "signature": "public DateTime monthStartDate;",
-    "returns": "DateTime"
-  },
-  {
-    "type": "property",
-    "name": "monthEndDate",
-    "source_file": "RocketEventsAPI/Render/RocketEventsTokens.cs",
-    "description": "The end date of the current month being viewed.",
-    "signature": "public DateTime monthEndDate;",
-    "returns": "DateTime"
-  },
-  {
-    "type": "property",
-    "name": "calMonthStartDate",
-    "source_file": "RocketEventsAPI/Render/RocketEventsTokens.cs",
-    "description": "The start date of the calendar month being displayed.",
-    "signature": "public DateTime calMonthStartDate;",
-    "returns": "DateTime"
-  },
-  {
-    "type": "property",
-    "name": "articleEventStartDate",
-    "source_file": "RocketEventsAPI/Render/RocketEventsTokens.cs",
-    "description": "The start date of the event for the current article.",
-    "signature": "public DateTime articleEventStartDate;",
-    "returns": "DateTime"
-  },
-  {
-    "type": "property",
-    "name": "articleEventEndDate",
-    "source_file": "RocketEventsAPI/Render/RocketEventsTokens.cs",
-    "description": "The end date of the event for the current article.",
-    "signature": "public DateTime articleEventEndDate;",
-    "returns": "DateTime"
-  },
-  {
-    "type": "property",
-    "name": "listUrlParams",
-    "source_file": "RocketEventsAPI/Render/RocketEventsTokens.cs",
-    "description": "An array of URL parameters for the event list.",
-    "signature": "public string[] listUrlParams;",
-    "returns": "string[]"
+    "returns": "IEncodedString"
   }
 ]

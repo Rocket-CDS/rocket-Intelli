@@ -33,12 +33,38 @@ export function activate(context: vscode.ExtensionContext) {
         });
     };
 
+    const normalizeToken = (token: any): any => {
+        const normalized = { ...token };
+
+        if (!normalized.classname && typeof normalized.source_file === 'string') {
+            const sourceExt = path.extname(normalized.source_file);
+            const sourceBase = path.basename(normalized.source_file, sourceExt);
+            if (sourceBase) {
+                normalized.classname = sourceBase;
+            }
+        }
+
+        if ((!normalized.isstatic || normalized.isstatic === '') && typeof normalized.signature === 'string') {
+            normalized.isstatic = /\bstatic\b/i.test(normalized.signature) ? 'true' : 'false';
+        }
+
+        return normalized;
+    };
+
+    const getTokenQuality = (token: any): number => {
+        let score = 0;
+        if (token.classname) { score += 2; }
+        if (token.isstatic === 'true' || token.isstatic === 'false') { score += 2; }
+        if (token.signature) { score += 1; }
+        if (Array.isArray(token.parameters)) { score += 1; }
+        return score;
+    };
+
     // Function to load tokens from all local JSON files (with deduplication)
     const loadTokens = () => {
         const bundledTokenDir = path.join(context.extensionPath, 'src');
         const tokenDirs = [tokenStorageDir, bundledTokenDir];
-        const allTokens: any[] = [];
-        const seen = new Set<string>();
+        const tokenMap = new Map<string, any>();
 
         tokenDirs.forEach((tokenDir) => {
             if (fs.existsSync(tokenDir)) {
@@ -51,9 +77,13 @@ export function activate(context: vscode.ExtensionContext) {
                             const tokens = JSON.parse(tokenContent);
                             if (Array.isArray(tokens)) {
                                 tokens.forEach((token: any) => {
-                                    if (token.name && !seen.has(token.name)) {
-                                        seen.add(token.name);
-                                        allTokens.push(token);
+                                    const normalizedToken = normalizeToken(token);
+                                    if (normalizedToken.name) {
+                                        const dedupeKey = `${normalizedToken.classname || ''}::${normalizedToken.name}`;
+                                        const existing = tokenMap.get(dedupeKey);
+                                        if (!existing || getTokenQuality(normalizedToken) >= getTokenQuality(existing)) {
+                                            tokenMap.set(dedupeKey, normalizedToken);
+                                        }
                                     }
                                 });
                             }
@@ -65,7 +95,7 @@ export function activate(context: vscode.ExtensionContext) {
             }
         });
 
-        return allTokens;
+        return Array.from(tokenMap.values());
     };
 
     let allTokens = loadTokens();
@@ -156,36 +186,130 @@ export function activate(context: vscode.ExtensionContext) {
                     return undefined;
                 }
 
-                return allTokens.map((token: any) => {
-                    const item = new vscode.CompletionItem(token.name, vscode.CompletionItemKind.Function);
-                    item.detail = token.signature;
+                // Extract the text after the @ symbol
+                const atIndex = linePrefix.lastIndexOf('@');
+                const textAfterAt = linePrefix.substring(atIndex + 1);
 
-                    // Build parameter snippet: FunctionName(${1:param1}, ${2:param2})
-                    if (token.parameters && token.parameters.length > 0) {
-                        const paramSnippets = token.parameters.map((p: any, i: number) => `\${${i + 1}:${p.name}}`).join(', ');
-                        item.insertText = new vscode.SnippetString(`${token.name}(${paramSnippets})`);
-                    } else {
-                        item.insertText = new vscode.SnippetString(`${token.name}()`);
+                // Check if there's a dot (ClassName.method pattern)
+                const dotIndex = textAfterAt.lastIndexOf('.');
+                let completionItems: vscode.CompletionItem[] = [];
+
+                if (dotIndex > 0) {
+                    // User typed @ClassName.methodPrefix
+                    const className = textAfterAt.substring(0, dotIndex);
+                    const methodPrefix = textAfterAt.substring(dotIndex + 1).toLowerCase();
+                    
+                    // Filter tokens by classname
+                    let filteredTokens = allTokens.filter((token: any) => 
+                        token.classname && token.classname.toLowerCase() === className.toLowerCase()
+                    );
+                    
+                    // Then filter by method name prefix if there's text after the dot
+                    if (methodPrefix.length > 0) {
+                        filteredTokens = filteredTokens.filter((token: any) => 
+                            token.name.toLowerCase().startsWith(methodPrefix)
+                        );
                     }
 
-                    let doc = `**${token.name}**\n\n`;
-                    doc += `${token.description}\n\n`;
-                    if (token.parameters && token.parameters.length > 0) {
-                        doc += '**Parameters:**\n';
-                        token.parameters.forEach((p: any) => {
-                            doc += `* \`${p.name}\` *(${p.type})*: ${p.description}\n`;
-                        });
-                        doc += '\n';
-                    }
-                    doc += `**Returns:** ${token.returns}\n\n`;
-                    doc += `**Example:**\n\`\`\`razor\n${token.example}\n\`\`\``;
-                    item.documentation = new vscode.MarkdownString(doc);
+                    completionItems = filteredTokens.map((token: any) => {
+                        const item = new vscode.CompletionItem(token.name, vscode.CompletionItemKind.Method);
+                        item.detail = token.signature;
+                        
+                        // Build parameter snippet
+                        if (token.parameters && token.parameters.length > 0) {
+                            const paramSnippets = token.parameters.map((p: any, i: number) => `\${${i + 1}:${p.name}}`).join(', ');
+                            item.insertText = new vscode.SnippetString(`${token.name}(${paramSnippets})`);
+                        } else {
+                            item.insertText = new vscode.SnippetString(`${token.name}()`);
+                        }
 
-                    return item;
-                });
+                        let doc = `**${token.name}**\n\n`;
+                        doc += `${token.description}\n\n`;
+                        if (token.parameters && token.parameters.length > 0) {
+                            doc += '**Parameters:**\n';
+                            token.parameters.forEach((p: any) => {
+                                doc += `* \`${p.name}\` *(${p.type})*: ${p.description}\n`;
+                            });
+                            doc += '\n';
+                        }
+                        doc += `**Returns:** ${token.returns}\n\n`;
+                        doc += `**Example:**\n\`\`\`razor\n${token.example}\n\`\`\``;
+                        item.documentation = new vscode.MarkdownString(doc);
+
+                        return item;
+                    });
+                } else {
+                    // User typed @classOrMethodPrefix
+                    const prefix = textAfterAt.toLowerCase();
+
+                    // Collect all unique static class names
+                    const classNames = new Set<string>();
+                    allTokens.forEach((token: any) => {
+                        if (token.isstatic === "true" && token.classname) {
+                            classNames.add(token.classname);
+                        }
+                    });
+
+                    // Create completion items for matching class names
+                    classNames.forEach((className) => {
+                        if (prefix.length === 0 || className.toLowerCase().startsWith(prefix)) {
+                            const classItem = new vscode.CompletionItem(className, vscode.CompletionItemKind.Class);
+                            classItem.insertText = className;
+                            classItem.commitCharacters = ['.'];
+                            classItem.filterText = className;
+                            classItem.detail = 'Static class';
+                            classItem.sortText = '0_' + className; // Sort classes first
+                            completionItems.push(classItem);
+                        }
+                    });
+
+                    // Also match method names
+                    let filteredTokens = allTokens;
+                    if (prefix.length > 0) {
+                        filteredTokens = allTokens.filter((token: any) => 
+                            token.name.toLowerCase().startsWith(prefix)
+                        );
+                    }
+
+                    // Create completion items for matching methods
+                    filteredTokens.forEach((token: any) => {
+                        const item = new vscode.CompletionItem(token.name, vscode.CompletionItemKind.Function);
+                        item.detail = token.signature;
+
+                        // Determine the function call name: use ClassName.MethodName for static methods
+                        const funcName = (token.isstatic === "true" && token.classname) 
+                            ? `${token.classname}.${token.name}`
+                            : token.name;
+
+                        // Build parameter snippet
+                        if (token.parameters && token.parameters.length > 0) {
+                            const paramSnippets = token.parameters.map((p: any, i: number) => `\${${i + 1}:${p.name}}`).join(', ');
+                            item.insertText = new vscode.SnippetString(`${funcName}(${paramSnippets})`);
+                        } else {
+                            item.insertText = new vscode.SnippetString(`${funcName}()`);
+                        }
+
+                        let doc = `**${token.name}**\n\n`;
+                        doc += `${token.description}\n\n`;
+                        if (token.parameters && token.parameters.length > 0) {
+                            doc += '**Parameters:**\n';
+                            token.parameters.forEach((p: any) => {
+                                doc += `* \`${p.name}\` *(${p.type})*: ${p.description}\n`;
+                            });
+                            doc += '\n';
+                        }
+                        doc += `**Returns:** ${token.returns}\n\n`;
+                        doc += `**Example:**\n\`\`\`razor\n${token.example}\n\`\`\``;
+                        item.documentation = new vscode.MarkdownString(doc);
+
+                        completionItems.push(item);
+                    });
+                }
+
+                return completionItems;
             }
         },
-        '@'
+        '@', '.'
     );
 
     // Register signature help provider - shows parameter info when typing ( or ,

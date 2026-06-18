@@ -1,0 +1,137 @@
+[
+  {
+    "type": "csharp-method",
+    "name": "AssignDataModel",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketContentAPI\\Render\\RocketContentAPITokens.cs",
+    "description": "Assigns the data model for razor, this makes the template easier to build. Assigns the data model for Razor, making the template easier to build by populating various data properties like articleData, appTheme, moduleData, etc., from the SimplisityRazor model.",
+    "signature": "public string AssignDataModel(SimplisityRazor sModel)",
+    "classname": "RocketContentAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketContentAPI.Components",
+    "parameters": [
+      {
+        "name": "sModel",
+        "type": "SimplisityRazor",
+        "description": "The s model."
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RowKey",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketContentAPI\\Render\\RocketContentAPITokens.cs",
+    "description": "A row MUST have a rowkey to be saved to the DB.  This generates the rowkey. Generates the necessary hidden fields for a row\u0027s unique key (\u0027rowkey\u0027 and \u0027rowkeylang\u0027) and a unique entity ID (\u0027eid\u0027). A row MUST have a rowkey to be saved to the database.",
+    "signature": "public IEncodedString RowKey(SimplisityInfo info)",
+    "classname": "RocketContentAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketContentAPI.Components",
+    "parameters": [
+      {
+        "name": "info",
+        "type": "SimplisityInfo",
+        "description": "The information."
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "CheckBoxRowIsHidden",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketContentAPI\\Render\\RocketContentAPITokens.cs",
+    "description": "Creates a checkbox for the IsHidden property of a row. Creates a checkbox for the \u0027IsHidden\u0027 property of a row, allowing a row to be marked as hidden.",
+    "signature": "public IEncodedString CheckBoxRowIsHidden(SimplisityInfo rowData)",
+    "classname": "RocketContentAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketContentAPI.Components",
+    "parameters": [
+      {
+        "name": "rowData",
+        "type": "SimplisityInfo",
+        "description": "The row data."
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "TextBoxRowTitle",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketContentAPI\\Render\\RocketContentAPITokens.cs",
+    "description": "Creates a textbox for the title, using a standard xpath. Creates a standard textbox for a row\u0027s title using the XPath \u0027genxml/lang/genxml/textbox/title\u0027.",
+    "signature": "public IEncodedString TextBoxRowTitle(SimplisityInfo rowData)",
+    "classname": "RocketContentAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketContentAPI.Components",
+    "parameters": [
+      {
+        "name": "rowData",
+        "type": "SimplisityInfo",
+        "description": "The row data."
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ChatGPT",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketContentAPI\\Render\\RocketContentAPITokens.cs",
+    "description": "Renders a button to open a ChatGPT modal for generating text. Requires a ChatGPT API key in the global settings. The generated text will populate the field specified by \u0027textId\u0027.",
+    "signature": "public IEncodedString ChatGPT(string textId, string sourceTextId = \u0022\u0022)",
+    "classname": "RocketContentAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketContentAPI.Components",
+    "parameters": [
+      {
+        "name": "textId",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sourceTextId",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DeepL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketContentAPI\\Render\\RocketContentAPITokens.cs",
+    "description": "Renders a button to open a DeepL translation modal. Requires a DeepL API key in the global settings and more than one portal language to be enabled. The translated text will populate the field specified by \u0027textId\u0027.",
+    "signature": "public IEncodedString DeepL(string textId, string sourceTextId = \u0022\u0022, string cultureCode = \u0022\u0022)",
+    "classname": "RocketContentAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketContentAPI.Components",
+    "parameters": [
+      {
+        "name": "textId",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sourceTextId",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "StylePadding",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketContentAPI\\Render\\RocketContentAPITokens.cs",
+    "description": "Standardized method and names to craete top,bottom,left,right padding on an element. Allows potion adjustment from module settings without change CSS files. field Id: leftpadding,rightpadding,toppadding,bottompadding Generates an inline CSS padding style string based on module settings. It reads \u0027leftpadding\u0027, \u0027rightpadding\u0027, \u0027toppadding\u0027, and \u0027bottompadding\u0027 settings and creates corresponding CSS properties.",
+    "signature": "public string StylePadding()",
+    "classname": "RocketContentAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketContentAPI.Components",
+    "parameters": [],
+    "returns": "string"
+  }
+]

@@ -1,580 +1,1068 @@
 [
   {
     "type": "csharp-method",
-    "name": "SafeSubstring",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Safely gets a substring of a given length from a string, without causing an out-of-bounds exception.",
-    "signature": "public static string SafeSubstring(string input, int maxLength)",
+    "name": "IsValidEmail",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
+    "signature": "public bool IsValidEmail(string strIn)",
+    "classname": "UtilsEmail",
+    "isstatic": "false",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "input", "type": "string", "description": "The input string." },
-      { "name": "maxLength", "type": "int", "description": "The maximum length of the substring." }
+      {
+        "name": "strIn",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "bool"
+  },
+  {
+    "type": "csharp-method",
+    "name": "SafeSubstring",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
+    "signature": "public static string SafeSubstring(string input, int maxLength)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
+    "parameters": [
+      {
+        "name": "input",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "maxLength",
+        "type": "int",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "IsAbsoluteUrl",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Checks if a given URL is an absolute URL.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static bool IsAbsoluteUrl(string url)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "url", "type": "string", "description": "The URL to check." }
+      {
+        "name": "url",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "RemoveDiacritics",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Removes diacritics (accents) from a string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string RemoveDiacritics(string text)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "text", "type": "string", "description": "The text to process." }
+      {
+        "name": "text",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "DeCode",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Decodes a string that was encoded by converting each character to its integer value, separated by dots.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string DeCode(string codedval)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "codedval", "type": "string", "description": "The encoded string." }
+      {
+        "name": "codedval",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "EnCode",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Encodes a string by converting each character to its integer value, separated by dots.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string EnCode(string value)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "value", "type": "string", "description": "The string to encode." }
+      {
+        "name": "value",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "DecodeCSV",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Decodes a comma-separated string where each value was encoded using the EnCode method.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string DecodeCSV(string inputData)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "inputData", "type": "string", "description": "The encoded CSV string." }
+      {
+        "name": "inputData",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "CreateFolder",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Creates a folder if it does not already exist.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static void CreateFolder(string folderMapPath)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "folderMapPath", "type": "string", "description": "The physical path of the folder to create." }
+      {
+        "name": "folderMapPath",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "DeleteFolder",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Deletes a folder.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static void DeleteFolder(string folderMapPath, bool recursive = false)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "folderMapPath", "type": "string", "description": "The physical path of the folder to delete." },
-      { "name": "recursive", "type": "bool", "description": "If true, deletes the folder and all its contents." }
+      {
+        "name": "folderMapPath",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "recursive",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "FormatToSave",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Formats a string for saving, applying scripting protection.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string FormatToSave(string inpData)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "inpData", "type": "string", "description": "The input data." }
+      {
+        "name": "inpData",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "FormatToSave",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Formats a string for saving based on its data type, applying scripting protection.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string FormatToSave(string inpData, TypeCode dataTyp)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "inpData", "type": "string", "description": "The input data." },
-      { "name": "dataTyp", "type": "TypeCode", "description": "The data type of the input." }
+      {
+        "name": "inpData",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "dataTyp",
+        "type": "TypeCode",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "FormatDisableScripting",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Removes potentially malicious HTML tags and scripts from a string to prevent XSS attacks.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "This function uses Regex search strings to remove HTML tags which are targeted in Cross-site scripting (XSS) attacks.  This function will evolve to provide more robust checking as additional holes are found.",
     "signature": "public static string FormatDisableScripting(string strInput, bool filterlinks = true)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "strInput", "type": "string", "description": "The string to filter." },
-      { "name": "filterlinks", "type": "bool", "description": "If true, also removes 'a' tags." }
+      {
+        "name": "strInput",
+        "type": "string",
+        "description": "This is the string to be filtered"
+      },
+      {
+        "name": "filterlinks",
+        "type": "bool",
+        "description": "Remove href link elements"
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "FormatToSave",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Formats data for saving to XML, converting it to a culture-invariant format.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string FormatToSave(string inpData, TypeCode dataTyp, string editlang)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "inpData", "type": "string", "description": "The input data." },
-      { "name": "dataTyp", "type": "TypeCode", "description": "The data type." },
-      { "name": "editlang", "type": "string", "description": "The culture code of the input data." }
+      {
+        "name": "inpData",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "dataTyp",
+        "type": "TypeCode",
+        "description": ""
+      },
+      {
+        "name": "editlang",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "IsCultureInfo",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Checks if a given string is a valid culture code.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static bool IsCultureInfo(string cultureCode)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "cultureCode", "type": "string", "description": "The culture code to check." }
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "FormatToDisplay",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Formats data for display, converting it from a culture-invariant format to a culture-specific format.",
-    "signature": "public static string FormatToDisplay(string inpData, string cultureCode, TypeCode dataTyp, string formatCode = \"\")",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
+    "signature": "public static string FormatToDisplay(string inpData, string cultureCode, TypeCode dataTyp, string formatCode = \u0022\u0022)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "inpData", "type": "string", "description": "The input data." },
-      { "name": "cultureCode", "type": "string", "description": "The culture code for display." },
-      { "name": "dataTyp", "type": "TypeCode", "description": "The data type." },
-      { "name": "formatCode", "type": "string", "description": "The format string." }
+      {
+        "name": "inpData",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "dataTyp",
+        "type": "TypeCode",
+        "description": ""
+      },
+      {
+        "name": "formatCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "FormatDateToString",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Formats a DateTime object into a string based on a specific culture.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string FormatDateToString(DateTime dateTime, string cultureCode)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "dateTime", "type": "DateTime", "description": "The DateTime object." },
-      { "name": "cultureCode", "type": "string", "description": "The culture code." }
+      {
+        "name": "dateTime",
+        "type": "DateTime",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "IsEmail",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Checks if a string is a valid email address.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "IsEmail function checks for a valid email format",
     "signature": "public static bool IsEmail(string emailaddress)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "emailaddress", "type": "string", "description": "The email address to validate." }
+      {
+        "name": "emailaddress",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "IsNumeric",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Checks if an object can be converted to a numeric value, optionally using a specific culture.",
-    "signature": "public static bool IsNumeric(object expression, string cultureCode = \"\")",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "IsNumeric function check if a given value is numeric, based on the culture code passed.  If no culture code is passed then a test on InvariantCulture is done.",
+    "signature": "public static bool IsNumeric(object expression, string cultureCode = \u0022\u0022)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "expression", "type": "object", "description": "The object to check." },
-      { "name": "cultureCode", "type": "string", "description": "The culture code to use for parsing." }
+      {
+        "name": "expression",
+        "type": "object",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "IsUriValid",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Checks if a string is a well-formed URI and can optionally check if the host exists.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static bool IsUriValid(string uri, UriKind uriKind  = UriKind.RelativeOrAbsolute, bool checkexists = false)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "uri", "type": "string", "description": "The URI string to check." },
-      { "name": "uriKind", "type": "UriKind", "description": "The kind of URI." },
-      { "name": "checkexists", "type": "bool", "description": "If true, performs a DNS lookup to see if the host exists." }
+      {
+        "name": "uri",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "uriKind",
+        "type": "UriKind",
+        "description": ""
+      },
+      {
+        "name": "checkexists",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "IsDate",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Checks if an object can be converted to a DateTime value using a specific culture.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static bool IsDate(object expression, string cultureCode)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "expression", "type": "object", "description": "The object to check." },
-      { "name": "cultureCode", "type": "string", "description": "The culture code to use for parsing." }
+      {
+        "name": "expression",
+        "type": "object",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "IsDateInvariantCulture",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Checks if an object can be converted to a DateTime value using a set of common invariant culture formats.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "Test date in these formats nby default: { \u0022yyyy-MM-dd\u0022, \u0022yyyy/MM/dd\u0022, \u0022MM-dd-yyyy\u0022, \u0022MM/dd/yyyy\u0022, \u0022dd/MM/yyyy\u0022, \u0022dd-MM-yyyy\u0022 } Use IsDate function if you know the culturecode.",
     "signature": "public static bool IsDateInvariantCulture(object expression)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "expression", "type": "object", "description": "The object to check." }
+      {
+        "name": "expression",
+        "type": "object",
+        "description": ""
+      }
     ],
     "returns": "bool"
   },
   {
     "type": "csharp-method",
     "name": "FormatAsMailTo",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Creates a 'mailto' link that is obfuscated to protect the email address from scrapers.",
-    "signature": "public static string FormatAsMailTo(string email, string subject = \"\", string visibleText = \"\")",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
+    "signature": "public static string FormatAsMailTo(string email, string subject = \u0022\u0022, string visibleText = \u0022\u0022)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "email", "type": "string", "description": "The email address." },
-      { "name": "subject", "type": "string", "description": "The default subject line." },
-      { "name": "visibleText", "type": "string", "description": "The visible text for the link." }
+      {
+        "name": "email",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "subject",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "visibleText",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "DeleteSysFile",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Deletes a file, ignoring any exceptions if the file is locked.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static void DeleteSysFile(string filePathName)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "filePathName", "type": "string", "description": "The path to the file to delete." }
+      {
+        "name": "filePathName",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "CleanInput",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Strips out characters from a string that do not match a given regular expression.",
-    "signature": "public static string CleanInput(string strIn, string regexpr = \"\")",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "CleanInput strips out all nonalphanumeric characters except periods (.), at symbols (@), and hyphens (-), and returns the remaining string. However, you can modify the regular expression pattern so that it strips out any characters that should not be included in an input string.",
+    "signature": "public static string CleanInput(string strIn, string regexpr = \u0022\u0022)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "strIn", "type": "string", "description": "The input string." },
-      { "name": "regexpr", "type": "string", "description": "The regular expression to match allowed characters." }
+      {
+        "name": "strIn",
+        "type": "string",
+        "description": "Dirty String"
+      },
+      {
+        "name": "regexpr",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "AlphaNumeric",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Strips out all non-alphanumeric characters from a string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "strips out all nonalphanumeric characters.",
     "signature": "public static string AlphaNumeric(string strIn)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "strIn", "type": "string", "description": "The input string." }
+      {
+        "name": "strIn",
+        "type": "string",
+        "description": "Dirty String"
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "Numeric",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Strips out all non-numeric characters from a string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "strips out all nonnumeric characters.",
     "signature": "public static string Numeric(string strIn)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "strIn", "type": "string", "description": "The input string." }
+      {
+        "name": "strIn",
+        "type": "string",
+        "description": "Dirty String"
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "UrlFriendly",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Converts a string into a URL-friendly format (e.g., 'like-this-one').",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "Produces optional, URL-friendly version of a title, \u0022like-this-one\u0022. hand-tuned for speed, reflects performance refactoring contributed by John Gietzen (user otac0n)",
     "signature": "public static string UrlFriendly(string title)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "title", "type": "string", "description": "The string to convert." }
+      {
+        "name": "title",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "SanitizeFileName",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Sanitizes a file name by removing diacritics and invalid file name characters.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string SanitizeFileName(string fileName)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "fileName", "type": "string", "description": "The file name to sanitize." }
+      {
+        "name": "fileName",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "RemapInternationalCharToAscii",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Remaps common international characters to their ASCII equivalents.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string RemapInternationalCharToAscii(char c)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "c", "type": "char", "description": "The character to remap." }
+      {
+        "name": "c",
+        "type": "char",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "StripAccents",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Strips accents from a string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "Strip accents from string.",
     "signature": "public static string StripAccents(string s)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "s", "type": "string", "description": "The string to process." }
+      {
+        "name": "s",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetUniqueString",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Generates a highly unique, URL-safe string based on the current time and a random number.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "Get unique string based on ticks and a random numer.  The random number is to try and stop clashes when processing on the same tick. This method has a VERY HIGH chance of being unique.",
     "signature": "public static string GetUniqueString(int randomsize = 8)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "randomsize", "type": "int", "description": "The size of the random key to append." }
+      {
+        "name": "randomsize",
+        "type": "int",
+        "description": "RandomKey size, the ramdon key is added to the tick string. #= size of random key"
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetRandomKey",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Generates a random string of a specified size. Not guaranteed to be unique.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "Get a random string. However the code MAY NOT be unique.  Do not use this method if you MUST have a unique string, try GetUniqueString()",
     "signature": "public static string GetRandomKey(int maxSize = 0, bool numericOnly = false)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "maxSize", "type": "int", "description": "The size of the key. If 0, returns a GUID-based key." },
-      { "name": "numericOnly", "type": "bool", "description": "If true, the key will only contain numbers." }
+      {
+        "name": "maxSize",
+        "type": "int",
+        "description": "0= Guid (Unique across machines),#= size of return string, larger return strings have more chance to be unique"
+      },
+      {
+        "name": "numericOnly",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetGuidKey",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Generates a URL-safe key from a new GUID.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string GetGuidKey()",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "ReplaceFirstOccurrence",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Replaces the first occurrence of a substring within a string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string ReplaceFirstOccurrence(string source, string find, string replace)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "source", "type": "string", "description": "The source string." },
-      { "name": "find", "type": "string", "description": "The substring to find." },
-      { "name": "replace", "type": "string", "description": "The replacement string." }
+      {
+        "name": "source",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "find",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "replace",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "ReplaceLastOccurrence",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Replaces the last occurrence of a substring within a string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string ReplaceLastOccurrence(string source, string find, string replace)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "source", "type": "string", "description": "The source string." },
-      { "name": "find", "type": "string", "description": "The substring to find." },
-      { "name": "replace", "type": "string", "description": "The replacement string." }
+      {
+        "name": "source",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "find",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "replace",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "Decrypt",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Decrypts a string using DES encryption with a given key.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string Decrypt(string strKey, string strData)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "strKey", "type": "string", "description": "The encryption key." },
-      { "name": "strData", "type": "string", "description": "The encrypted, Base64-encoded data." }
+      {
+        "name": "strKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "strData",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "Encrypt",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Encrypts a string using DES encryption with a given key.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string Encrypt(string strKey, string strData)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "strKey", "type": "string", "description": "The encryption key." },
-      { "name": "strData", "type": "string", "description": "The data to encrypt." }
+      {
+        "name": "strKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "strData",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "ReplaceFileExt",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Replaces the extension of a file path with a new extension.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string ReplaceFileExt(string fileName, string newExt)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "fileName", "type": "string", "description": "The file path." },
-      { "name": "newExt", "type": "string", "description": "The new extension." }
+      {
+        "name": "fileName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "newExt",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "StrToByteArray",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Converts a string to a byte array using UTF8 encoding.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static byte[] StrToByteArray(string str)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "str", "type": "string", "description": "The string to convert." }
+      {
+        "name": "str",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "byte[]"
   },
   {
     "type": "csharp-method",
     "name": "ObjectToByteArray",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Serializes an object into a byte array.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static byte[] ObjectToByteArray(Object obj)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "obj", "type": "Object", "description": "The object to serialize." }
+      {
+        "name": "obj",
+        "type": "Object",
+        "description": ""
+      }
     ],
     "returns": "byte[]"
   },
   {
     "type": "csharp-method",
     "name": "CopyAll",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Recursively copies all files and subdirectories from a source to a target directory.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static void CopyAll(string source, string target)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "source", "type": "string", "description": "The source directory path." },
-      { "name": "target", "type": "string", "description": "The target directory path." }
+      {
+        "name": "source",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "target",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "CopyAll",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Recursively copies all files and subdirectories from a source to a target directory.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static void CopyAll(DirectoryInfo source, DirectoryInfo target)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "source", "type": "DirectoryInfo", "description": "The source directory." },
-      { "name": "target", "type": "DirectoryInfo", "description": "The target directory." }
+      {
+        "name": "source",
+        "type": "DirectoryInfo",
+        "description": ""
+      },
+      {
+        "name": "target",
+        "type": "DirectoryInfo",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "GetMd5Hash",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Computes the MD5 hash of a string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string GetMd5Hash(string input)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "input", "type": "string", "description": "The input string." }
+      {
+        "name": "input",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "GetMd5Hash",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Computes the MD5 hash of a string, with an option for uppercase or lowercase output.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string GetMd5Hash(string input, bool uppercase)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "input", "type": "string", "description": "The input string." },
-      { "name": "uppercase", "type": "bool", "description": "If true, the hash is returned in uppercase." }
+      {
+        "name": "input",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "uppercase",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "Base64Encode",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Encodes a string into Base64 format.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string Base64Encode(string plainText)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "plainText", "type": "string", "description": "The plain text to encode." }
+      {
+        "name": "plainText",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "Base64Decode",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Decodes a Base64-encoded string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string Base64Decode(string base64EncodedData)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "base64EncodedData", "type": "string", "description": "The Base64-encoded data." }
+      {
+        "name": "base64EncodedData",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "AddJsonNetRootAttribute",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Adds the Json.NET namespace attribute to the root element of a SimplisityInfo's XML document.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static void AddJsonNetRootAttribute(ref SimplisityInfo sInfo)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "sInfo", "type": "ref SimplisityInfo", "description": "The SimplisityInfo object." }
+      {
+        "name": "sInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "AddJsonArrayAttributesForXPath",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Adds the Json.NET 'Array=true' attribute to all XML elements matching an XPath expression.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static void AddJsonArrayAttributesForXPath(string xpath, ref SimplisityInfo sInfo)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "xpath", "type": "string", "description": "The XPath expression." },
-      { "name": "sInfo", "type": "ref SimplisityInfo", "description": "The SimplisityInfo object." }
+      {
+        "name": "xpath",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sInfo",
+        "type": "SimplisityInfo",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "CopyDirectory",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Copies a directory and its contents to a new location.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static void CopyDirectory(string sourceDir, string destinationDir, bool recursive)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "sourceDir", "type": "string", "description": "The source directory path." },
-      { "name": "destinationDir", "type": "string", "description": "The destination directory path." },
-      { "name": "recursive", "type": "bool", "description": "If true, copies subdirectories recursively." }
+      {
+        "name": "sourceDir",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "destinationDir",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "recursive",
+        "type": "bool",
+        "description": ""
+      }
     ],
     "returns": "void"
   },
   {
     "type": "csharp-method",
     "name": "HtmlToPlainText",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Converts an HTML string to plain text by stripping out tags.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string HtmlToPlainText(string html)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "html", "type": "string", "description": "The HTML string." }
+      {
+        "name": "html",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   },
   {
     "type": "csharp-method",
     "name": "EscapeJsonString",
-    "source_file": "Simplisity/GeneralUtils.cs",
-    "description": "Escapes special characters in a string to make it safe for inclusion in a JSON string.",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNrocket\\Simplisity\\GeneralUtils.cs",
+    "description": "",
     "signature": "public static string EscapeJsonString(string value)",
+    "classname": "GeneralUtils",
+    "isstatic": "true",
+    "namespace": "Simplisity",
     "parameters": [
-      { "name": "value", "type": "string", "description": "The string to escape." }
+      {
+        "name": "value",
+        "type": "string",
+        "description": ""
+      }
     ],
     "returns": "string"
   }

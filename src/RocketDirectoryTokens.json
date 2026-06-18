@@ -1,0 +1,647 @@
+[
+  {
+    "type": "csharp-method",
+    "name": "AssignDataModel",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Assigns the data model for Razor, making the template easier to build by populating various data properties like appTheme, moduleData, articleData, etc., from the SimplisityRazor model.",
+    "signature": "public string AssignDataModel(SimplisityRazor sModel)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "sModel",
+        "type": "SimplisityRazor",
+        "description": ""
+      }
+    ],
+    "returns": "string"
+  },
+  {
+    "type": "csharp-method",
+    "name": "TextBoxMoney",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Renders a textbox for currency input. The value is formatted according to the portal\u0027s currency settings.",
+    "signature": "public IEncodedString TextBoxMoney(int portalId, string systemKey, string cultureCode, SimplisityInfo info, String xpath, String attributes = \u0022\u0022, String defaultValue = \u0022\u0022, bool localized = false, int row = 0, string listname = \u0022\u0022, string type = \u0022text\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "systemKey",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "info",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "xpath",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "attributes",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "defaultValue",
+        "type": "String",
+        "description": ""
+      },
+      {
+        "name": "localized",
+        "type": "bool",
+        "description": ""
+      },
+      {
+        "name": "row",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "listname",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "InterfaceNameResourceKey",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Gets the interfaces name from the resource file. Gets the localized name for a RocketInterface from the resource files. It searches in the system\u0027s resources first, then the interface\u0027s template resources.",
+    "signature": "public IEncodedString InterfaceNameResourceKey(RocketInterface rocketInterface, SystemLimpet systemData, String lang = \u0022\u0022, string resxFileName = \u0022SideMenu\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "rocketInterface",
+        "type": "RocketInterface",
+        "description": "The rocket interface."
+      },
+      {
+        "name": "systemData",
+        "type": "SystemLimpet",
+        "description": "The system data."
+      },
+      {
+        "name": "lang",
+        "type": "String",
+        "description": "The language."
+      },
+      {
+        "name": "resxFileName",
+        "type": "string",
+        "description": "Name of the RESX file."
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FilterGroupCheckBox",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "CheckBox for a group filter. (Used in the ThemeSettings for selecting which group filters to use.) Renders a checkbox for a property group filter, typically used in theme settings to enable or disable filter groups.",
+    "signature": "public IEncodedString FilterGroupCheckBox(SimplisityInfo info, string groupId, string textName)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "info",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "groupId",
+        "type": "string",
+        "description": "The group identifier."
+      },
+      {
+        "name": "textName",
+        "type": "string",
+        "description": "Name of the text."
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FilterGroupCheckBox",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "",
+    "signature": "public IEncodedString FilterGroupCheckBox(SimplisityInfo info, CatalogSettingsLimpet catalogSettings)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "info",
+        "type": "SimplisityInfo",
+        "description": ""
+      },
+      {
+        "name": "catalogSettings",
+        "type": "CatalogSettingsLimpet",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FilterCheckBox",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Filters the CheckBox on the \u0022Filters\u0022 website view. Renders a filter checkbox for the public-facing view. When changed, it updates a session field and triggers a JavaScript function to refresh the article list.",
+    "signature": "public IEncodedString FilterCheckBox(string checkboxId, string textName, string sreturn, bool value, string cssClass = \u0022\u0022, string attributes = \u0022\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "checkboxId",
+        "type": "string",
+        "description": "The checkbox identifier."
+      },
+      {
+        "name": "textName",
+        "type": "string",
+        "description": "Name of the text."
+      },
+      {
+        "name": "sreturn",
+        "type": "string",
+        "description": "The sreturn."
+      },
+      {
+        "name": "value",
+        "type": "bool",
+        "description": "if set to \u003Cc\u003Etrue\u003C/c\u003E [value]."
+      },
+      {
+        "name": "cssClass",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "attributes",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FilterJsApiCall",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Adds the JS for calling the filter API. JS:callArticleList() cmd:remote_publiclist Renders the JavaScript function \u0027callFilterArticleList\u0027 which calls the remote API to refresh the list of articles based on the current filter selections.",
+    "signature": "public IEncodedString FilterJsApiCall(ModuleContentLimpet moduleData, SessionParams sessionParams, string templateName = \u0022articlelist.cshtml\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "moduleData",
+        "type": "ModuleContentLimpet",
+        "description": ""
+      },
+      {
+        "name": "sessionParams",
+        "type": "SessionParams",
+        "description": "The session parameters."
+      },
+      {
+        "name": "templateName",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "FilterClearButton",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Renders a button that clears all active filters by unchecking all filter checkboxes and refreshing the article list.",
+    "signature": "public IEncodedString FilterClearButton(string textName, string sreturn)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "textName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sreturn",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "TagButtonClear",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Tags the button. Renders a button to clear the active tag filter. It is initially hidden and appears when a tag is selected.",
+    "signature": "public IEncodedString TagButtonClear(string textName, SessionParams sessionParams, string displayClass = \u0022rocket-tagbutton\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "textName",
+        "type": "string",
+        "description": "Name of the text."
+      },
+      {
+        "name": "sessionParams",
+        "type": "SessionParams",
+        "description": "The session parameters."
+      },
+      {
+        "name": "displayClass",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "TagButton",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Renders a clickable tag button. When clicked, it sets the \u0027rocketpropertyidtag\u0027 session field and refreshes the article list to show items with that tag.",
+    "signature": "public IEncodedString TagButton(int propertyid, string textName, SessionParams sessionParams, string displayClass = \u0022rocket-tagbutton\u0022, string selectedClass = \u0022rocket-tagbuttonOn\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "propertyid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "textName",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sessionParams",
+        "type": "SessionParams",
+        "description": ""
+      },
+      {
+        "name": "displayClass",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "selectedClass",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "TagJsApiCall",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Adds the JS for calling the filter API. JS:callTagArticleList() cmd:remote_publiclist",
+    "signature": "public IEncodedString TagJsApiCall(ModuleContentLimpet moduleData, string sreturn, SessionParams sessionParams, string templateName = \u0022articlelist.cshtml\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "moduleData",
+        "type": "ModuleContentLimpet",
+        "description": ""
+      },
+      {
+        "name": "sreturn",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sessionParams",
+        "type": "SessionParams",
+        "description": ""
+      },
+      {
+        "name": "templateName",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "TagJsApiCall",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Renders the JavaScript function \u0027callTagArticleList\u0027 which calls the remote API to refresh the list of articles based on the selected tag.",
+    "signature": "public IEncodedString TagJsApiCall(ModuleContentLimpet moduleData, string sreturn, SessionParams sessionParams, string displayClass, string selectedClass, string templateName)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "moduleData",
+        "type": "ModuleContentLimpet",
+        "description": ""
+      },
+      {
+        "name": "sreturn",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sessionParams",
+        "type": "SessionParams",
+        "description": ""
+      },
+      {
+        "name": "displayClass",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "selectedClass",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "templateName",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DateJsApiCall",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Dates the js API call. JS function: doDateSearchReload cmd:remote_publiclist Renders the JavaScript function \u0027doDateSearchReload\u0027 which calls the remote API to refresh the list of articles based on a selected date range.",
+    "signature": "public IEncodedString DateJsApiCall(ModuleContentLimpet moduleData, string sreturn, SessionParams sessionParams, string templateName = \u0022articlelist.cshtml\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "moduleData",
+        "type": "ModuleContentLimpet",
+        "description": ""
+      },
+      {
+        "name": "sreturn",
+        "type": "string",
+        "description": "sreturn."
+      },
+      {
+        "name": "sessionParams",
+        "type": "SessionParams",
+        "description": "The session parameters."
+      },
+      {
+        "name": "templateName",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ListUrl",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Builds the List URL. Builds a friendly URL to a list page, optionally including category information.",
+    "signature": "public IEncodedString ListUrl(int listpageid, CategoryLimpet categoryData, string[] urlparams = null)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "listpageid",
+        "type": "int",
+        "description": "The listpageid."
+      },
+      {
+        "name": "categoryData",
+        "type": "CategoryLimpet",
+        "description": ""
+      },
+      {
+        "name": "urlparams",
+        "type": "string[]",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ListUrl",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Builds the List URL with paramaters.",
+    "signature": "public IEncodedString ListUrl(int listpageid, string[] urlparams = null)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "listpageid",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "urlparams",
+        "type": "string[]",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DetailUrl",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Builds the Detail URL. Builds a friendly URL to a detail page for a specific article, including the article title and ID for SEO and routing.",
+    "signature": "public IEncodedString DetailUrl(int detailpageid, ArticleLimpet articleData, string[] urlparams = null)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "detailpageid",
+        "type": "int",
+        "description": "The detailpageid."
+      },
+      {
+        "name": "articleData",
+        "type": "ArticleLimpet",
+        "description": ""
+      },
+      {
+        "name": "urlparams",
+        "type": "string[]",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DetailUrl",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Builds the Detail URL.",
+    "signature": "public IEncodedString DetailUrl(int detailpageid, ArticleLimpet articleData, CategoryLimpet categoryData, string[] urlparams = null)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "detailpageid",
+        "type": "int",
+        "description": "The detailpageid."
+      },
+      {
+        "name": "articleData",
+        "type": "ArticleLimpet",
+        "description": ""
+      },
+      {
+        "name": "categoryData",
+        "type": "CategoryLimpet",
+        "description": ""
+      },
+      {
+        "name": "urlparams",
+        "type": "string[]",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "RssUrl",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Generates a URL for an RSS feed based on a command, date range, and optional SQL index.",
+    "signature": "public IEncodedString RssUrl(int portalId, string cmd, int yearDate, int monthDate, int numberOfMonths = 1, string sqlidx = \u0022\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "portalId",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "cmd",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "yearDate",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "monthDate",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "numberOfMonths",
+        "type": "int",
+        "description": ""
+      },
+      {
+        "name": "sqlidx",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "ChatGPT",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Renders a button to open a ChatGPT modal for generating text. Requires a ChatGPT API key in the global settings. The generated text will populate the field specified by \u0027textId\u0027.",
+    "signature": "public IEncodedString ChatGPT(string textId, string sourceTextId = \u0022\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "textId",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sourceTextId",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  },
+  {
+    "type": "csharp-method",
+    "name": "DeepL",
+    "source_file": "D:\\NEVOWEB\\Project\\DesktopModules\\DNNRocketModules\\RocketDirectoryAPI\\Render\\RocketDirectoryAPITokens.cs",
+    "description": "Renders a button to open a DeepL translation modal. Requires a DeepL API key in the global settings and more than one portal language to be enabled. The translated text will populate the field specified by \u0027textId\u0027.",
+    "signature": "public IEncodedString DeepL(string textId, string sourceTextId = \u0022\u0022, string cultureCode = \u0022\u0022)",
+    "classname": "RocketDirectoryAPITokens",
+    "isstatic": "false",
+    "namespace": "RocketDirectoryAPI.Components",
+    "parameters": [
+      {
+        "name": "textId",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "sourceTextId",
+        "type": "string",
+        "description": ""
+      },
+      {
+        "name": "cultureCode",
+        "type": "string",
+        "description": ""
+      }
+    ],
+    "returns": "IEncodedString"
+  }
+]
