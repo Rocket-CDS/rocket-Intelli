@@ -28,6 +28,8 @@ This extension contributes the following settings:
 
 ## Package
 
+VScode > Open New Terminal
+
 ```
 npm install -g @vscode/vsce
 ```
